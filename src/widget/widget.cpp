@@ -1749,7 +1749,10 @@ void Widget::updateFriendActivity(const Friend& frnd)
 
 void Widget::removeFriend(Friend* f, bool fake)
 {
-    assert(f);
+    if (!f) {
+        qWarning() << "Tried to remove a null friend";
+        return;
+    }
     if (!fake) {
         RemoveChatDialog ask(this, *f);
         ask.exec();
@@ -2008,18 +2011,28 @@ void Widget::onGroupMessageReceived(int groupnumber, int peernumber, const QStri
                                     bool isAction)
 {
     const GroupId& groupId = groupList->id2Key(groupnumber);
-    assert(groupList->findGroup(groupId));
+
+    // A message can arrive for a group we no longer track (e.g. while leaving
+    // it). QMap::operator[] would insert an empty dispatcher, so look it up and
+    // bail out instead of dereferencing a null pointer in release builds.
+    auto dispatcherIt = groupMessageDispatchers.find(groupId);
+    if (dispatcherIt == groupMessageDispatchers.end() || !dispatcherIt.value()) {
+        qWarning() << "Ignoring message for unknown group" << groupId.toString();
+        return;
+    }
 
     ToxPk author = core->getGroupPeerPk(groupnumber, peernumber);
 
-    groupMessageDispatchers[groupId]->onMessageReceived(author, isAction, message);
+    dispatcherIt.value()->onMessageReceived(author, isAction, message);
 }
 
 void Widget::onGroupPeerlistChanged(uint32_t groupnumber)
 {
     const GroupId& groupId = groupList->id2Key(groupnumber);
     Group* g = groupList->findGroup(groupId);
-    assert(g);
+    if (!g) {
+        return;
+    }
     g->regeneratePeerList();
 }
 
@@ -2027,7 +2040,9 @@ void Widget::onGroupPeerNameChanged(uint32_t groupnumber, const ToxPk& peerPk, c
 {
     const GroupId& groupId = groupList->id2Key(groupnumber);
     Group* g = groupList->findGroup(groupId);
-    assert(g);
+    if (!g) {
+        return;
+    }
 
     const QString setName = friendList->decideNickname(peerPk, newName);
     g->updateUsername(peerPk, newName);
@@ -2037,10 +2052,12 @@ void Widget::onGroupTitleChanged(uint32_t groupnumber, const QString& author, co
 {
     const GroupId& groupId = groupList->id2Key(groupnumber);
     Group* g = groupList->findGroup(groupId);
-    assert(g);
+    if (!g) {
+        return;
+    }
 
-    GroupWidget* widget = groupWidgets[groupId];
-    if (widget->isActive()) {
+    GroupWidget* widget = groupWidgets.value(groupId, nullptr);
+    if (widget && widget->isActive()) {
         formatWindowTitle(title);
     }
 
@@ -2051,22 +2068,32 @@ void Widget::onGroupTitleChanged(uint32_t groupnumber, const QString& author, co
 void Widget::titleChangedByUser(const QString& title)
 {
     const auto* group = qobject_cast<Group*>(sender());
-    assert(group != nullptr);
+    if (!group) {
+        return;
+    }
     emit changeGroupTitle(group->getId(), title);
 }
 
 void Widget::onGroupPeerAudioPlaying(int groupnumber, ToxPk peerPk)
 {
     const GroupId& groupId = groupList->id2Key(groupnumber);
-    assert(groupList->findGroup(groupId));
+    if (!groupList->findGroup(groupId)) {
+        return;
+    }
 
-    auto form = groupChatForms[groupId].data();
+    auto form = groupChatForms.value(groupId).data();
+    if (!form) {
+        return;
+    }
     form->peerAudioPlaying(peerPk);
 }
 
 void Widget::removeGroup(Group* g, bool fake)
 {
-    assert(g);
+    if (!g) {
+        qWarning() << "Tried to remove a null group";
+        return;
+    }
     if (!fake) {
         RemoveChatDialog ask(this, *g);
         ask.exec();
@@ -2141,12 +2168,17 @@ Group* Widget::createGroup(uint32_t groupnumber, const GroupId& groupId)
     Group* newgroup =
         groupList->addGroup(*core, groupnumber, groupId, groupName, enabled, core->getUsername(),
             *friendList);
-    assert(newgroup);
+    if (!newgroup) {
+        qCritical() << "Failed to create group" << groupId.toString();
+        return nullptr;
+    }
 
     if (enabled) {
         connect(newgroup, &Group::userLeft, [=](const ToxPk& user){
             CoreAV *av = core->getAv();
-            assert(av);
+            if (!av) {
+                return;
+            }
             av->invalidateGroupCallPeerSource(*newgroup, user);
         });
     }
@@ -2381,10 +2413,15 @@ void Widget::setStatusBusy()
 void Widget::onGroupSendFailed(uint32_t groupnumber)
 {
     const auto& groupId = groupList->id2Key(groupnumber);
-    assert(groupList->findGroup(groupId));
+    if (!groupList->findGroup(groupId)) {
+        return;
+    }
 
     const auto curTime = QDateTime::currentDateTime();
-    auto form = groupChatForms[groupId].data();
+    auto form = groupChatForms.value(groupId).data();
+    if (!form) {
+        return;
+    }
     form->addSystemInfoMessage(curTime, SystemMessageType::messageSendFailed, {});
 }
 
