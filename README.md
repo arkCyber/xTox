@@ -10,7 +10,7 @@ file transfer, built on the [Tox](https://tox.chat) protocol.**
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3%2B-blue.svg)](LICENSE)
 [![Latest release](https://img.shields.io/github/v/release/arkCyber/xTox?include_prereleases&sort=semver)](https://github.com/arkCyber/xTox/releases/latest)
 [![Build status](https://github.com/arkCyber/xTox/actions/workflows/build-test-deploy.yaml/badge.svg)](https://github.com/arkCyber/xTox/actions/workflows/build-test-deploy.yaml)
-[![Issues](https://img.shields.io/github/issues/xTox/xTox)](https://github.com/arkCyber/xTox/issues)
+[![Issues](https://img.shields.io/github/issues/arkCyber/xTox)](https://github.com/arkCyber/xTox/issues)
 [![Platforms](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows%20%7C%20FreeBSD-informational)](#installation)
 [![Qt 5.15](https://img.shields.io/badge/Qt-5.15-brightgreen)](https://www.qt.io)
 
