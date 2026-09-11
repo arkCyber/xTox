@@ -4,7 +4,7 @@ Unicode True
 ###################
 !define APP_NAME "xTox"
 !define COMP_NAME "Tox"
-!define WEB_SITE "https://github.com/xTox/xTox"
+!define WEB_SITE "https://github.com/arkCyber/xTox"
 !define VERSION "1.0.0.0"
 !define DESCRIPTION "xTox Installer"
 !define COPYRIGHT "The Tox Project"
@@ -183,7 +183,7 @@ FunctionEnd
 !define MUI_FINISHPAGE_RUN_FUNCTION Launch_xTox_without_Admin
 !define MUI_FINISHPAGE_RUN
 !define MUI_FINISHPAGE_LINK "Find xTox on GitHub"
-!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/xTox/xTox"
+!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/arkCyber/xTox"
 !insertmacro MUI_PAGE_FINISH
 
 Function Launch_xTox_without_Admin
@@ -279,7 +279,7 @@ Section "Install"
   ${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "DisplayVersion" "1.17.5"
   ${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "Publisher" "The xTox Project"
   ${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "UninstallString" "$INSTDIR\uninstall.exe"
-  ${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "URLInfoAbout" "https://xtox.github.io"
+  ${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "URLInfoAbout" "https://github.com/arkCyber/xTox"
 
   # Register the tox: protocol
   ${WriteRegStr} HKCR "tox" "" "URL:tox Protocol"

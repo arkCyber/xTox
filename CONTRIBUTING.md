@@ -32,7 +32,7 @@ it still will be there next time you might need it. `:-)`
 ### Must read
 * If you aren't sure, you can ask on the
   [**IRC channel**](https://web.libera.chat/#xtox) or read our
-  [**wiki**](https://github.com/xTox/xTox/wiki) first.
+  [**wiki**](https://github.com/arkCyber/xTox/wiki) first.
 * Do a quick **search**. Others might have already reported the issue.
 * Write in **English**!
 * Provide **version** information (you can find version numbers in menu
@@ -80,7 +80,7 @@ simple rules we need to keep xTox a "smooth experience" for everybody involved.
   change is needed.
 * If your commit fixes a reported issue (for example #4134), add the following
   message to the commit `Fixes #4134.`.  [Here is an
-  example](https://github.com/xTox/xTox/commit/87160526d5bafcee7869d6741a06045e13d731d5).
+  example](https://github.com/arkCyber/xTox/commit/87160526d5bafcee7869d6741a06045e13d731d5).
 
 
 ## Pull request
@@ -261,7 +261,7 @@ not, it doesn't need testing until PR author fixes merge conflicts.  You might
 want to leave a comment on the PR saying that it needs a rebase :smile:
 
 As for testing itself, there's a nice entry on the wiki:
-https://github.com/xTox/xTox/wiki/Testing
+https://github.com/arkCyber/xTox/wiki/Testing
 
 
 ## Git config
@@ -301,6 +301,6 @@ Symbols that should be forbidden for filenames under Windows:
 `<` `>` `:` `"` `/` `\` `|` `?` `*`
 
 
-[pull request]: https://github.com/xTox/xTox/pulls
+[pull request]: https://github.com/arkCyber/xTox/pulls
 [`test-pr.sh`]: /test-pr.sh
 [coding_standards.md]: /doc/coding_standards.md

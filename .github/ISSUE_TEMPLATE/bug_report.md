@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a report to help us improve xTox
 title: ''
-labels: 'S-bug'
+labels: 'bug'
 assignees: ''
 ---
 

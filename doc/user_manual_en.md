@@ -331,7 +331,7 @@ router or connection, you can try to disable them.
 
 * __Reset to default settings:__ Use this button to revert any changes you made
   to the xTox settings. *Note that current implentation [is
-  buggy](https://github.com/xTox/xTox/issues/3664) and aside from settings also
+  buggy](https://github.com/arkCyber/xTox/issues/3664) and aside from settings also
   friend [aliases] will be removed!*
 
 ### About
@@ -457,7 +457,7 @@ xTox provides support for custom emoji packs. To install a new emoji pack
 put it in `%LOCALAPPDATA%/emoticons` for Windows or `~/.local/share/emoticons`
 for Linux. If these directories don't exist, you have to create them. The emoji
 files have to be in a subfolder also containing `emoticon.xml`, see the
-structure of https://github.com/xTox/xTox/tree/v1.5.2/smileys for further
+structure of https://github.com/arkCyber/xTox/tree/v1.5.2/smileys for further
 information.
 
 ## Bootstrap Nodes

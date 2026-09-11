@@ -112,7 +112,7 @@ void AboutForm::replaceVersions()
     qDebug() << "AboutForm not showing updates, xTox built without UPDATE_CHECK";
 #endif
 
-    QString commitLink = "https://github.com/xTox/xTox/commit/" + QString(GIT_VERSION);
+    QString commitLink = "https://github.com/arkCyber/xTox/commit/" + QString(GIT_VERSION);
     bodyUI->gitVersion->setText(
         tr("Commit hash: %1").arg(createLink(commitLink, QString(GIT_VERSION))));
 
@@ -135,7 +135,7 @@ void AboutForm::replaceVersions()
                                 "(links, images, etc go here)\n\n"
                                 "----\n\n"
                                 "More information on how to write good bug reports in the wiki: "
-                                "https://github.com/xTox/xTox/wiki/Writing-Useful-Bug-Reports.\n\n"
+                                "https://github.com/arkCyber/xTox/wiki/Writing-Useful-Bug-Reports.\n\n"
                                 "Please remove any unnecessary template section before submitting.")
                             .arg(QSysInfo::prettyProductName(), GIT_DESCRIBE, GIT_VERSION,
                                  TOXCORE_VERSION, QT_VERSION_STR);
@@ -150,14 +150,14 @@ void AboutForm::replaceVersions()
 
            "`%1` is replaced by translation of `bug tracker`"
            "\n`%2` is replaced by translation of `Writing Useful Bug Reports`")
-            .arg(createLink("https://github.com/xTox/xTox/issues",
+            .arg(createLink("https://github.com/arkCyber/xTox/issues",
                             tr("bug-tracker", "Replaces `%1` in the `A list of all known…`")))
-            .arg(createLink("https://github.com/xTox/xTox/wiki/Writing-Useful-Bug-Reports",
+            .arg(createLink("https://github.com/arkCyber/xTox/wiki/Writing-Useful-Bug-Reports",
                             tr("Writing Useful Bug Reports",
                                "Replaces `%2` in the `A list of all known…`"))));
 
     bodyUI->clickToReport->setText(
-        createLink("https://github.com/xTox/xTox/issues/new?body=" + QString::fromUtf8(QUrl(issueBody).toEncoded()),
+        createLink("https://github.com/arkCyber/xTox/issues/new?body=" + QString::fromUtf8(QUrl(issueBody).toEncoded()),
                    QString("<b>%1</b>").arg(tr("Click here to report a bug."))));
 
 
@@ -167,7 +167,7 @@ void AboutForm::replaceVersions()
             .arg(
                 tr("See a full list of %1 at Github",
                    "`%1` is replaced with translation of word `contributors`")
-                    .arg(createLink("https://xtox.github.io/gitstats/authors.html",
+                    .arg(createLink("https://github.com/arkCyber/xTox/graphs/contributors",
                                     tr("contributors", "Replaces `%1` in `See a full list of…`"))));
 
     bodyUI->authorInfo->setText(authorInfo);

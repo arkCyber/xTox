@@ -1,6 +1,6 @@
 Welcome to the xTox for OS X internal nightly installer!
 
-Please report all bugs to https://github.com/xTox/xTox
+Please report all bugs to https://github.com/arkCyber/xTox
 
 ########################################################
 ##         WARNING: Install me to your user ONLY       

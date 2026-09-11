@@ -47,7 +47,7 @@ add_remote() {
 
     # change to https if needed
     [[ "$@" == "https" ]] \
-        && local remote_url="https://github.com/xTox/xTox.git"
+        && local remote_url="https://github.com/arkCyber/xTox.git"
 
     is_remote_present $remote_name \
         || git remote add $remote_name "${remote_url}"

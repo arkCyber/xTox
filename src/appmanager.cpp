@@ -75,7 +75,7 @@ void logMessageHandler(QtMsgType type, const QMessageLogContext& ctxt, const QSt
     {
         // snorenotify logs this when we call requestCloseNotification correctly. The behaviour still works, so we'll
         // just mask the warning for now. The issue has been reported upstream:
-        // https://github.com/xTox/xTox/pull/6073#pullrequestreview-420748519
+        // https://github.com/arkCyber/xTox/pull/6073#pullrequestreview-420748519
         return;
     }
 

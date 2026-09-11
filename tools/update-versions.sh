@@ -51,9 +51,9 @@ update_osx() {
 
 update_readme() {
     cd "$BASE_DIR"
-    sed -ri "s|(github.com/xTox/xTox/releases/download/v)$VERSION_PATTERN|\1$@|g" README.md
+    sed -ri "s|(github.com/arkCyber/xTox/releases/download/v)$VERSION_PATTERN|\1$@|g" README.md
     # for flatpak and AppImage
-    sed -ri "s|(github.com/xTox/xTox/releases/download/v$VERSION_PATTERN/xTox-v)$VERSION_PATTERN|\1$@|g" README.md
+    sed -ri "s|(github.com/arkCyber/xTox/releases/download/v$VERSION_PATTERN/xTox-v)$VERSION_PATTERN|\1$@|g" README.md
 }
 
 update_appdata() {

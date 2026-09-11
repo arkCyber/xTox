@@ -261,7 +261,7 @@ the repository:
 
 ```bash
 cd /home/$USER
-git clone https://github.com/xTox/xTox.git xTox
+git clone https://github.com/arkCyber/xTox.git xTox
 cd xTox
 ```
 
@@ -423,7 +423,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 First, clone xTox.
 
 ```bash
-git clone https://github.com/xTox/xTox
+git clone https://github.com/arkCyber/xTox
 cd xTox
 ```
 

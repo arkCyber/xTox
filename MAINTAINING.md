@@ -60,7 +60,7 @@ git config --global alias.logs 'log --show-signature'
   which does that for you automatically.
 - **use** [`merge-pr.sh`] script to merge PRs. First checkout the target
   branch, usually either `master` or a release dev branch e.g. `v1.17-dev`,
-  make sure it's up to date with xTox/xTox, then e.g. `./merge-pr.sh 1234`.
+  make sure it's up to date with arkCyber/xTox, then e.g. `./merge-pr.sh 1234`.
 
   You don't have to use it, but then you're running into risk of breaking
   CI build of master & other PRs, since it verifies all commit messages,
@@ -84,7 +84,7 @@ git config --global alias.logs 'log --show-signature'
 # Continous Integration
 
 All CI is done through GitHub actions. Nightly builds are published to
-xTox/xTox releases.
+arkCyber/xTox releases.
 
 # Issues
 
@@ -260,4 +260,4 @@ helping for a while, ask to be added to the `xTox` organization on GitHub.
 [Flathub repository]: https://github.com/flathub/io.github.xtox.xTox
 [`./flatpak/io.github.xtox.xTox.json`]: flatpak/io.github.xtox.xTox.json
 [the Flathub build bot]: https://flathub.org/builds/#/
-[xTox-nightly-release]: https://github.com/xTox/xTox-nightly-releases
+[xTox-nightly-release]: https://github.com/arkCyber/xTox-nightly-releases

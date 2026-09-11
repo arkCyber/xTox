@@ -172,8 +172,8 @@ const QVector<StringPair> MIXED_FORMATTING_SPECIAL_CASES {
 #define MAKE_WWW_LINK(url) "<a href=\"http://" url "\">" url "</a>"
 
 const QVector<QPair<QString, QString>> URL_CASES {
-    PAIR_FORMAT("https://github.com/xTox/xTox/issues/4233",
-                MAKE_LINK("https://github.com/xTox/xTox/issues/4233")),
+    PAIR_FORMAT("https://github.com/arkCyber/xTox/issues/4233",
+                MAKE_LINK("https://github.com/arkCyber/xTox/issues/4233")),
     PAIR_FORMAT("www.youtube.com", MAKE_WWW_LINK("www.youtube.com")),
     PAIR_FORMAT("https://url.com/some*url/some*more*url/",
                 MAKE_LINK("https://url.com/some*url/some*more*url/")),

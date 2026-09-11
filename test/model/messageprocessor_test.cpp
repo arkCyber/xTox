@@ -106,7 +106,7 @@ void TestMessageProcessor::testSelfMention()
     processedMessage = messageProcessor.processIncomingCoreMessage(false, "NewUserName: hi");
     QVERIFY(messageHasSelfMention(processedMessage));
 
-    // Regression tests for: https://github.com/xTox/xTox/issues/2119
+    // Regression tests for: https://github.com/arkCyber/xTox/issues/2119
     {
         // Empty usernames should not match
         sharedParams.onUserNameSet("");

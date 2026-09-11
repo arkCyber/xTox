@@ -594,7 +594,13 @@ QList<History::HistMessage> History::getMessagesForChat(const ChatId& chatId, si
 
         // Intentionally arrange query so message types are at the end so we don't have to think
         // about the iterator jumping around after handling the different types.
-        assert(messageType.size() == 1);
+        // message_type comes from the (untrusted) profile database; only a single
+        // character is meaningful. Skip a corrupt row instead of relying on an
+        // assert that release builds compile out.
+        if (messageType.size() != 1) {
+            qWarning() << "Ignoring history entry with an invalid message type";
+            return;
+        }
         switch (messageType[0].toLatin1()) {
         case 'T': {
             it = std::next(row.begin(), messageOffset);

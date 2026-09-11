@@ -213,7 +213,7 @@ void TestDbSchema::test1to2()
     delivered message, indicating they were stuck, to a new table,
     `broken_messages`, preventing them from ever being sent in the future.
 
-    https://github.com/xTox/xTox/issues/5776
+    https://github.com/arkCyber/xTox/issues/5776
     */
 
     auto db = std::shared_ptr<RawDatabase>{new RawDatabase{testDatabaseFile->fileName(), {}, {}}};

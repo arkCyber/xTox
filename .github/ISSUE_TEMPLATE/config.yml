@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Question or help
-    url: https://github.com/xTox/xTox/discussions
+    url: https://github.com/arkCyber/xTox/discussions
     about: Ask questions and get help from the community.
   - name: Security vulnerability
-    url: https://github.com/xTox/xTox/security/advisories/new
+    url: https://github.com/arkCyber/xTox/security/advisories/new
     about: Please report security issues privately, not in a public issue.

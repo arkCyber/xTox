@@ -23,8 +23,6 @@
 #include <QByteArray>
 #include <QString>
 
-#include <cassert>
-
 /**
  * @class ToxPk
  * @brief This class represents a Tox Public Key, which is a part of Tox ID.
@@ -75,7 +73,9 @@ ToxPk::ToxPk(const QString& pk)
     if (pk.length() == numHexChars) {
         return QByteArray::fromHex(pk.toLatin1());
     } else {
-        assert(!"ToxPk constructed with invalid length string");
+        // The string comes from untrusted sources (settings files, Tox URIs,
+        // ...). Don't assert: an invalid length simply yields an empty key,
+        // consistently in debug and release builds.
         return QByteArray(); // invalid pk string
     }
     }())

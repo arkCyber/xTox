@@ -39,22 +39,35 @@ struct Version {
     int patch;
 };
 
-Version tagToVersion(QString tagName)
+bool tagToVersion(const QString& tagName, Version& version)
 {
     // capture tag name to avoid showing update available on dev builds which include hash as part of describe
     QRegularExpression versionFormat(versionRegexString);
-    auto matches = versionFormat.match(tagName);
-    assert(matches.lastCapturedIndex() == 3);
+    const auto matches = versionFormat.match(tagName);
 
-    bool ok;
-    auto major = matches.captured(1).toInt(&ok);
-    assert(ok);
-    auto minor = matches.captured(2).toInt(&ok);
-    assert(ok);
-    auto patch = matches.captured(3).toInt(&ok);
-    assert(ok);
+    // The tag name is attacker controlled in the worst case (it comes from a
+    // network response, potentially via a proxy). A failed match/parse must not
+    // be assumed away with an assert (compiled out in release builds), where a
+    // failed toInt() silently yields 0 and could report a bogus update.
+    if (!matches.hasMatch()) {
+        qWarning() << "Could not parse a version out of tag" << tagName;
+        return false;
+    }
 
-    return {major, minor, patch};
+    bool okMajor = false;
+    bool okMinor = false;
+    bool okPatch = false;
+    const int major = matches.captured(1).toInt(&okMajor);
+    const int minor = matches.captured(2).toInt(&okMinor);
+    const int patch = matches.captured(3).toInt(&okPatch);
+
+    if (!okMajor || !okMinor || !okPatch) {
+        qWarning() << "Could not parse a version out of tag" << tagName;
+        return false;
+    }
+
+    version = Version{major, minor, patch};
+    return true;
 }
 
 bool isUpdateAvailable(Version current, Version available)
@@ -152,8 +165,14 @@ void UpdateCheck::handleResponse(QNetworkReply* reply)
         return;
     }
 
-    auto currentVer = tagToVersion(GIT_DESCRIBE);
-    auto availableVer = tagToVersion(latestVersion);
+    Version currentVer{};
+    Version availableVer{};
+    if (!tagToVersion(GIT_DESCRIBE, currentVer) || !tagToVersion(latestVersion, availableVer)) {
+        qWarning() << "Failed to parse version information, skipping update check";
+        emit updateCheckFailed();
+        reply->deleteLater();
+        return;
+    }
 
     if (isUpdateAvailable(currentVer, availableVer)) {
         qInfo() << "Update available to version" << latestVersion;

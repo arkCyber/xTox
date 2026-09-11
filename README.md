@@ -8,9 +8,9 @@
 file transfer, built on the [Tox](https://tox.chat) protocol.**
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3%2B-blue.svg)](LICENSE)
-[![Latest release](https://img.shields.io/github/v/release/xTox/xTox?include_prereleases&sort=semver)](https://github.com/xTox/xTox/releases/latest)
-[![Build status](https://github.com/xTox/xTox/actions/workflows/build-test-deploy.yaml/badge.svg)](https://github.com/xTox/xTox/actions/workflows/build-test-deploy.yaml)
-[![Issues](https://img.shields.io/github/issues/xTox/xTox)](https://github.com/xTox/xTox/issues)
+[![Latest release](https://img.shields.io/github/v/release/arkCyber/xTox?include_prereleases&sort=semver)](https://github.com/arkCyber/xTox/releases/latest)
+[![Build status](https://github.com/arkCyber/xTox/actions/workflows/build-test-deploy.yaml/badge.svg)](https://github.com/arkCyber/xTox/actions/workflows/build-test-deploy.yaml)
+[![Issues](https://img.shields.io/github/issues/xTox/xTox)](https://github.com/arkCyber/xTox/issues)
 [![Platforms](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows%20%7C%20FreeBSD-informational)](#installation)
 [![Qt 5.15](https://img.shields.io/badge/Qt-5.15-brightgreen)](https://www.qt.io)
 
@@ -72,7 +72,7 @@ and upstream attribution are preserved (see [`NOTICE`](NOTICE)).
 ## Installation
 
 Prebuilt installers and packages, when available, are published on the
-[releases page](https://github.com/xTox/xTox/releases).
+[releases page](https://github.com/arkCyber/xTox/releases).
 
 | Platform | Options |
 |----------|---------|
@@ -92,7 +92,7 @@ Full, per-platform instructions (dependencies, CMake options, packaging) live in
 The short version on Linux/macOS:
 
 ```bash
-git clone https://github.com/xTox/xTox.git
+git clone https://github.com/arkCyber/xTox.git
 cd xTox
 mkdir -p _build && cd _build
 cmake .. -DCMAKE_BUILD_TYPE=Release
@@ -109,7 +109,7 @@ Contributions are welcome — bug reports, translations, documentation, design a
 code. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) before opening a pull
 request.
 
-- **Bugs / features:** open an [issue](https://github.com/xTox/xTox/issues).
+- **Bugs / features:** open an [issue](https://github.com/arkCyber/xTox/issues).
 - **Pull requests:** fork the repository, create a topic branch, and follow the
   commit message format checked by `verify-commit-messages.sh`.
 - **Code style:** see [`doc/coding_standards.md`](doc/coding_standards.md) and

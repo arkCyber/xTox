@@ -439,7 +439,7 @@ line. Doxygen keywords like `@brief`, `@param` and `@return` should be used
 such that doxygen can intelligently generate the appropriate documentation.
 
 On all updates to master, doxygen comments are automatically generated for the
-source code, available at https://xtox.github.io/doxygen.
+source code, available at https://arkCyber.github.io/xTox/doxygen.
 
 ```C++
 /*...license info...*/

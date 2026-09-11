@@ -42,7 +42,7 @@ LoginScreen::LoginScreen(Settings& settings_, Style& style,
 {
     ui->setupUi(this);
 
-    // permanently disables maximize button https://github.com/xTox/xTox/issues/1973
+    // permanently disables maximize button https://github.com/arkCyber/xTox/issues/1973
     setWindowFlags(windowFlags() & ~Qt::WindowMaximizeButtonHint);
     setFixedSize(size());
 

@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea or improvement for xTox
 title: ''
-labels: 'S-feature'
+labels: 'enhancement'
 assignees: ''
 ---
 

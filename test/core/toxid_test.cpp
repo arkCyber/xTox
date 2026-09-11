@@ -42,6 +42,7 @@ private slots:
     void clearTest();
     void copyTest();
     void validationTest();
+    void invalidInputTest();
 };
 
 void TestToxId::toStringTest()
@@ -86,6 +87,38 @@ void TestToxId::validationTest()
     QVERIFY(ToxId(testToxId).isValid());
     QVERIFY(ToxId(newNoSpam).isValid());
     QVERIFY(!ToxId(corrupted).isValid());
+}
+
+/**
+ * @brief Constructing a ToxId from invalid/untrusted input must yield an invalid,
+ *        empty id rather than aborting.
+ * @note The constructors used to validate with assert(), which is compiled out in
+ *       release builds. A corrupt settings file or a hostile Tox URI must not be
+ *       able to crash a debug build either.
+ */
+void TestToxId::invalidInputTest()
+{
+    // Too short / too long strings
+    const ToxId tooShort(QStringLiteral("A369"));
+    QVERIFY(!tooShort.isValid());
+    QVERIFY(tooShort.toString().isEmpty());
+
+    const ToxId tooLong(testToxId + QStringLiteral("FF"));
+    QVERIFY(!tooLong.isValid());
+    QVERIFY(tooLong.toString().isEmpty());
+
+    // Right length, but not hexadecimal
+    const ToxId nonHex(QString(ToxId::numHexChars, QLatin1Char('Z')));
+    QVERIFY(!nonHex.isValid());
+    QVERIFY(nonHex.toString().isEmpty());
+
+    // Byte arrays of the wrong length
+    QVERIFY(!ToxId(QByteArray()).isValid());
+    QVERIFY(!ToxId(QByteArray(ToxId::size - 1, 0)).isValid());
+    QVERIFY(!ToxId(QByteArray(ToxId::size + 1, 0)).isValid());
+
+    const uint8_t shortId[1] = {0};
+    QVERIFY(!ToxId(shortId, 1).isValid());
 }
 
 QTEST_GUILESS_MAIN(TestToxId)

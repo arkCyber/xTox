@@ -48,7 +48,7 @@ if grep_for_invalid
 then
     echo ""
     echo "Above ↑ commits don't conform to commit message format:"
-    echo "https://github.com/xTox/xTox/blob/master/CONTRIBUTING.md#commit-message-format"
+    echo "https://github.com/arkCyber/xTox/blob/master/CONTRIBUTING.md#commit-message-format"
     echo ""
     echo "Please fix."
     echo ""

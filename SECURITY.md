@@ -15,7 +15,7 @@ release on top of it.
 **Please do not report security vulnerabilities through public GitHub issues.**
 
 Instead, report them privately using GitHub's
-[Security Advisories](https://github.com/xTox/xTox/security/advisories/new)
+[Security Advisories](https://github.com/arkCyber/xTox/security/advisories/new)
 feature (repository **Security** tab → *Report a vulnerability*). This keeps the
 report confidential until a fix is available.
 

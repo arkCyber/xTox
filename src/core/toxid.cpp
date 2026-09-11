@@ -24,7 +24,6 @@
 
 #include <QRegularExpression>
 
-#include <cassert>
 #include <cstdint>
 
 const QRegularExpression ToxId::ToxIdRegEx(QString("(^|\\s)[A-Fa-f0-9]{%1}($|\\s)").arg(ToxId::numHexChars));
@@ -75,7 +74,9 @@ ToxId::ToxId(const QString& id)
     if (isToxId(id)) {
         toxId = QByteArray::fromHex(id.toLatin1());
     } else {
-        assert(!"ToxId constructed with invalid length string");
+        // The string comes from untrusted sources (settings files, Tox URIs,
+        // clipboard, ...). Don't assert: an invalid id simply yields an empty,
+        // invalid ToxId, consistently in debug and release builds.
         toxId = QByteArray(); // invalid id string
     }
 }
@@ -117,7 +118,8 @@ void ToxId::constructToxId(const QByteArray& rawId)
     if (rawId.length() == ToxId::size && isToxId(QString::fromUtf8(rawId.toHex()).toUpper())) {
         toxId = QByteArray(rawId); // construct from full toxid
     } else {
-        assert(!"ToxId constructed with invalid input");
+        // Untrusted input (profile database, network, ...): return an empty id
+        // instead of aborting on an assert that is compiled out in release.
         toxId = QByteArray(); // invalid id
     }
 }
