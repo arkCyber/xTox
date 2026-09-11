@@ -178,9 +178,17 @@ void AVForm::setVolume(qreal value)
 
 void AVForm::on_videoModescomboBox_currentIndexChanged(int index)
 {
-    assert(0 <= index && index < videoModes.size());
-    int devIndex = videoDevCombobox->currentIndex();
-    assert(0 <= devIndex && devIndex < videoDeviceList.size());
+    // The index comes from the combo box, and the device/mode lists can be
+    // rebuilt (rescanDevices) while the signal is queued. Validate at runtime:
+    // the asserts used here are compiled out in release builds, where an
+    // out-of-range index would be an out-of-bounds read.
+    if (index < 0 || index >= videoModes.size()) {
+        return;
+    }
+    const int devIndex = videoDevCombobox->currentIndex();
+    if (devIndex < 0 || devIndex >= videoDeviceList.size()) {
+        return;
+    }
 
     QString devName = videoDeviceList[devIndex].first;
     VideoMode newMode = videoModes[index];
@@ -436,7 +444,11 @@ void AVForm::updateVideoModes(int curIndex)
 
 void AVForm::on_videoDevCombobox_currentIndexChanged(int index)
 {
-    assert(0 <= index && index < videoDeviceList.size());
+    // Validate at runtime: the device list may have been rebuilt since the
+    // signal was queued, and asserts are compiled out in release builds.
+    if (index < 0 || index >= videoDeviceList.size()) {
+        return;
+    }
 
     videoSettings->setScreenGrabbed(false);
     QString dev = videoDeviceList[index].first;

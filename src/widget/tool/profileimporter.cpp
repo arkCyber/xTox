@@ -123,7 +123,18 @@ bool ProfileImporter::importProfile(const QString& path)
         QFile(profilePath).remove();
     }
 
-    QFile::copy(path, profilePath);
+    if (!QFile::copy(path, profilePath)) {
+        // QFile::copy() returns false on failure (e.g. the destination is not
+        // writable); previously the result was ignored and a success message
+        // was shown even when nothing was imported.
+        QMessageBox::warning(this, tr("Profile import failed", "popup title"),
+                             tr("Could not import \"%1\" to \"%2\".",
+                                "popup text: source file, destination file")
+                                 .arg(path, profilePath),
+                             QMessageBox::Ok);
+        return false;
+    }
+
     // no good way to update the ui from here... maybe we need a Widget:refreshUi() function...
     // such a thing would simplify other code as well I believe
     QMessageBox::information(this, tr("Profile imported"),
