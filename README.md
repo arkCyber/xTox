@@ -92,7 +92,7 @@ Full, per-platform instructions (dependencies, CMake options, packaging) live in
 The short version on Linux/macOS:
 
 ```bash
-git clone --recurse-submodules https://github.com/xTox/xTox.git
+git clone https://github.com/xTox/xTox.git
 cd xTox
 mkdir -p _build && cd _build
 cmake .. -DCMAKE_BUILD_TYPE=Release
