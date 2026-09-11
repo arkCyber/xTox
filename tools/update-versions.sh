@@ -1,20 +1,20 @@
 #!/bin/bash
 
-#   Copyright © 2016-2019 by The qTox Project Contributors
+#   Copyright © 2016-2019 by The xTox Project Contributors
 #
-#   This file is part of qTox, a Qt-based graphical interface for Tox.
-#   qTox is libre software: you can redistribute it and/or modify
+#   This file is part of xTox, a Qt-based graphical interface for Tox.
+#   xTox is libre software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
 #   the Free Software Foundation, either version 3 of the License, or
 #   (at your option) any later version.
 #
-#   qTox is distributed in the hope that it will be useful,
+#   xTox is distributed in the hope that it will be useful,
 #   but WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
 #   You should have received a copy of the GNU General Public License
-#   along with qTox.  If not, see <http://www.gnu.org/licenses/>
+#   along with xTox.  If not, see <http://www.gnu.org/licenses/>
 
 
 # script to change versions in the files for osx and windows "packages"
@@ -41,7 +41,7 @@ readonly VERSION_PATTERN="[0-9]+\.[0-9]+\.[0-9]+"
 
 update_windows() {
     ( cd "$BASE_DIR/windows"
-        ./qtox-nsi-version.sh "$@" )
+        ./xtox-nsi-version.sh "$@" )
 }
 
 update_osx() {
@@ -51,16 +51,16 @@ update_osx() {
 
 update_readme() {
     cd "$BASE_DIR"
-    sed -ri "s|(github.com/qTox/qTox/releases/download/v)$VERSION_PATTERN|\1$@|g" README.md
+    sed -ri "s|(github.com/xTox/xTox/releases/download/v)$VERSION_PATTERN|\1$@|g" README.md
     # for flatpak and AppImage
-    sed -ri "s|(github.com/qTox/qTox/releases/download/v$VERSION_PATTERN/qTox-v)$VERSION_PATTERN|\1$@|g" README.md
+    sed -ri "s|(github.com/xTox/xTox/releases/download/v$VERSION_PATTERN/xTox-v)$VERSION_PATTERN|\1$@|g" README.md
 }
 
 update_appdata() {
     cd "$BASE_DIR"/res/
     local isodate="$(date --iso-8601)"
-    sed -ri "s|(<release version=\")$VERSION_PATTERN|\1$@|g" io.github.qtox.qTox.appdata.xml
-    sed -ri "s|(<release version=\"$VERSION_PATTERN\" date=\").{10}|\1"$isodate"|g" io.github.qtox.qTox.appdata.xml
+    sed -ri "s|(<release version=\")$VERSION_PATTERN|\1$@|g" io.github.xtox.xTox.appdata.xml
+    sed -ri "s|(<release version=\"$VERSION_PATTERN\" date=\").{10}|\1"$isodate"|g" io.github.xtox.xTox.appdata.xml
 }
 
 

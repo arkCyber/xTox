@@ -143,8 +143,8 @@ which may lead to problems with video calls.</source>
         <translation>原作者：%1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>正在使用 qTox 版本 %1。</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>正在使用 xTox 版本 %1。</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -159,10 +159,10 @@ which may lead to problems with video calls.</source>
         <translation>Qt 版本：%1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>所有已知问题的列表可以在 GitHub 上我们的 %1 里找到。如果您发现 qTox 的错误或者安全漏洞，请根据我们的维基文章 %2 提交报告。</translation>
+        <translation>所有已知问题的列表可以在 GitHub 上我们的 %1 里找到。如果您发现 xTox 的错误或者安全漏洞，请根据我们的维基文章 %2 提交报告。</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -324,12 +324,12 @@ which may lead to problems with video calls.</source>
         <translation>有更新可用</translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
-        <translation>qTox 已经是最新的 ✓</translation>
+        <source>xTox is up to date ✓</source>
+        <translation>xTox 已经是最新的 ✓</translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
-        <translation>当前正在运行未测试/不稳定的 qTox 版本</translation>
+        <source>Currently running an untested/unstable version of xTox</source>
+        <translation>当前正在运行未测试/不稳定的 xTox 版本</translation>
     </message>
 </context>
 <context>
@@ -464,8 +464,8 @@ which may lead to problems with video calls.</source>
         <translation>高级</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
-        <translation>除非您 %1 知道自己在做什么，否则请 %2 改变这里的任何设置。此处所做的更改可能导致 qTox 出现问题，甚至导致数据丢失，比如聊天历史记录丢失。%3</translation>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
+        <translation>除非您 %1 知道自己在做什么，否则请 %2 改变这里的任何设置。此处所做的更改可能导致 xTox 出现问题，甚至导致数据丢失，比如聊天历史记录丢失。%3</translation>
     </message>
     <message>
         <source>really</source>
@@ -480,8 +480,8 @@ which may lead to problems with video calls.</source>
         <translation>重要注意事项</translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
-        <translation>此处的更改在重启 qTox 后才会生效。</translation>
+        <source>Changes here are applied only after restarting xTox.</source>
+        <translation>此处的更改在重启 xTox 后才会生效。</translation>
     </message>
     <message>
         <source>Reset settings</source>
@@ -647,8 +647,8 @@ which may lead to problems with video calls.</source>
         <translation>发送文件</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>qTox 无法打开 %1</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>xTox 无法打开 %1</translation>
     </message>
     <message>
         <source>Copy</source>
@@ -660,8 +660,8 @@ which may lead to problems with video calls.</source>
         <translation>无法打开临时文件</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
-        <translation>qTox 无法保存截图</translation>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
+        <translation>xTox 无法保存截图</translation>
     </message>
     <message>
         <source>Call duration: </source>
@@ -1091,8 +1091,8 @@ so you can save the file on Windows.</source>
         <translation>通用设置</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>翻译将在qTox重启后生效。</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>翻译将在xTox重启后生效。</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1107,8 +1107,8 @@ so you can save the file on Windows.</source>
         <translation>最小化到托盘</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>开机自动启动 qTox（当前账户）。</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>开机自动启动 xTox（当前账户）。</translation>
     </message>
     <message>
         <source>Show contacts&apos; status changes</source>
@@ -1132,9 +1132,9 @@ so you can save the file on Windows.</source>
         <translation>使用亮色的托盘图标。</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox 将在启动时最小化到系统托盘。</translation>
+        <translation>xTox 将在启动时最小化到系统托盘。</translation>
     </message>
     <message>
         <source>Autostart</source>
@@ -1181,17 +1181,17 @@ so you can save the file on Windows.</source>
         <translation> MB</translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
-        <translation>按下最小化（_）后 qTox 将最小化到托盘，
+        <translation>按下最小化（_）后 xTox 将最小化到托盘，
 而不是系统任务栏。</translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
-        <translation>按下关闭 （X） 后 qTox 将关闭到托盘，
+        <translation>按下关闭 （X） 后 xTox 将关闭到托盘，
 而不是完全关闭。</translation>
     </message>
     <message>
@@ -1597,8 +1597,8 @@ You may want to create one.</source>
         <translation>密码错误。</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>如果账户没有密码，qTox 可以跳过登录界面</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>如果账户没有密码，xTox 可以跳过登录界面</translation>
     </message>
     <message>
         <source>Username input field</source>
@@ -1766,9 +1766,9 @@ Please make sure to enter the same password twice.</source>
         <translation>可执行文件</translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translation>你请求 qTox 打开一个可执行文件。可执行文件可能会破坏您的计算机。确定要打开此文件吗？</translation>
+        <translation>你请求 xTox 打开一个可执行文件。可执行文件可能会破坏您的计算机。确定要打开此文件吗？</translation>
     </message>
 </context>
 <context>
@@ -1973,8 +1973,8 @@ If you are getting spammed with friend requests, change the NoSpam.</source>
         <translation>从密码获取密钥失败，该帐户将不会使用新的密码。</translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation>使用 qTox 与他人交流</translation>
+        <source>Toxing on xTox</source>
+        <translation>使用 xTox 与他人交流</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2305,8 +2305,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>错误</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>qTox 无法打开您的聊天记录，将会禁用它们。</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>xTox 无法打开您的聊天记录，将会禁用它们。</translation>
     </message>
     <message>
         <source>None</source>
@@ -2501,8 +2501,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>无法加载聊天记录</translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
-        <translation>数据库版本 (%1) 比我们当前支持的 (%2) 更新。请升级 qTox 。</translation>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
+        <translation>数据库版本 (%1) 比我们当前支持的 (%2) 更新。请升级 xTox 。</translation>
     </message>
 </context>
 <context>
@@ -2531,9 +2531,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>单击并拖动以选择一个区域。按 %1 以隐藏/显示 qTox 窗口，或 %2 来取消。</translation>
+        <translation>单击并拖动以选择一个区域。按 %1 以隐藏/显示 xTox 窗口，或 %2 来取消。</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2546,9 +2546,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>ESC</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>按 %1 键发送所选区域的屏幕截图，%2 键以隐藏/显示 qTox 窗口，或 %3 键取消屏幕截图。</translation>
+        <translation>按 %1 键发送所选区域的屏幕截图，%2 键以隐藏/显示 xTox 窗口，或 %3 键取消屏幕截图。</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2672,8 +2672,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>未能加载个人设置</translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
-        <translation>无法将设置从版本 %1 升级到版本 %2。无法启动 qTox。</translation>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
+        <translation>无法将设置从版本 %1 升级到版本 %2。无法启动 xTox。</translation>
     </message>
     <message>
         <source>Failed to load global settings</source>
@@ -2740,8 +2740,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>尺寸： </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation>qTox 重新启动之前可能不会加载新的文本样式设置。</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation>xTox 重新启动之前可能不会加载新的文本样式设置。</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2768,7 +2768,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>新消息</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
         <translation>收到新消息并且没有打开的窗口时打开窗口。</translation>
     </message>
@@ -2987,7 +2987,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation>显示</translation>
     </message>
     <message>
@@ -3020,9 +3020,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Toxcore 无法启动，应用程序将在您关闭此消息后终止。</translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
-        <translation>Toxcore 无法使用代理设置启动。qTox 不能运行；请修改设置并重新启动。</translation>
+        <translation>Toxcore 无法使用代理设置启动。xTox 不能运行；请修改设置并重新启动。</translation>
     </message>
     <message>
         <source>Couldn&apos;t send friend request</source>

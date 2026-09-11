@@ -1,20 +1,20 @@
 /*
-    Copyright © 2014-2019 by The qTox Project Contributors
+    Copyright © 2014-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "chatform.h"
@@ -193,10 +193,9 @@ ChatForm::ChatForm(Profile& profile_, Friend* chatFriend, IChatLog& chatLog_,
     connect(msgEdit, &ChatTextEdit::enterPressed, this, &ChatForm::sendImageFromPreview);
     connect(msgEdit, &ChatTextEdit::escapePressed, this, &ChatForm::cancelImagePreview);
     connect(statusMessageLabel, &CroppingLabel::customContextMenuRequested, this,
-            [&](const QPoint& pos) {
+            [this](const QPoint& pos) {
                 if (!statusMessageLabel->text().isEmpty()) {
-                    QWidget* sender_ = static_cast<QWidget*>(sender());
-                    statusMessageMenu.exec(sender_->mapToGlobal(pos));
+                    statusMessageMenu.exec(statusMessageLabel->mapToGlobal(pos));
                 }
             });
 
@@ -299,7 +298,7 @@ void ChatForm::onAttachClicked()
         QString fileName = QFileInfo(path).fileName();
         if (!file.exists() || !file.open(QIODevice::ReadOnly)) {
             QMessageBox::warning(this, tr("Unable to open"),
-                                 tr("qTox wasn't able to open %1").arg(fileName));
+                                 tr("xTox wasn't able to open %1").arg(fileName));
             continue;
         }
 
@@ -561,7 +560,7 @@ void ChatForm::dropEvent(QDropEvent* ev)
             file.setFileName(info.absoluteFilePath());
             if (!file.exists() || !file.open(QIODevice::ReadOnly)) {
                 QMessageBox::warning(this, tr("Unable to open"),
-                                     tr("qTox wasn't able to open %1").arg(fileName));
+                                     tr("xTox wasn't able to open %1").arg(fileName));
                 continue;
             }
         }
@@ -624,8 +623,8 @@ void ChatForm::sendImageFromPreview()
     // use ~ISO 8601 for screenshot timestamp, considering FS limitations
     // https://en.wikipedia.org/wiki/ISO_8601
     // Windows has to be supported, thus filename can't have `:` in it :/
-    // Format should be: `qTox_Screenshot_yyyy-MM-dd HH-mm-ss.zzz.png`
-    QString filepath = QString("%1images%2qTox_Image_%3.png")
+    // Format should be: `xTox_Screenshot_yyyy-MM-dd HH-mm-ss.zzz.png`
+    QString filepath = QString("%1images%2xTox_Image_%3.png")
                            .arg(settings.getPaths().getAppDataDirPath())
                            .arg(QDir::separator())
                            .arg(QDateTime::currentDateTime().toString("yyyy-MM-dd HH-mm-ss.zzz"));
@@ -643,7 +642,7 @@ void ChatForm::sendImageFromPreview()
     } else {
         QMessageBox::warning(this,
                              tr("Failed to open temporary file", "Temporary file for screenshot"),
-                             tr("qTox wasn't able to save the screenshot"));
+                             tr("xTox wasn't able to save the screenshot"));
     }
 }
 
@@ -684,7 +683,7 @@ void ChatForm::startCounter()
     if (callDurationTimer) {
         return;
     }
-    callDurationTimer = new QTimer();
+    callDurationTimer = new QTimer(this);
     connect(callDurationTimer, &QTimer::timeout, this, &ChatForm::onUpdateTime);
     callDurationTimer->start(1000);
     timeElapsed.start();

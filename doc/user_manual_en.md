@@ -1,4 +1,4 @@
-# qTox User Manual
+# xTox User Manual
 ## Index
 
 * [Profile corner](#profile-corner)
@@ -36,7 +36,7 @@ Status can be one of:
 * `Online` – green
 * `Away` – yellow
 * `Busy` – red
-* `Offline` – gray, set automatically by qTox when there is no connection to
+* `Offline` – gray, set automatically by xTox when there is no connection to
   the Tox network.
 
 
@@ -45,7 +45,7 @@ Status can be one of:
 Located on the left, below the [profile corner]. Can be sorted e.g. `By
 Activity`.
 
-`By Activity` sorting in qTox is updated whenever client receives something that
+`By Activity` sorting in xTox is updated whenever client receives something that
 is directly aimed at you, and not sent to everyone, that is:
 
 * audio/video call
@@ -96,7 +96,7 @@ Some of the informations listed are:
 * name
 * status message
 * Public Key (PK) – note that PK is only a part of Tox ID and alone can't be
-  used to add the contact e.g. on a different profile. Part not known by qTox
+  used to add the contact e.g. on a different profile. Part not known by xTox
   is the [NoSpam](#nospam).
 
 
@@ -149,7 +149,7 @@ your friends instead of the long Tox ID.
 
 ### Profile
 
-qTox allows you to use multiple Tox IDs with different profiles, each of which
+xTox allows you to use multiple Tox IDs with different profiles, each of which
 can have different nicknames, status messages and friends.
 
 + __Current profile:__ Shows the filename which stores your information.
@@ -175,62 +175,62 @@ In the friend's window you can customize some options for this friend specifical
 ## Settings
 ### General
 
-* __Language:__ Changes which language the qTox interface uses.
-* __Autostart:__ If set, qTox will start when you login on your computer. qTox
+* __Language:__ Changes which language the xTox interface uses.
+* __Autostart:__ If set, xTox will start when you login on your computer. xTox
   will also automatically open the profile which was active when you ticked the
   checkbox, but this only works if your profile isn't encrypted (has no
   password set).
-* __Light icon:__ If set, qTox will use a different icon, which is easier to
+* __Light icon:__ If set, xTox will use a different icon, which is easier to
   see on black backgrounds.
-* __Show system tray icon:__ If set, qTox will show its icon in your system
+* __Show system tray icon:__ If set, xTox will show its icon in your system
   tray.
-    * __Start in tray:__ On start, qTox will only show its tray icon and no
+    * __Start in tray:__ On start, xTox will only show its tray icon and no
       window.
     * __Minimize to tray:__ The minimize button on the top right, will minimize
-      qTox to its tray icon. There won't be a taskbar item.
+      xTox to its tray icon. There won't be a taskbar item.
     * __Close to tray__: The close button on the top right will minimize
-      qTox to its tray icon. There won't be a taskbar item.
-* __Play sound:__ If checked, qTox will play a sound when you get a new
+      xTox to its tray icon. There won't be a taskbar item.
+* __Play sound:__ If checked, xTox will play a sound when you get a new
   message.
-    * __Play sound while Busy__: If checked, qTox will play a sound even
+    * __Play sound while Busy__: If checked, xTox will play a sound even
       when your status is set to `Busy`.
-* __Show contacts' status changes:__ If set, qTox will show contact status
+* __Show contacts' status changes:__ If set, xTox will show contact status
   changes in your chat window.
-* __Faux offline messaging:__ If enabled, qTox will attempt to send messages
+* __Faux offline messaging:__ If enabled, xTox will attempt to send messages
   when a currently offline contact comes online again.
-* __Auto away after (0 to disable):__ After the specified amount of time, qTox
+* __Auto away after (0 to disable):__ After the specified amount of time, xTox
   will set your status to "Away". A setting of 0 will never change your status.
 * __Default directory to save files:__ Allows you to specify the default
   destination for incoming file transfers.
-* __Autoaccept files:__ If set, qTox will automatically accept file transfers
+* __Autoaccept files:__ If set, xTox will automatically accept file transfers
   and put them in the directory specified above.
 
 ### User Interface
 #### Chat
 
 * __Base font:__ You can set a non-default font and its size for the chat. The
-  new font setting will be used for new messages and all messages after qTox
+  new font setting will be used for new messages and all messages after xTox
   has been restarted.
 * __Text Style format:__ see [Message styling](#message-styling) section.
 
 #### New message
 
-* __Open window:__ If checked, the qTox window will be opened when you receive a
+* __Open window:__ If checked, the xTox window will be opened when you receive a
   new message. If you use the multiple windows mode, see
   [Multi Window Mode](#multi-window-mode) for details.
-    * __Focus window:__ If checked, the qTox window will additionally be focused
+    * __Focus window:__ If checked, the xTox window will additionally be focused
       when you receive a new message.
 
 #### Contact list
 
-* __Group chats always notify:__ If set, qTox will notify you on every new
+* __Group chats always notify:__ If set, xTox will notify you on every new
   message in a groupchat.
 * __Place groupchats at top of friend list:__ If checked, your groupchats will
   be at the top of the contacts list instead of being sorted with your other
   contacts.
-* __Compact contact list:__ If set, qTox will use a contact list layout which
+* __Compact contact list:__ If set, xTox will use a contact list layout which
   takes up less screen space.
-* __Multiple windows mode:__ If enabled, the qTox user interface will be split
+* __Multiple windows mode:__ If enabled, the xTox user interface will be split
   into multiple independent windows. For details see [Multi Window
   Mode](#multi-window-mode).
     * __Open each chat in an individual window:__ If checked, a new window will
@@ -239,7 +239,7 @@ In the friend's window you can customize some options for this friend specifical
 
 #### Emoticons
 
-* __Use emoticons:__ If enabled, qTox will replace smileys ( e.g. `:-)` )  with
+* __Use emoticons:__ If enabled, xTox will replace smileys ( e.g. `:-)` )  with
   corresponding graphical emoticons.
 * __Smiley Pack:__ Allows you to choose from different sets of shipped emoticon
   styles.
@@ -247,9 +247,9 @@ In the friend's window you can customize some options for this friend specifical
 
 #### Theme
 
-* __Style:__ Changes the appearance of qTox.
-* __Theme color:__ Changes the colors qTox uses.
-* __Timestamp format:__ Changes the format in which qTox displays message
+* __Style:__ Changes the appearance of xTox.
+* __Theme color:__ Changes the colors xTox uses.
+* __Timestamp format:__ Changes the format in which xTox displays message
   timestamps.
 * __Date format:__ Same as above for the date.
 
@@ -257,10 +257,10 @@ In the friend's window you can customize some options for this friend specifical
 
 * __Send typing notifications:__ If enabled, notify your chat partner when you
   are currently typing.
-* __Keep chat history:__ If enabled, qTox will save your sent and received
+* __Keep chat history:__ If enabled, xTox will save your sent and received
   messages. Encrypt your profile, if you want to encrypt the chat history.
   ***Note*** that disabling history disables `Faux offline messaging`. With
-  disabled history qTox doesn't store messages, so it can't try to re-send
+  disabled history xTox doesn't store messages, so it can't try to re-send
   them.
 
 #### NoSpam
@@ -273,15 +273,15 @@ found in your [User Profile](#user-profile).
 
 #### BlackList
 
-BlackList is a feature of qTox that locally blocks a group member's messages across all your joined groups, in case someone spams a group. You need to put a members public key into the BlackList text box one per line to activate it. Currently qTox doesn't have a method to get the public key from a group member, this will be added in the future.
+BlackList is a feature of xTox that locally blocks a group member's messages across all your joined groups, in case someone spams a group. You need to put a members public key into the BlackList text box one per line to activate it. Currently xTox doesn't have a method to get the public key from a group member, this will be added in the future.
 
 ### Audio/Video
 #### Audio Settings
 
-* __Playback device:__ Select the device qTox should use for all audio output
+* __Playback device:__ Select the device xTox should use for all audio output
   (notifications, calls, etc).
 * __Volume:__ Here you can adjust the playback volume to your needs.
-* __Capture device:__ Select the device qTox should use for audio input in
+* __Capture device:__ Select the device xTox should use for audio input in
   calls.
 * __Gain:__ Set the input volume of your microphone with this slider. When you
   are talking normally, the displayed volume indicator should be in the green
@@ -289,7 +289,7 @@ BlackList is a feature of qTox that locally blocks a group member's messages acr
 
 #### Video Settings
 
-* __Video device:__ Select the video device qTox should use for video calls.
+* __Video device:__ Select the video device xTox should use for video calls.
   "None" will show a dummy picture to your chat partner. "Desktop" will stream
   the content of your screen.
 * __Resolution:__ You can select from the available resolutions and frame rates
@@ -305,19 +305,19 @@ device in the box below.
 ### Advanced
 #### Portable
 
-* __Make Tox portable:__ If enabled, qTox will load/save user data from the
+* __Make Tox portable:__ If enabled, xTox will load/save user data from the
   working directory, instead of ` ~/.config/tox/ `.
 
 #### Connection Settings
 
-* __Enable IPv6 (recommended):__ If enabled, qTox will use IPv4 and IPv6
-  protocols, whichever is available. If disabled, qTox will only use IPv4.
-* __Enable UDP (recommended):__ If enabled, qTox will use TCP and UDP protocols.
-  If disabled, qTox will only use TCP, which lowers the amount of open
+* __Enable IPv6 (recommended):__ If enabled, xTox will use IPv4 and IPv6
+  protocols, whichever is available. If disabled, xTox will only use IPv4.
+* __Enable UDP (recommended):__ If enabled, xTox will use TCP and UDP protocols.
+  If disabled, xTox will only use TCP, which lowers the amount of open
   connections and slightly decreases required bandwidth, but is also slower and
   puts more load on other network participants.
 
-Most users will want both options enabled, but if qTox negatively impacts your
+Most users will want both options enabled, but if xTox negatively impacts your
 router or connection, you can try to disable them.
 
 * __Proxy type:__ If you want to use a proxy, set the type here. "None" disables
@@ -330,14 +330,14 @@ router or connection, you can try to disable them.
 ---
 
 * __Reset to default settings:__ Use this button to revert any changes you made
-  to the qTox settings. *Note that current implentation [is
-  buggy](https://github.com/qTox/qTox/issues/3664) and aside from settings also
+  to the xTox settings. *Note that current implentation [is
+  buggy](https://github.com/xTox/xTox/issues/3664) and aside from settings also
   friend [aliases] will be removed!*
 
 ### About
-* __Version:__ Shows the version of qTox and the libraries it depends on. Please
+* __Version:__ Shows the version of xTox and the libraries it depends on. Please
   append this information to every bug report.
-* __License:__ Shows the license under which the code of qTox is available.
+* __License:__ Shows the license under which the code of xTox is available.
 * __Authors:__ Lists the people who developed this shiny piece of software.
 * __Known Issues:__ Links to our list of known issues and improvements.
 
@@ -352,7 +352,7 @@ Videochats and file transfers are currently unsupported in groupchats.
 
 ## Message Styling
 
-Similar to other messaging applications, qTox supports stylized text formatting.
+Similar to other messaging applications, xTox supports stylized text formatting.
 
 * For **Bold**, surround text in single or double asterisks: `*text*`
  or `**text**`
@@ -364,7 +364,7 @@ Similar to other messaging applications, qTox supports stylized text formatting.
  or `__text__`
 * For **Code**, surround your code in in single backticks: `` `text` ``
 
-Additionally, qTox supports three modes of Markdown parsing:
+Additionally, xTox supports three modes of Markdown parsing:
 
 * `Plaintext`: No text is stylized
 * `Show Formatting Characters`: Stylize text while showing formatting characters
@@ -374,13 +374,13 @@ Additionally, qTox supports three modes of Markdown parsing:
 
 *Note that any change in Markdown preference will require a restart.*
 
-qTox also supports action messages by prefixing a message with `/me`, where
+xTox also supports action messages by prefixing a message with `/me`, where
 `/me` is replaced with your current username. For example `/me likes cats`
-turns into *` * qTox User likes cats`*.
+turns into *` * xTox User likes cats`*.
 
 ## Quotes
 
-qTox has feature to quote selected text in chat window:
+xTox has feature to quote selected text in chat window:
 
 1. Select the text you want to quote.
 2. Right-click on the selected text and choose "Quote selected text" in the
@@ -391,7 +391,7 @@ pretty formatting.
 ## Friend- and Groupinvites
 
 To invite a friend to a chat with you, you have to click the `+` button on the
-bottom left of the qTox window. The "Add a friend" Tab allows you to enter the
+bottom left of the xTox window. The "Add a friend" Tab allows you to enter the
 Tox ID of your friend, or the username of a [ToxMe service] if your friend
 registered there.
 
@@ -404,7 +404,7 @@ also displayed here and you can accept and decline them.
 
 ## Multi Window Mode
 
-In this mode, qTox will separate its main window into a single contact list and
+In this mode, xTox will separate its main window into a single contact list and
 one or multiple chat windows, which allows you to have multiple conversations on
 your screen at the same time. Additionally you can manually group chats into a
 window by dragging and dropping them onto each other. This mode can be activated
@@ -418,7 +418,7 @@ The following shortcuts are currently supported:
 |------------------------------|--------------------------------|
 | `Arrow up`                   | Paste last sent message        |
 | `CTRL` + `SHIFT` + `L`       | Clear chat                     |
-| `CTRL` + `q`                 | Quit qTox                      |
+| `CTRL` + `q`                 | Quit xTox                      |
 | `CTRL` + `Page Down`         | Switch to the next contact     |
 | `CTRL` + `Page Up`           | Switch to the previous contact |
 | `CTRL` + `TAB`               | Switch to the next contact     |
@@ -448,21 +448,21 @@ Protocol: NONE, HTTP or SOCKS5 <br>
 Address: Proxy address <br>
 Port: Proxy port number (0-65535) <br>
 Example input: <br>
-`qtox -P SOCKS5:192.168.0.1:2121` <br>
-`qtox -P none`
+`xtox -P SOCKS5:192.168.0.1:2121` <br>
+`xtox -P none`
 
 ## Emoji Packs
 
-qTox provides support for custom emoji packs. To install a new emoji pack
+xTox provides support for custom emoji packs. To install a new emoji pack
 put it in `%LOCALAPPDATA%/emoticons` for Windows or `~/.local/share/emoticons`
 for Linux. If these directories don't exist, you have to create them. The emoji
 files have to be in a subfolder also containing `emoticon.xml`, see the
-structure of https://github.com/qTox/qTox/tree/v1.5.2/smileys for further
+structure of https://github.com/xTox/xTox/tree/v1.5.2/smileys for further
 information.
 
 ## Bootstrap Nodes
 
-qTox uses bootstrap nodes to find its way in to the DHT. The list of nodes is
+xTox uses bootstrap nodes to find its way in to the DHT. The list of nodes is
 stored in `~/.config/tox/` on Linux, `%APPDATA%\Roaming\tox` on Windows, and
 `~/Library/Application Support/Tox` on macOS. `bootstrapNodes.example.json`
 stores the default list. If a new list is placed at `bootstrapNodes.json`, it
@@ -493,8 +493,8 @@ public key, and which changes on every start of a client, so it's best to use a
 
 # Extensions
 
-qTox supports extra features through the use of extensions to the tox protocol. Not all contacts are going to support these extensions.
+xTox supports extra features through the use of extensions to the tox protocol. Not all contacts are going to support these extensions.
 
-For most cases you won't have to do anything, but you may wonder why behavior of chats is different for some friends. There is a puzzle piece icon to the left of your contact's name in the top of a chat. If it's green that means that they support all the features qTox cares about. If it's yellow it means some of the features are supported. If it's red it means that they don't support any extensions.
+For most cases you won't have to do anything, but you may wonder why behavior of chats is different for some friends. There is a puzzle piece icon to the left of your contact's name in the top of a chat. If it's green that means that they support all the features xTox cares about. If it's yellow it means some of the features are supported. If it's red it means that they don't support any extensions.
 
-You can hover over the icon to see which extensions they support. qTox should dynamically enable/disable features based on the extension set of your friend.
+You can hover over the icon to see which extensions they support. xTox should dynamically enable/disable features based on the extension set of your friend.

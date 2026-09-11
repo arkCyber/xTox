@@ -139,8 +139,8 @@ which may lead to problems with video calls.</source>
         <translation>Αρχικός δημιουργός: %1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>Χρησιμοποιείτε την qTox έκδοση %1.</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>Χρησιμοποιείτε την xTox έκδοση %1.</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -155,10 +155,10 @@ which may lead to problems with video calls.</source>
         <translation>Qt έκδοση: %1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>Μια λίστα με όλα τα γνωστά θέματα μπορεί να βρεθεί στο %1 μας στο Github. Αν ανακαλύψετε κάποιο σφάλμα ή κενό ασφαλείας στο εσωτερικό του qTox, παρακαλούμε να το αναφέρετε σύμφωνα με τις οδηγίες στο % 2 του άρθρου wiki μας.</translation>
+        <translation>Μια λίστα με όλα τα γνωστά θέματα μπορεί να βρεθεί στο %1 μας στο Github. Αν ανακαλύψετε κάποιο σφάλμα ή κενό ασφαλείας στο εσωτερικό του xTox, παρακαλούμε να το αναφέρετε σύμφωνα με τις οδηγίες στο % 2 του άρθρου wiki μας.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -320,11 +320,11 @@ which may lead to problems with video calls.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
+        <source>xTox is up to date ✓</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
+        <source>Currently running an untested/unstable version of xTox</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -493,11 +493,11 @@ which may lead to problems with video calls.</source>
         <translation>Αρχεία καταγραφής (*.log)</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
+        <source>Changes here are applied only after restarting xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -648,8 +648,8 @@ which may lead to problems with video calls.</source>
         <translation>Αδυναμία ανοίγματος</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>Το qTox δεν κατάφερε να ανοίξει το %1</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>Το xTox δεν κατάφερε να ανοίξει το %1</translation>
     </message>
     <message>
         <source>Bad idea</source>
@@ -661,8 +661,8 @@ which may lead to problems with video calls.</source>
         <translation>Αποτυχία ανοίγματος προσωρινού αρχείου</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
-        <translation>Το qTox δεν κατάφερε να σώσει το στιγμιότυπο εικόνας</translation>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
+        <translation>Το xTox δεν κατάφερε να σώσει το στιγμιότυπο εικόνας</translation>
     </message>
     <message>
         <source>Call duration: </source>
@@ -1087,16 +1087,16 @@ so you can save the file on Windows.</source>
         <translation>Γενικές Ρυθμίσεις</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>Η μετάφραση ενδέχεται να μην φορτωθεί μέχρι να γίνει επανεκκίνηση του qTox.</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>Η μετάφραση ενδέχεται να μην φορτωθεί μέχρι να γίνει επανεκκίνηση του xTox.</translation>
     </message>
     <message>
         <source>Language:</source>
         <translation>Γλώσσα:</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>Εκκίνηση του qTox κατά την εκκίνηση του λειτουργικού συστήματος (τρέχον προφίλ).</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>Εκκίνηση του xTox κατά την εκκίνηση του λειτουργικού συστήματος (τρέχον προφίλ).</translation>
     </message>
     <message>
         <source>Autostart</source>
@@ -1116,9 +1116,9 @@ so you can save the file on Windows.</source>
         <translation>Εμφάνιση εικονίδιου περιοχής ειδοποιήσεων συστήματος</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>Το qTox θα εκκινηθεί ελαχιστοποιημένο στη περιοχή κατάστασης.</translation>
+        <translation>Το xTox θα εκκινηθεί ελαχιστοποιημένο στη περιοχή κατάστασης.</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1177,13 +1177,13 @@ so you can save the file on Windows.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
         <translation type="unfinished"></translation>
@@ -1528,8 +1528,8 @@ Share it with your friends to begin chatting.</source>
         <translation>Δημιουργία Προφίλ</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>Εάν το προφίλ δεν έχει κωδικό πρόσβασης, το qTox μπορεί να παραλείψει την οθόνη σύνδεσης</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>Εάν το προφίλ δεν έχει κωδικό πρόσβασης, το xTox μπορεί να παραλείψει την οθόνη σύνδεσης</translation>
     </message>
     <message>
         <source>Load automatically</source>
@@ -1760,9 +1760,9 @@ Please make sure to enter the same password twice.</source>
         <translation type="unfinished">Εκτελέσιμο αρχείο</translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translation type="unfinished">Έχετε ζητήσει απ&apos; το qTox να ανοίξει ένα εκτελέσιμο αρχείο. Τα εκτελέσιμα αρχεία μπορούν ενδεχομένως να βλάψουν τον υπολογιστή σας. Είστε βέβαιοι ότι θέλετε να ανοίξετε αυτό το αρχείο;</translation>
+        <translation type="unfinished">Έχετε ζητήσει απ&apos; το xTox να ανοίξει ένα εκτελέσιμο αρχείο. Τα εκτελέσιμα αρχεία μπορούν ενδεχομένως να βλάψουν τον υπολογιστή σας. Είστε βέβαιοι ότι θέλετε να ανοίξετε αυτό το αρχείο;</translation>
     </message>
 </context>
 <context>
@@ -1968,8 +1968,8 @@ If you are getting spammed with friend requests, change the NoSpam.</source>
         <translation>Απέτυχε η εξαγωγή κλειδιού από τον κωδικό πρόσβασης, το προφίλ δεν θα χρησιμοποιήσει τον νέο κωδικό πρόσβασης.</translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation type="unfinished">Παρουσία στο qTox</translation>
+        <source>Toxing on xTox</source>
+        <translation type="unfinished">Παρουσία στο xTox</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2307,8 +2307,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Σφάλμα</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>Το qTox δεν μπόρεσε να ανοίξει τα αρχεία καταγραφής των συνομιλιών σας, γι&apos; αυτό θα απενεργοποιηθούν.</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>Το xTox δεν μπόρεσε να ανοίξει τα αρχεία καταγραφής των συνομιλιών σας, γι&apos; αυτό θα απενεργοποιηθούν.</translation>
     </message>
     <message>
         <source>Dark</source>
@@ -2493,7 +2493,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2523,9 +2523,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>Κάντε κλικ και σύρετε για να επιλέξτε μια περιοχή. Πατήστε %1 για να εμφανίστε/αποκρύψτε το παράθυρο qTox ή %2 για ακύρωση.</translation>
+        <translation>Κάντε κλικ και σύρετε για να επιλέξτε μια περιοχή. Πατήστε %1 για να εμφανίστε/αποκρύψτε το παράθυρο xTox ή %2 για ακύρωση.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2538,9 +2538,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Διαφυγή (Escape)</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>Πατήστε %1 για να στείλετε ένα στιγμιότυπο εικόνας της επιλεγμένης περιοχής, %2 για να εμφανίστε/αποκρύψτε το παράθυρο qTox, ή %3 για ακύρωση.</translation>
+        <translation>Πατήστε %1 για να στείλετε ένα στιγμιότυπο εικόνας της επιλεγμένης περιοχής, %2 για να εμφανίστε/αποκρύψτε το παράθυρο xTox, ή %3 για ακύρωση.</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2664,7 +2664,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2732,8 +2732,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Μέγεθος: </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation>Η νέα προτίμηση του στυλ κειμένου ενδέχεται να μην φορτωθεί μέχρι να γίνει επανεκκίνηση του qTox.</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation>Η νέα προτίμηση του στυλ κειμένου ενδέχεται να μην φορτωθεί μέχρι να γίνει επανεκκίνηση του xTox.</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2760,9 +2760,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Νέο μήνυμα</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translation>Ανοίξτε το παράθυρο του qTox όταν λαμβάνετε ένα νέο μήνυμα και κανένα παράθυρο δεν θα είναι ανοιχτό ακόμα.</translation>
+        <translation>Ανοίξτε το παράθυρο του xTox όταν λαμβάνετε ένα νέο μήνυμα και κανένα παράθυρο δεν θα είναι ανοιχτό ακόμα.</translation>
     </message>
     <message>
         <source>Open window</source>
@@ -2979,7 +2979,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation>Εμφάνιση</translation>
     </message>
     <message>
@@ -3012,7 +3012,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
         <translation type="unfinished"></translation>
     </message>

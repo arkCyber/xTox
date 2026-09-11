@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#    Copyright © 2017-2019 The qTox Project Contributors
+#    Copyright © 2017-2019 The xTox Project Contributors
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
 
 set -eu -o pipefail
 
-QTOX_DIR="$1"
+XTOX_DIR="$1"
 
 cd "$2"
 BUNDLE_PATH="$(pwd)"
@@ -31,22 +31,22 @@ DMG_DIR="$BUILD_DIR/dmg.tmp"
 APP_VER=$(defaults read "$BUNDLE_PATH/Contents/Info.plist" CFBundleVersion)
 
 if [ ! -d "$BUNDLE_PATH" ]; then
-    echo "Please pass path to qTox.app as an argument!"
+    echo "Please pass path to xTox.app as an argument!"
     exit 1 
 fi
 
 rm -rf "$DMG_DIR"
-rm -f "$BUILD_DIR/qTox.dmg"
+rm -f "$BUILD_DIR/xTox.dmg"
 mkdir "$DMG_DIR"
 cp -r "$BUNDLE_PATH" "$DMG_DIR/"
 
 cd "$DMG_DIR"
 ln -s /Applications "./Install to Applications"
 mkdir .background
-cp -f $QTOX_DIR/osx/background-DMG/qTox-DMG-bak.tiff .background/backgroundImage.tiff
-cp -f $QTOX_DIR/osx/DS_Store-DMG ./.DS_Store
-cp -f $QTOX_DIR/LICENSE ./LICENSE
-cp -f $QTOX_DIR/README.md ./README.md
+cp -f $XTOX_DIR/osx/background-DMG/xTox-DMG-bak.tiff .background/backgroundImage.tiff
+cp -f $XTOX_DIR/osx/DS_Store-DMG ./.DS_Store
+cp -f $XTOX_DIR/LICENSE ./LICENSE
+cp -f $XTOX_DIR/README.md ./README.md
 cd -
 
-hdiutil create -volname "qTox $APP_VER" -srcfolder "$DMG_DIR/" -format UDZO "$BUILD_DIR/qTox.dmg"
+hdiutil create -volname "xTox $APP_VER" -srcfolder "$DMG_DIR/" -format UDZO "$BUILD_DIR/xTox.dmg"

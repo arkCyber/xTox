@@ -1,21 +1,21 @@
 /*
     Copyright © 2013 by Maxim Biro <nurupo.contributions@gmail.com>
-    Copyright © 2014-2019 by The qTox Project Contributors
+    Copyright © 2014-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "settings.h"
@@ -30,7 +30,7 @@
 #include "src/persistence/smileypack.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/imessageboxmanager.h"
-#ifdef QTOX_PLATFORM_EXT
+#ifdef XTOX_PLATFORM_EXT
 #include "src/platform/autorun.h"
 #endif
 #include "src/ipc.h"
@@ -60,7 +60,7 @@
  * which have widget->saveX() and widget->loadX() methods.
  */
 
-const QString Settings::globalSettingsFile = "qtox.ini";
+const QString Settings::globalSettingsFile = "xtox.ini";
 CompatibleRecursiveMutex Settings::bigLock;
 QThread* Settings::settingsThread{nullptr};
 static constexpr int GLOBAL_SETTINGS_VERSION = 1;
@@ -73,7 +73,7 @@ Settings::Settings(IMessageBoxManager& messageBoxManager_)
     , messageBoxManager{messageBoxManager_}
 {
     settingsThread = new QThread();
-    settingsThread->setObjectName("qTox Settings");
+    settingsThread->setObjectName("xTox Settings");
     settingsThread->start(QThread::LowPriority);
     qRegisterMetaType<const ToxEncrypt*>("const ToxEncrypt*");
     moveToThread(settingsThread);
@@ -123,7 +123,7 @@ void Settings::loadGlobal()
     auto upgradeSuccess = GlobalSettingsUpgrader::doUpgrade(*this, globalSettingsVersion, GLOBAL_SETTINGS_VERSION);
     if (!upgradeSuccess) {
         messageBoxManager.showError(tr("Failed to load global settings"),
-            tr("Unable to upgrade settings from version %1 to version %2. Cannot start qTox.")
+            tr("Unable to upgrade settings from version %1 to version %2. Cannot start xTox.")
             .arg(globalSettingsVersion)
             .arg(GLOBAL_SETTINGS_VERSION));
         std::terminate();
@@ -497,7 +497,7 @@ void Settings::loadPersonal(const Profile& profile, bool newProfile)
     auto upgradeSuccess = PersonalSettingsUpgrader::doUpgrade(ps, personalSettingsVersion, PERSONAL_SETTINGS_VERSION);
     if (!upgradeSuccess) {
         messageBoxManager.showError(tr("Failed to load personal settings"),
-            tr("Unable to upgrade settings from version %1 to version %2. Cannot start qTox.")
+            tr("Unable to upgrade settings from version %1 to version %2. Cannot start xTox.")
             .arg(personalSettingsVersion)
             .arg(PERSONAL_SETTINGS_VERSION));
         std::terminate();
@@ -917,7 +917,7 @@ bool Settings::getAutorun() const
 {
     QMutexLocker locker{&bigLock};
 
-#ifdef QTOX_PLATFORM_EXT
+#ifdef XTOX_PLATFORM_EXT
     return Platform::getAutorun(*this);
 #else
     return false;
@@ -926,7 +926,7 @@ bool Settings::getAutorun() const
 
 void Settings::setAutorun(bool newValue)
 {
-#ifdef QTOX_PLATFORM_EXT
+#ifdef XTOX_PLATFORM_EXT
     bool autorun = Platform::getAutorun(*this);
 
     if (newValue != autorun) {
@@ -2259,7 +2259,7 @@ Settings::friendProp& Settings::getOrInsertFriendPropRef(const ToxPk& id)
 
 ICoreSettings::ProxyType Settings::fixInvalidProxyType(ICoreSettings::ProxyType proxyType)
 {
-    // Repair uninitialized enum that was saved to settings due to bug (https://github.com/qTox/qTox/issues/5311)
+    // Repair uninitialized enum that was saved to settings due to bug (https://github.com/xTox/xTox/issues/5311)
     switch (proxyType) {
     case ICoreSettings::ProxyType::ptNone:
     case ICoreSettings::ProxyType::ptSOCKS5:

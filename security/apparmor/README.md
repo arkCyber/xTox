@@ -1,6 +1,6 @@
-# Hardening qTox with AppArmor
+# Hardening xTox with AppArmor
 
-qTox can be confined with AppArmor on Linux to reduce attack vectors in case
+xTox can be confined with AppArmor on Linux to reduce attack vectors in case
 remote code execution exploit is being used. Please note that [MAC's] (of
 course) does not guarantee perfect security, but it will:
 - Deny access to your `~/.bashrc`, `~/.ssh/*`
@@ -19,7 +19,7 @@ files (like `~/.config/QtProject.conf`, caches, etc), opening web links via
 unconfined browsers introduces additional attack vectors, too. So please be
 cautious even with number of security measures applied.
 
-**AppArmor profile attaches only to `/usr/bin/qtox` and `/usr/local/bin/qtox`
+**AppArmor profile attaches only to `/usr/bin/xtox` and `/usr/local/bin/xtox`
 executables by default**. See [Tuning permissions](#tuning-permissions) for
 custom setups.
 
@@ -45,11 +45,11 @@ To enable AppArmor profile on your system, run prepared install script:
 ```
 sudo security/apparmor/x.y.z/install.sh
 ```
-Restart `qTox` if it was already running before enabling AppArmor profile.
+Restart `xTox` if it was already running before enabling AppArmor profile.
 
-## Checking if qTox is actually confined
+## Checking if xTox is actually confined
 
-Run `aa-status` command line utility and check if `qTox` is listed within `X
+Run `aa-status` command line utility and check if `xTox` is listed within `X
 processes are in enforced mode.` list:
 ```
 sudo aa-status
@@ -58,15 +58,15 @@ sudo aa-status
    /usr/lib/ipsec/charon (2421)            
    /usr/sbin/cups-browsed (839)
    ...
-   /usr/bin/qtox (16315) qtox
+   /usr/bin/xtox (16315) xtox
    ...
 ```
 
 Alternatively, use `ps` and `grep`:
 
 ```
-ps auxZ | fgrep qtox
-qtox (enforce)                  vincas   16315  2.0  1.1 1502292 180220 ?      SLl  12:21   0:38 /usr/bin/qtox
+ps auxZ | fgrep xtox
+xtox (enforce)                  vincas   16315  2.0  1.1 1502292 180220 ?      SLl  12:21   0:38 /usr/bin/xtox
 ```
 
 If OK it's marked as `(enforce)`. `unconfined` means AppArmor profile is not
@@ -91,31 +91,31 @@ sudo fgrep DENIED /var/log/audit/audit.log
 
 You will see messages like this:
 ```
-type=AVC msg=audit(1549793273.269:149): apparmor="DENIED" operation="open" profile="qtox" name="/home/vincas/.config/klanguageove
-rridesrc" pid=3037 comm="qtox" requested_mask="r" denied_mask="r" fsuid=1000 ouid=1000
+type=AVC msg=audit(1549793273.269:149): apparmor="DENIED" operation="open" profile="xtox" name="/home/vincas/.config/klanguageove
+rridesrc" pid=3037 comm="xtox" requested_mask="r" denied_mask="r" fsuid=1000 ouid=1000
 ```
 
 This means that `r`ead access was denied to the file
 `/home/vincas/.config/klanguageoverridesrc`, owned by you (ouid 1000), by
-AppArmor profile `qtox` (available in `/etc/apparmor.d/usr.bin.qtox`).
+AppArmor profile `xtox` (available in `/etc/apparmor.d/usr.bin.xtox`).
 
 Please create issue if you detect new AppArmor `DENIED` messages and you believe
 that these denials are relevant for other users too. Meanwhile, workaround by
-adding manual rule. DO NOT modify `/etc/apparmor.d/usr.bin.qtox` directly! See
+adding manual rule. DO NOT modify `/etc/apparmor.d/usr.bin.xtox` directly! See
 [Tuning permissions](#tuning-permissions) for fixing access issues.
 
 ## Tuning permissions
 
 If you need access to files (for file sharing) other than from your `$HOME` or
-mounted media, create/modify `/etc/apparmor.d/tunables/usr.bin.qtox.d/local`
+mounted media, create/modify `/etc/apparmor.d/tunables/usr.bin.xtox.d/local`
 file and append writable path variable:
 
 ```
-@{qtox_additional_rw_dirs} += /path/to/some/directory
+@{xtox_additional_rw_dirs} += /path/to/some/directory
 ```
 
 Alternatively, if you need more custom/advanced rules (not only for file
-access), create/modify `/etc/apparmor.d/local/usr.bin.qtox` file.
+access), create/modify `/etc/apparmor.d/local/usr.bin.xtox` file.
 
 Rule example for reading only, recursively (note the comma!):
 
@@ -138,17 +138,17 @@ If AppArmor restart fails, check syntax errors by invoking AppArmor parser
 directly:
 
 ```
-sudo apparmor_parser -r /etc/apparmor.d/usr.bin.qtox
+sudo apparmor_parser -r /etc/apparmor.d/usr.bin.xtox
 ```
 
-For custom installations, when `qTox` executable is not `/usr/bin/qtox` or
-`/usr/local/bin/qtox`:
-1. create `/etc/apparmor.d/tunables/usr.bin.qtox.d/local`, adding
-   `@{qtox_prefix} += /path/to/your/custom/install/prefix` line.
-2. modify `/etc/apparmor.d/usr.bin.qtox` profile attachement path: `profile qtox
-   /{usr{,local}/bin/qtox,path/to/your/qtox_executable} {`
+For custom installations, when `xTox` executable is not `/usr/bin/xtox` or
+`/usr/local/bin/xtox`:
+1. create `/etc/apparmor.d/tunables/usr.bin.xtox.d/local`, adding
+   `@{xtox_prefix} += /path/to/your/custom/install/prefix` line.
+2. modify `/etc/apparmor.d/usr.bin.xtox` profile attachement path: `profile xtox
+   /{usr{,local}/bin/xtox,path/to/your/xtox_executable} {`
 
-Restart AppArmor and [check](#checking-if-qtox-is-actually-confined) if `qTox`
+Restart AppArmor and [check](#checking-if-xtox-is-actually-confined) if `xTox`
 process under custom path is actually confined.
 
 ## Other resources

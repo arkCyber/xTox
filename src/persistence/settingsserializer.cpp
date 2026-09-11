@@ -1,20 +1,20 @@
 /*
-    Copyright © 2015-2019 by The qTox Project Contributors
+    Copyright © 2015-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "settingsserializer.h"
@@ -25,8 +25,10 @@
 
 #include <QDebug>
 #include <QFile>
+#include <QIODevice>
 #include <QSaveFile>
 #include <cassert>
+#include <climits>
 #include <memory>
 
 /**
@@ -52,7 +54,7 @@
  */
  /**
  * @var static const char magic[];
- * @brief Little endian ASCII "QTOX" magic
+ * @brief Little endian ASCII "XTOX" magic
  */
 const char SettingsSerializer::magic[] = {0x51, 0x54, 0x4F, 0x58};
 namespace {
@@ -83,16 +85,45 @@ QDataStream& readStream(QDataStream& dataStream, SettingsSerializer::RecordTag& 
 
 QDataStream& readStream(QDataStream& dataStream, QByteArray& data)
 {
-    char num3;
-    int num = 0;
-    int num2 = 0;
-    do {
-        dataStream.readRawData(&num3, 1);
-        num |= (num3 & 0x7f) << num2;
-        num2 += 7;
-    } while ((num3 & 0x80) != 0);
-    data.resize(num);
-    dataStream.readRawData(data.data(), num);
+    // Read the base-128 varint length prefix by hand so it can be bounded: a 32
+    // bit length needs at most 5 bytes, and we must never read past the end of
+    // the stream or allocate based on an unvalidated, attacker controlled size.
+    uint32_t num = 0;
+    int shift = 0;
+    for (int i = 0; i < 5; ++i) {
+        if (dataStream.atEnd()) {
+            data.clear();
+            return dataStream;
+        }
+        char num3;
+        if (dataStream.readRawData(&num3, 1) != 1) {
+            data.clear();
+            return dataStream;
+        }
+        num |= static_cast<uint32_t>(static_cast<uint8_t>(num3) & 0x7f) << shift;
+        if ((num3 & 0x80) == 0)
+            break;
+        shift += 7;
+    }
+
+    if (num > static_cast<uint32_t>(INT_MAX)) {
+        data.clear();
+        return dataStream;
+    }
+
+    // Never try to read more than the stream actually holds, otherwise a corrupt
+    // file could trigger a huge allocation before readRawData fails.
+    QIODevice* device = dataStream.device();
+    const qint64 available = device ? device->bytesAvailable() : -1;
+    if (available >= 0 && static_cast<qint64>(num) > available) {
+        data.clear();
+        return dataStream;
+    }
+
+    data.resize(static_cast<int>(num));
+    if (num > 0 && dataStream.readRawData(data.data(), static_cast<int>(num)) != static_cast<int>(num)) {
+        data.clear();
+    }
     return dataStream;
 }
 } // namespace
@@ -342,7 +373,7 @@ void SettingsSerializer::readSerialized()
             qWarning() << "We have a password, but the settings file is not encrypted";
     }
 
-    if (memcmp(data.data(), magic, 4)) {
+    if (data.size() < static_cast<int>(sizeof(magic)) || memcmp(data.data(), magic, sizeof(magic))) {
         qWarning() << "Bad magic!";
         return;
     }
@@ -440,7 +471,7 @@ void SettingsSerializer::readIni()
     std::unique_ptr<int[]> groupSizes{new int[groups.size()]};
     memset(groupSizes.get(), 0, static_cast<size_t>(groups.size()) * sizeof(int));
     for (const Value& v : values) {
-        if (v.group < 0 || v.group > groups.size())
+        if (v.group < 0 || v.group >= groups.size())
             continue;
         groupSizes[static_cast<size_t>(v.group)]++;
     }
@@ -449,7 +480,7 @@ void SettingsSerializer::readIni()
     QVector<int> groupsToKill;
     for (int i = values.size() - 1; i >= 0; i--) {
         const Value& v = values[i];
-        if (v.group < 0 || v.group > groups.size())
+        if (v.group < 0 || v.group >= groups.size())
             continue;
         if (groupSizes[static_cast<size_t>(v.group)] != 1)
             continue;
@@ -514,7 +545,9 @@ void SettingsSerializer::readIni()
     }
 
     // Clean up spurious array element groups
-    std::sort(std::begin(groupsToKill), std::end(groupsToKill), std::greater_equal<int>());
+    // (std::greater_equal is not a strict weak ordering and leads to undefined
+    // behaviour in std::sort; std::greater is the correct descending comparator)
+    std::sort(std::begin(groupsToKill), std::end(groupsToKill), std::greater<int>());
 
     for (int g : groupsToKill) {
         if (groupSizes[static_cast<size_t>(g)])

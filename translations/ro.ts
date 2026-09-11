@@ -143,8 +143,8 @@ ceea ce poate duce la probleme cu apelurile video.</translation>
         <translation>Autorul original: %1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>Utilizați versiunea qTox %1.</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>Utilizați versiunea xTox %1.</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -159,10 +159,10 @@ ceea ce poate duce la probleme cu apelurile video.</translation>
         <translation>Versiune Qt: %1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>O listă a tuturor problemelor cunoscute poate fi găsită la adresa %1 din Github. Dacă descoperiți o eroare sau o vulnerabilitate de securitate în cadrul qTox, raportați-o conform ghidului din articolul nostru wiki %2.</translation>
+        <translation>O listă a tuturor problemelor cunoscute poate fi găsită la adresa %1 din Github. Dacă descoperiți o eroare sau o vulnerabilitate de securitate în cadrul xTox, raportați-o conform ghidului din articolul nostru wiki %2.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -324,12 +324,12 @@ ceea ce poate duce la probleme cu apelurile video.</translation>
         <translation>Actualizare disponibilă</translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
-        <translation>qTox este actualizat ✓</translation>
+        <source>xTox is up to date ✓</source>
+        <translation>xTox este actualizat ✓</translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
-        <translation>În prezent rulează o versiune netestată / instabilă a qTox</translation>
+        <source>Currently running an untested/unstable version of xTox</source>
+        <translation>În prezent rulează o versiune netestată / instabilă a xTox</translation>
     </message>
 </context>
 <context>
@@ -498,12 +498,12 @@ ceea ce poate duce la probleme cu apelurile video.</translation>
         <translation>Log-uri (*.log)</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
-        <translation>Afară de cazul când %1 știți ce faceți vă rog, faceți %2 orice schimbare aici. Modificările făcute aici pot duce la probleme cu qTox și chiar la pierderea datelor dvs., de ex. istorie.%3</translation>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
+        <translation>Afară de cazul când %1 știți ce faceți vă rog, faceți %2 orice schimbare aici. Modificările făcute aici pot duce la probleme cu xTox și chiar la pierderea datelor dvs., de ex. istorie.%3</translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
-        <translation>Modificările de aici sunt aplicate numai după repornirea qTox.</translation>
+        <source>Changes here are applied only after restarting xTox.</source>
+        <translation>Modificările de aici sunt aplicate numai după repornirea xTox.</translation>
     </message>
     <message>
         <source>Save file</source>
@@ -649,8 +649,8 @@ ceea ce poate duce la probleme cu apelurile video.</translation>
         <translation>Trimiteți un fișier</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>QTox nu a putut să se deschidă %1</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>XTox nu a putut să se deschidă %1</translation>
     </message>
     <message>
         <source>Unable to open</source>
@@ -666,9 +666,9 @@ ceea ce poate duce la probleme cu apelurile video.</translation>
         <translation>Eșec la deschiderea fișierului temporar</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
         <translatorcomment>laut Duden ist Screenshot schon deutsch</translatorcomment>
-        <translation>qTox nu a reușit să salveze captura de ecran</translation>
+        <translation>xTox nu a reușit să salveze captura de ecran</translation>
     </message>
     <message>
         <source>Call duration: </source>
@@ -1100,8 +1100,8 @@ astfel încât să puteți salva fișierul pe Windows.</translation>
         <translation>Setări generale</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>Traducerea nu poate fi încărcată decât după repornirea qTox.</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>Traducerea nu poate fi încărcată decât după repornirea xTox.</translation>
     </message>
     <message>
         <source>Language:</source>
@@ -1121,9 +1121,9 @@ astfel încât să puteți salva fișierul pe Windows.</translation>
         <translation>Pictogramă luminoasă</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox va porni minimizat în zona de notificare.</translation>
+        <translation>xTox va porni minimizat în zona de notificare.</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1166,8 +1166,8 @@ astfel încât să puteți salva fișierul pe Windows.</translation>
         <translation>Afișare modificări de stare ale contactelor</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>Porniți qTox la pornirea sistemului de operare (profilul curent).</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>Porniți xTox la pornirea sistemului de operare (profilul curent).</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
@@ -1190,17 +1190,17 @@ astfel încât să puteți salva fișierul pe Windows.</translation>
         <translation> MB</translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
-        <translation>După apăsarea minimizării (_) qTox se va minimiza la tava
+        <translation>După apăsarea minimizării (_) xTox se va minimiza la tava
 în loc de bara de activități a sistemului.</translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
-        <translation>După apăsarea închidere (X) qTox se va închide în tavă,
+        <translation>După apăsarea închidere (X) xTox se va închide în tavă,
 în loc să se închidă complet.</translation>
     </message>
     <message>
@@ -1546,8 +1546,8 @@ Distribuiți-l prietenilor dvs. pentru a începe să conversați.</translation>
         <translation>Creează un profil</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>Dacă profilul nu are o parolă, qTox poate sări peste ecranul de conectare</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>Dacă profilul nu are o parolă, xTox poate sări peste ecranul de conectare</translation>
     </message>
     <message>
         <source>Load automatically</source>
@@ -1780,9 +1780,9 @@ Vă rugăm să vă asigurați că introduceți aceeași parolă de două ori.</t
         <translation type="unfinished">Fișier executabil</translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translation type="unfinished">Sunteți întrebat de qTox pentru deschiderea unui fișier executabil. Fișierele executabile pot deteriora computerul. Sigur doriți să deschideți acest fișier?</translation>
+        <translation type="unfinished">Sunteți întrebat de xTox pentru deschiderea unui fișier executabil. Fișierele executabile pot deteriora computerul. Sigur doriți să deschideți acest fișier?</translation>
     </message>
 </context>
 <context>
@@ -1989,8 +1989,8 @@ Salvarea modificărilor formatelor este posibilă, ceea ce poate duce la pierder
         <translation>Nu s-a putut obține o cheie din parolă, profilul nu va utiliza noua parolă.</translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation>Folosiți Tox în qTox</translation>
+        <source>Toxing on xTox</source>
+        <translation>Folosiți Tox în xTox</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2331,8 +2331,8 @@ Acest ID include codul NoSpam (în albastru) și suma de control (în gri).</tra
         <translation>Eroare</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>qTox nu au putut deschide jurnalele de discuții, vor fi dezactivate.</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>xTox nu au putut deschide jurnalele de discuții, vor fi dezactivate.</translation>
     </message>
     <message>
         <source>Dark</source>
@@ -2517,7 +2517,7 @@ Acest ID include codul NoSpam (în albastru) și suma de control (în gri).</tra
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2547,9 +2547,9 @@ Acest ID include codul NoSpam (în albastru) și suma de control (în gri).</tra
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>Faceți clic și trageți pentru a selecta o regiune. Apăsați %1 Pentru ascundere/afișare fereastra qTox , sau %2 anulare.</translation>
+        <translation>Faceți clic și trageți pentru a selecta o regiune. Apăsați %1 Pentru ascundere/afișare fereastra xTox , sau %2 anulare.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2562,9 +2562,9 @@ Acest ID include codul NoSpam (în albastru) și suma de control (în gri).</tra
         <translation>Escape</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>Apăsați %1 pentru a trimite o captură de ecran a selecției, %2 Pentru ascundere/afișare fereastră qTox, sau %3 anulare.</translation>
+        <translation>Apăsați %1 pentru a trimite o captură de ecran a selecției, %2 Pentru ascundere/afișare fereastră xTox, sau %3 anulare.</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2688,7 +2688,7 @@ Acest ID include codul NoSpam (în albastru) și suma de control (în gri).</tra
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2756,8 +2756,8 @@ Acest ID include codul NoSpam (în albastru) și suma de control (în gri).</tra
         <translation>Mărime: </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation>Preferința noului stil de text nu se poate încărca până la repornirea qTox.</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation>Preferința noului stil de text nu se poate încărca până la repornirea xTox.</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2784,9 +2784,9 @@ Acest ID include codul NoSpam (în albastru) și suma de control (în gri).</tra
         <translation>Mesaj nou</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translation>Se deschide fereastra qTox când primiți un mesaj nou și nu este deschisă o fereastră încă.</translation>
+        <translation>Se deschide fereastra xTox când primiți un mesaj nou și nu este deschisă o fereastră încă.</translation>
     </message>
     <message>
         <source>Open window</source>
@@ -3004,7 +3004,7 @@ Acest ID include codul NoSpam (în albastru) și suma de control (în gri).</tra
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation>Afișare</translation>
     </message>
     <message>
@@ -3037,9 +3037,9 @@ Acest ID include codul NoSpam (în albastru) și suma de control (în gri).</tra
         <translation>Toxcore nu a reușit să pornească, aplicația se va încheia după ce închideți acest mesaj.</translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
-        <translation>Toxcore nu a reușit să înceapă cu setările proxy. qTox nu poate rula; vă rugăm să modificați setările și să reporniți.</translation>
+        <translation>Toxcore nu a reușit să înceapă cu setările proxy. xTox nu poate rula; vă rugăm să modificați setările și să reporniți.</translation>
     </message>
     <message>
         <source>Couldn&apos;t send friend request</source>

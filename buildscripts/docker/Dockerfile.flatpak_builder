@@ -1,4 +1,4 @@
-#    Copyright © 2021 by The qTox Project Contributors
+#    Copyright © 2021 by The xTox Project Contributors
 #
 #    This program is libre software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -59,4 +59,4 @@ RUN mkdir -p /src/toxext_messages && \
     cd /src/toxext_messages && \
     /build/download/download_toxext_messages.sh
 
-WORKDIR /qtox
+WORKDIR /xtox

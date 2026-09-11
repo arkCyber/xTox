@@ -1,10 +1,10 @@
 {
-    "app-id": "io.github.qtox.qTox",
+    "app-id": "io.github.xtox.xTox",
     "runtime": "org.kde.Platform",
     "sdk": "org.kde.Sdk",
     "runtime-version": "5.15",
-    "command": "qtox",
-    "rename-icon": "qtox",
+    "command": "xtox",
+    "rename-icon": "xtox",
     "finish-args": [
         "--share=network",
         "--socket=pulseaudio",
@@ -126,7 +126,7 @@
             ]
         },
         {
-            "name": "qTox",
+            "name": "xTox",
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
@@ -136,7 +136,7 @@
             "sources": [
                 {
                     "type": "dir",
-                    "path": "/qtox/"
+                    "path": "/xtox/"
                 }
             ]
         }

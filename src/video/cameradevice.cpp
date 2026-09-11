@@ -1,27 +1,28 @@
 /*
-    Copyright © 2015-2019 by The qTox Project Contributors
+    Copyright © 2015-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <QApplication>
 #include <QDebug>
 #include <QDesktopWidget>
 #include <QScreen>
-extern "C" {
+extern "C"
+{
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wold-style-cast"
 #include <libavdevice/avdevice.h>
@@ -168,7 +169,8 @@ CameraDevice* CameraDevice::open(QString devName, VideoMode mode)
         qWarning() << "VideoMode could be invalid!";
     }
 
-    const std::string videoSize = QStringLiteral("%1x%2").arg(mode.width).arg(mode.height).toStdString();
+    const std::string videoSize =
+        QStringLiteral("%1x%2").arg(mode.width).arg(mode.height).toStdString();
     const std::string framerate = QString{}.setNum(FPS).toStdString();
 
     AVDictionary* options = nullptr;
@@ -190,7 +192,8 @@ CameraDevice* CameraDevice::open(QString devName, VideoMode mode)
             screen.setWidth((screen.width() * pixRatio) - 2);
             screen.setHeight((screen.height() * pixRatio) - 2);
         }
-        const std::string screenVideoSize = QStringLiteral("%1x%2").arg(screen.width()).arg(screen.height()).toStdString();
+        const std::string screenVideoSize =
+            QStringLiteral("%1x%2").arg(screen.width()).arg(screen.height()).toStdString();
         av_dict_set(&options, "video_size", screenVideoSize.c_str(), 0);
         devName += QString("+%1,%2").arg(QString().setNum(mode.x), QString().setNum(mode.y));
 
@@ -284,45 +287,19 @@ QVector<QPair<QString, QString>> CameraDevice::getRawDeviceListGeneric()
     if (!getDefaultInputFormat())
         return devices;
 
-    // Alloc an input device context
-    AVFormatContext* s;
-    if (!(s = avformat_alloc_context()))
-        return devices;
-
     if (!iformat->priv_class || !AV_IS_INPUT_DEVICE(iformat->priv_class->category)) {
-        avformat_free_context(s);
         return devices;
     }
 
-    s->iformat = iformat;
-    if (s->iformat->priv_data_size > 0) {
-        s->priv_data = av_mallocz(s->iformat->priv_data_size);
-        if (!s->priv_data) {
-            avformat_free_context(s);
-            return devices;
-        }
-        if (s->iformat->priv_class) {
-            *static_cast<const AVClass**>(s->priv_data) = s->iformat->priv_class;
-            av_opt_set_defaults(s->priv_data);
-        }
-    } else {
-        s->priv_data = nullptr;
-    }
-
-    // List the devices for this context
+    // Let FFmpeg allocate and initialize the device context for us. Since FFmpeg 7 the
+    // AVInputFormat::priv_data_size field is no longer part of the public API, so the
+    // context's priv_data can no longer be set up by hand here. In contrast to
+    // avdevice_list_devices(), avdevice_list_input_sources() allocates a properly
+    // initialized context internally and frees it again before returning.
     AVDeviceInfoList* devlist = nullptr;
-    AVDictionary* tmp = nullptr;
-    av_dict_copy(&tmp, nullptr, 0);
-    if (av_opt_set_dict2(s, &tmp, AV_OPT_SEARCH_CHILDREN) < 0) {
-        av_dict_free(&tmp);
-        avformat_free_context(s);
-        return devices;
-    }
-    avdevice_list_devices(s, &devlist);
-    av_dict_free(&tmp);
-    avformat_free_context(s);
-    if (!devlist) {
-        qWarning() << "avdevice_list_devices failed";
+    const int ret = avdevice_list_input_sources(iformat, nullptr, nullptr, &devlist);
+    if (ret < 0 || !devlist) {
+        qWarning() << "avdevice_list_input_sources failed:" << ret;
         return devices;
     }
 

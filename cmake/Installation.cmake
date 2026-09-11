@@ -1,18 +1,18 @@
-#   Copyright © 2019 by The qTox Project Contributors
+#   Copyright © 2019 by The xTox Project Contributors
 #
-#   This file is part of qTox, a Qt-based graphical interface for Tox.
-#   qTox is libre software: you can redistribute it and/or modify
+#   This file is part of xTox, a Qt-based graphical interface for Tox.
+#   xTox is libre software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
 #   the Free Software Foundation, either version 3 of the License, or
 #   (at your option) any later version.
 #
-#   qTox is distributed in the hope that it will be useful,
+#   xTox is distributed in the hope that it will be useful,
 #   but WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
 #   You should have received a copy of the GNU General Public License
-#   along with qTox.  If not, see <http://www.gnu.org/licenses/>
+#   along with xTox.  If not, see <http://www.gnu.org/licenses/>
 
 ################################################################################
 #
@@ -39,8 +39,8 @@ if(APPLE)
   " COMPONENT Runtime
   )
   
-  install(FILES img/icons/qtox.icns DESTINATION ${BUNDLE_PATH}/Contents/Resources/)
-  install(FILES img/icons/qtox_profile.icns DESTINATION ${BUNDLE_PATH}/Contents/Resources/)
+  install(FILES img/icons/xtox.icns DESTINATION ${BUNDLE_PATH}/Contents/Resources/)
+  install(FILES img/icons/xtox_profile.icns DESTINATION ${BUNDLE_PATH}/Contents/Resources/)
 
   install(CODE "
   message(STATUS \"Creating dmg image\")
@@ -51,21 +51,21 @@ else()
   include( GNUInstallDirs )
   # follow the xdg-desktop specification
   install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}")
-  install(FILES "res/io.github.qtox.qTox.appdata.xml" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/metainfo")
-  install(FILES "io.github.qtox.qTox.desktop" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
+  install(FILES "res/io.github.xtox.xTox.appdata.xml" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/metainfo")
+  install(FILES "io.github.xtox.xTox.desktop" DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications")
 
   # Install application icons according to the XDG spec
   set(ICON_SIZES 14 16 22 24 32 36 48 64 72 96 128 192 256 512)
   foreach(size ${ICON_SIZES})
-    set(path_from "img/icons/${size}x${size}/qtox.png")
+    set(path_from "img/icons/${size}x${size}/xtox.png")
     set(path_to "share/icons/hicolor/${size}x${size}/apps/")
     install(FILES ${path_from} DESTINATION ${path_to})
   endforeach(size)
 
   # process the icon, compress if enabled
-  set(SVG_SRC "${CMAKE_SOURCE_DIR}/img/icons/qtox.svg")
+  set(SVG_SRC "${CMAKE_SOURCE_DIR}/img/icons/xtox.svg")
   if(${SVGZ_ICON})
-    set(SVG_GZIP "${CMAKE_BINARY_DIR}/qtox.svgz")
+    set(SVG_GZIP "${CMAKE_BINARY_DIR}/xtox.svgz")
     install(CODE "
     execute_process(COMMAND gzip -S z INPUT_FILE ${SVG_SRC} OUTPUT_FILE ${SVG_GZIP})
     " COMPONENT Runtime)

@@ -1,20 +1,20 @@
 /*
-    Copyright © 2014-2019 by The qTox Project Contributors
+    Copyright © 2014-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <QApplication>
@@ -27,7 +27,7 @@ namespace {
 #ifdef UNICODE
 /**
  * tstring is either std::wstring or std::string, depending on whether the user
- * is building a Unicode or Multi-Byte version of qTox. This makes the code
+ * is building a Unicode or Multi-Byte version of xTox. This makes the code
  * easier to reuse and compatible with both setups.
  */
 using tstring = std::wstring;
@@ -53,7 +53,7 @@ inline tstring currentCommandLine(const Settings& settings)
 
 inline tstring currentRegistryKeyName(const Settings& settings)
 {
-    return toTString("qTox - " + settings.getCurrentProfile());
+    return toTString("xTox - " + settings.getCurrentProfile());
 }
 }
 

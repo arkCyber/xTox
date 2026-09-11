@@ -1,0 +1,16 @@
+version: 2
+
+updates:
+  # Keep GitHub Actions used by the workflows up to date
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  # Keep the build/test container images up to date
+  - package-ecosystem: "docker"
+    directory: "/buildscripts/docker"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3

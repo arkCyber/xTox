@@ -1,18 +1,18 @@
-#   Copyright © 2019 by The qTox Project Contributors
+#   Copyright © 2019 by The xTox Project Contributors
 #
-#   This file is part of qTox, a Qt-based graphical interface for Tox.
-#   qTox is libre software: you can redistribute it and/or modify
+#   This file is part of xTox, a Qt-based graphical interface for Tox.
+#   xTox is libre software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
 #   the Free Software Foundation, either version 3 of the License, or
 #   (at your option) any later version.
 #
-#   qTox is distributed in the hope that it will be useful,
+#   xTox is distributed in the hope that it will be useful,
 #   but WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
 #   You should have received a copy of the GNU General Public License
-#   along with qTox.  If not, see <http://www.gnu.org/licenses/>
+#   along with xTox.  If not, see <http://www.gnu.org/licenses/>
 
 ################################################################################
 #
@@ -27,9 +27,10 @@ option(PLATFORM_EXTENSIONS "Enable platform specific extensions, requires extra 
 option(UPDATE_CHECK "Enable automatic update check" ON)
 option(USE_CCACHE "Use ccache when available" ON)
 option(SPELL_CHECK "Enable spell cheching support" ON)
-option(SVGZ_ICON "Compress the SVG icon of qTox" ON)
+option(SVGZ_ICON "Compress the SVG icon of xTox" ON)
 option(ASAN "Compile with AddressSanitizer" OFF)
 option(TSAN "Compile with ThreadSanitizer" OFF)
+option(UBSAN "Compile with UndefinedBehaviorSanitizer" OFF)
 option(DESKTOP_NOTIFICATIONS "Use snorenotify for desktop notifications" OFF)
 option(STRICT_OPTIONS "Error on compile warning, used by CI" OFF)
 
@@ -42,14 +43,38 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Debug CACHE STRING "Options are: None, Debug, Release, RelWithDebInfo, MinSizeRel." FORCE)
 endif()
 
-if(ASAN)
-    set (CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=address")
-    set (CMAKE_LINKER_FLAGS_DEBUG "${CMAKE_LINKER_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=address")
+# Sanitizer builds. Note that `CMAKE_LINKER_FLAGS_DEBUG` is not a variable CMake
+# consumes, so the sanitizer runtime must be added to the real per-target-type
+# linker flags below, otherwise executables/shared libraries fail to link (or,
+# when the flag only comes from CMAKE_CXX_FLAGS, are not instrumented
+# consistently).
+if(ASAN AND TSAN)
+    message(FATAL_ERROR "ASAN and TSAN cannot be enabled at the same time")
 endif()
 
+set(_xtox_sanitizers "")
+if(ASAN)
+    set(_xtox_sanitizers "address")
+endif()
 if(TSAN)
-    set (CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=thread")
-    set (CMAKE_LINKER_FLAGS_DEBUG "${CMAKE_LINKER_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=thread")
+    set(_xtox_sanitizers "thread")
+endif()
+if(UBSAN)
+    if(_xtox_sanitizers)
+        set(_xtox_sanitizers "${_xtox_sanitizers},undefined")
+    else()
+        set(_xtox_sanitizers "undefined")
+    endif()
+endif()
+
+if(_xtox_sanitizers)
+    set(_xtox_sanitizer_flags "-fno-omit-frame-pointer -fsanitize=${_xtox_sanitizers}")
+    set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} ${_xtox_sanitizer_flags}")
+    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} ${_xtox_sanitizer_flags}")
+    set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS_DEBUG} ${_xtox_sanitizer_flags}")
+    set(CMAKE_SHARED_LINKER_FLAGS_DEBUG "${CMAKE_SHARED_LINKER_FLAGS_DEBUG} ${_xtox_sanitizer_flags}")
+    set(CMAKE_MODULE_LINKER_FLAGS_DEBUG "${CMAKE_MODULE_LINKER_FLAGS_DEBUG} ${_xtox_sanitizer_flags}")
+    message(STATUS "Sanitizers enabled for Debug builds: ${_xtox_sanitizers}")
 endif()
 
 set(ENV{PKG_CONFIG_PATH}
@@ -66,7 +91,7 @@ execute_process(
   OUTPUT_VARIABLE QT_PREFIX_PATH
   OUTPUT_STRIP_TRAILING_WHITESPACE)
 
-project(qtox)
+project(xtox)
 
 # Instruct CMake to run moc automatically when needed.
 set(CMAKE_AUTOMOC ON)
@@ -130,7 +155,7 @@ include(Dependencies)
 
 ################################################################################
 #
-# :: qTox main library sources
+# :: xTox main library sources
 #
 ################################################################################
 
@@ -519,7 +544,7 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
   )
 
   set(${PROJECT_NAME}_RESOURCES ${${PROJECT_NAME}_RESOURCES}
-    windows/qtox.rc
+    windows/xtox.rc
   )
 elseif (${CMAKE_SYSTEM_NAME} MATCHES "Linux" OR ${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
   set(${PROJECT_NAME}_SOURCES ${${PROJECT_NAME}_SOURCES}
@@ -634,7 +659,7 @@ target_link_libraries(${PROJECT_NAME}_static
   ${ALL_LIBRARIES}
   coverage_config)
 
-target_link_libraries(${PROJECT_NAME}_static qtox::warnings)
+target_link_libraries(${PROJECT_NAME}_static xtox::warnings)
 target_link_libraries(${PROJECT_NAME}_static util_library)
 target_link_libraries(${PROJECT_NAME}_static audio_library)
 target_link_libraries(${PROJECT_NAME}_static translations_library)
@@ -654,7 +679,7 @@ include(Testing)
 include(Installation)
 
 if (DEFINED ENV{IN_NIX_SHELL})
-  # the qtox binary must be "wrapped" to find the Qt platform plugin
+  # the xtox binary must be "wrapped" to find the Qt platform plugin
   # and other dependencies at runtime
   add_custom_command(
     TARGET ${PROJECT_NAME}

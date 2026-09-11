@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#    Copyright © 2016-2019 The qTox Project Contributors
+#    Copyright © 2016-2019 The xTox Project Contributors
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-# script to change qTox version in `info.plist` file to the supplied one
+# script to change xTox version in `info.plist` file to the supplied one
 #
 # NOTE: it checkouts the files before appending a version to them!
 #

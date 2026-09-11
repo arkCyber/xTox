@@ -107,7 +107,7 @@ jobs:
         with:
           docker_image_name: almalinux
       - name: Run build
-        run: docker-compose run --rm almalinux ./.ci-scripts/build-qtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }}
+        run: docker-compose run --rm almalinux ./.ci-scripts/build-xtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }}
   build-fedora:
     name: Fedora with ASAN
     runs-on: ubuntu-latest
@@ -123,7 +123,7 @@ jobs:
         with:
           docker_image_name: fedora
       - name: Run build
-        run: docker-compose run --rm fedora ./.ci-scripts/build-qtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }} --sanitize
+        run: docker-compose run --rm fedora ./.ci-scripts/build-xtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }} --sanitize
   clang-tidy:
     name: Clang-Tidy
     runs-on: ubuntu-latest
@@ -139,7 +139,7 @@ jobs:
         with:
           docker_image_name: fedora
       - name: Run build
-        run: docker-compose run --rm fedora ./.ci-scripts/build-qtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }} --tidy
+        run: docker-compose run --rm fedora ./.ci-scripts/build-xtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }} --tidy
   build-opensuse:
     name: Opensuse
     runs-on: ubuntu-latest
@@ -155,7 +155,7 @@ jobs:
         with:
           docker_image_name: opensuse
       - name: Run build
-        run: docker-compose run --rm opensuse ./.ci-scripts/build-qtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }}
+        run: docker-compose run --rm opensuse ./.ci-scripts/build-xtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }}
   build-debian:
     name: Debian
     runs-on: ubuntu-latest
@@ -171,7 +171,7 @@ jobs:
         with:
           docker_image_name: debian
       - name: Run build
-        run: docker-compose run --rm debian ./.ci-scripts/build-qtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }}
+        run: docker-compose run --rm debian ./.ci-scripts/build-xtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }}
   build-debian-old:
     name: Debian Old
     runs-on: ubuntu-latest
@@ -187,7 +187,7 @@ jobs:
         with:
           docker_image_name: debian_old
       - name: Run build
-        run: docker-compose run --rm debian_old ./.ci-scripts/build-qtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }}
+        run: docker-compose run --rm debian_old ./.ci-scripts/build-xtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }}
   translation-check:
     name: Check for translatable strings
     runs-on: ubuntu-latest
@@ -212,7 +212,7 @@ jobs:
         with:
           docker_image_name: ubuntu_lts
       - name: Run build
-        run: docker-compose run --rm ubuntu_lts ./.ci-scripts/build-qtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }}
+        run: docker-compose run --rm ubuntu_lts ./.ci-scripts/build-xtox-linux.sh --build-type ${{ matrix.build_type }} --${{ matrix.features }}
       - name: Code coverage
         run: |
           # https://github.com/actions/runner/issues/491
@@ -239,24 +239,24 @@ jobs:
         with:
           docker_image_name: ubuntu_lts
       - name: Run build
-        run: docker-compose run --rm ubuntu_lts ./appimage/build.sh --src-dir /qtox
+        run: docker-compose run --rm ubuntu_lts ./appimage/build.sh --src-dir /xtox
       - name: Upload appimage
         uses: actions/upload-artifact@v2
         with:
-          name: qTox-${{ github.sha }}.x86_64.AppImage
-          path: qTox-*.x86_64.AppImage
+          name: xTox-${{ github.sha }}.x86_64.AppImage
+          path: xTox-*.x86_64.AppImage
       - name: Get tag name for appimage release file name
         if: contains(github.ref, 'refs/tags/v')
         id: get_version
         run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
-      # The zync file names MUST match the pattern "qTox-*.x86_64.AppImage.zsync"
+      # The zync file names MUST match the pattern "xTox-*.x86_64.AppImage.zsync"
       # indefinitely for older versions to be able to update https://github.com/AppImage/AppImageSpec/blob/master/draft.md#github-releases
       - name: Rename appimage for release upload
         if: contains(github.ref, 'refs/tags/v')
         run: |
-          cp qTox-*.x86_64.AppImage qTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage
-          sha256sum qTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage > qTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage.sha256
-          cp qTox-*.x86_64.AppImage.zsync qTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage.zsync
+          cp xTox-*.x86_64.AppImage xTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage
+          sha256sum xTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage > xTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage.sha256
+          cp xTox-*.x86_64.AppImage.zsync xTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage.zsync
       - name: Upload to versioned release
         if: contains(github.ref, 'refs/tags/v')
         uses: ncipollo/release-action@v1
@@ -264,12 +264,12 @@ jobs:
           allowUpdates: true
           draft: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "qTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage,qTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage.sha256,qTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage.zsync"
+          artifacts: "xTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage,xTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage.sha256,xTox-${{ steps.get_version.outputs.VERSION }}.x86_64.AppImage.zsync"
       - name: Rename artifact for nightly upload
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
-          cp qTox-*.x86_64.AppImage qTox-nightly.x86_64.AppImage
-          cp qTox-*.x86_64.AppImage.zsync qTox-nightly.x86_64.AppImage.zsync
+          cp xTox-*.x86_64.AppImage xTox-nightly.x86_64.AppImage
+          cp xTox-*.x86_64.AppImage.zsync xTox-nightly.x86_64.AppImage.zsync
       - name: Upload to nightly release
         uses: ncipollo/release-action@v1
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
@@ -281,7 +281,7 @@ jobs:
           prerelease: true
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "qTox-nightly.x86_64.AppImage,qTox-nightly.x86_64.AppImage.zsync"
+          artifacts: "xTox-nightly.x86_64.AppImage,xTox-nightly.x86_64.AppImage.zsync"
   build-flatpak:
     name: Flatpak
     runs-on: ubuntu-latest
@@ -304,8 +304,8 @@ jobs:
       - name: Upload flatpak
         uses: actions/upload-artifact@v2
         with:
-          name: qTox-${{ github.sha }}.x86_64.flatpak
-          path: qtox.flatpak
+          name: xTox-${{ github.sha }}.x86_64.flatpak
+          path: xtox.flatpak
       - name: Get tag name for flatpak release file name
         if: contains(github.ref, 'refs/tags/v')
         id: get_version
@@ -313,8 +313,8 @@ jobs:
       - name: Rename flatpak for release upload
         if: contains(github.ref, 'refs/tags/v')
         run: |
-          cp qtox.flatpak qTox-${{ steps.get_version.outputs.VERSION }}.x86_64.flatpak
-          sha256sum qTox-${{ steps.get_version.outputs.VERSION }}.x86_64.flatpak > qTox-${{ steps.get_version.outputs.VERSION }}.x86_64.flatpak.sha256
+          cp xtox.flatpak xTox-${{ steps.get_version.outputs.VERSION }}.x86_64.flatpak
+          sha256sum xTox-${{ steps.get_version.outputs.VERSION }}.x86_64.flatpak > xTox-${{ steps.get_version.outputs.VERSION }}.x86_64.flatpak.sha256
       - name: Upload to versioned release
         if: contains(github.ref, 'refs/tags/v')
         uses: ncipollo/release-action@v1
@@ -322,12 +322,12 @@ jobs:
           allowUpdates: true
           draft: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "qTox-${{ steps.get_version.outputs.VERSION }}.x86_64.flatpak,qTox-${{ steps.get_version.outputs.VERSION }}.x86_64.flatpak.sha256"
+          artifacts: "xTox-${{ steps.get_version.outputs.VERSION }}.x86_64.flatpak,xTox-${{ steps.get_version.outputs.VERSION }}.x86_64.flatpak.sha256"
       - name: Rename artifact for nightly upload
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
-          cp qtox.flatpak qTox-nightly.flatpak
-          sha256sum qTox-nightly.flatpak > qTox-nightly.flatpak.sha256
+          cp xtox.flatpak xTox-nightly.flatpak
+          sha256sum xTox-nightly.flatpak > xTox-nightly.flatpak.sha256
       - name: Upload to nightly release
         uses: ncipollo/release-action@v1
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
@@ -339,7 +339,7 @@ jobs:
           prerelease: true
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "qTox-nightly.flatpak,qTox-nightly.flatpak.sha256"
+          artifacts: "xTox-nightly.flatpak,xTox-nightly.flatpak.sha256"
   build-windows:
     name: Windows
     runs-on: ubuntu-latest
@@ -361,23 +361,23 @@ jobs:
         with:
           docker_image_name: windows_builder
       - name: Run build
-        run: docker-compose run --rm windows_builder ./windows/cross-compile/build.sh --arch x86_64 --build-type ${{ matrix.build_type }} --run-tests --src-dir /qtox
+        run: docker-compose run --rm windows_builder ./windows/cross-compile/build.sh --arch x86_64 --build-type ${{ matrix.build_type }} --run-tests --src-dir /xtox
       - name: Upload installer
         if: matrix.build_type == 'release'
         uses: actions/upload-artifact@v2
         with:
-          name: setup-qtox-x86_64-${{ matrix.build_type }}.exe
-          path: package-prefix/setup-qtox.exe
+          name: setup-xtox-x86_64-${{ matrix.build_type }}.exe
+          path: package-prefix/setup-xtox.exe
       - name: Upload zip
         uses: actions/upload-artifact@v2
         with:
-          name: qtox-x86_64-${{ matrix.build_type }}.zip
-          path: install-prefix/qtox-x86_64-${{ matrix.build_type }}.zip
+          name: xtox-x86_64-${{ matrix.build_type }}.zip
+          path: install-prefix/xtox-x86_64-${{ matrix.build_type }}.zip
       - name: Rename exe for release upload
         if: contains(github.ref, 'refs/tags/v') && matrix.build_type == 'release'
         run: |
-          cp package-prefix/setup-qtox.exe setup-qtox-x86_64-release.exe
-          sha256sum setup-qtox-x86_64-release.exe > setup-qtox-x86_64-release.exe.sha256
+          cp package-prefix/setup-xtox.exe setup-xtox-x86_64-release.exe
+          sha256sum setup-xtox-x86_64-release.exe > setup-xtox-x86_64-release.exe.sha256
       - name: Upload to versioned release
         if: contains(github.ref, 'refs/tags/v') && matrix.build_type == 'release'
         uses: ncipollo/release-action@v1
@@ -385,12 +385,12 @@ jobs:
           allowUpdates: true
           draft: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "setup-qtox-x86_64-release.exe,setup-qtox-x86_64-release.exe.sha256"
+          artifacts: "setup-xtox-x86_64-release.exe,setup-xtox-x86_64-release.exe.sha256"
       - name: Rename zip for nightly upload
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
-          cp install-prefix/qtox-x86_64-${{ matrix.build_type }}.zip qtox-nightly-x86_64-${{ matrix.build_type }}.zip
-          sha256sum qtox-nightly-x86_64-${{ matrix.build_type }}.zip > qtox-nightly-x86_64-${{ matrix.build_type }}.zip.sha256
+          cp install-prefix/xtox-x86_64-${{ matrix.build_type }}.zip xtox-nightly-x86_64-${{ matrix.build_type }}.zip
+          sha256sum xtox-nightly-x86_64-${{ matrix.build_type }}.zip > xtox-nightly-x86_64-${{ matrix.build_type }}.zip.sha256
       - name: Upload zip to nightly release
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: ncipollo/release-action@v1
@@ -402,12 +402,12 @@ jobs:
           prerelease: true
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "qtox-nightly-x86_64-${{ matrix.build_type }}.zip,qtox-nightly-x86_64-${{ matrix.build_type }}.zip.sha256"
+          artifacts: "xtox-nightly-x86_64-${{ matrix.build_type }}.zip,xtox-nightly-x86_64-${{ matrix.build_type }}.zip.sha256"
       - name: Rename exe for nightly upload
         if: github.event_name == 'push' && github.ref == 'refs/heads/master' && matrix.build_type == 'release'
         run: |
-          cp package-prefix/setup-qtox.exe qtox-nightly-x86_64-${{ matrix.build_type }}.exe
-          sha256sum qtox-nightly-x86_64-${{ matrix.build_type }}.exe > qtox-nightly-x86_64-${{ matrix.build_type }}.exe.sha256
+          cp package-prefix/setup-xtox.exe xtox-nightly-x86_64-${{ matrix.build_type }}.exe
+          sha256sum xtox-nightly-x86_64-${{ matrix.build_type }}.exe > xtox-nightly-x86_64-${{ matrix.build_type }}.exe.sha256
       - name: Upload exe to nightly release
         if: github.event_name == 'push' && github.ref == 'refs/heads/master' && matrix.build_type == 'release'
         uses: ncipollo/release-action@v1
@@ -419,7 +419,7 @@ jobs:
           prerelease: true
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "qtox-nightly-x86_64-${{ matrix.build_type }}.exe,qtox-nightly-x86_64-${{ matrix.build_type }}.exe.sha256"
+          artifacts: "xtox-nightly-x86_64-${{ matrix.build_type }}.exe,xtox-nightly-x86_64-${{ matrix.build_type }}.exe.sha256"
   build-windows-i686:
     name: Windows i686
     runs-on: ubuntu-latest
@@ -441,23 +441,23 @@ jobs:
         with:
           docker_image_name: windows_builder.i686
       - name: Run build
-        run: docker-compose run --rm windows_builder.i686 ./windows/cross-compile/build.sh --arch i686 --build-type ${{ matrix.build_type }} --run-tests --src-dir /qtox
+        run: docker-compose run --rm windows_builder.i686 ./windows/cross-compile/build.sh --arch i686 --build-type ${{ matrix.build_type }} --run-tests --src-dir /xtox
       - name: Upload installer
         if: matrix.build_type == 'release'
         uses: actions/upload-artifact@v2
         with:
-          name: setup-qtox-i686-${{ matrix.build_type }}.exe
-          path: package-prefix/setup-qtox.exe
+          name: setup-xtox-i686-${{ matrix.build_type }}.exe
+          path: package-prefix/setup-xtox.exe
       - name: Upload zip
         uses: actions/upload-artifact@v2
         with:
-          name: qtox-i686-${{ matrix.build_type }}.zip
-          path: install-prefix/qtox-i686-${{ matrix.build_type }}.zip
+          name: xtox-i686-${{ matrix.build_type }}.zip
+          path: install-prefix/xtox-i686-${{ matrix.build_type }}.zip
       - name: Rename exe for release upload
         if: contains(github.ref, 'refs/tags/v') && matrix.build_type == 'release'
         run: |
-          cp package-prefix/setup-qtox.exe setup-qtox-i686-release.exe
-          sha256sum setup-qtox-i686-release.exe > setup-qtox-i686-release.exe.sha256
+          cp package-prefix/setup-xtox.exe setup-xtox-i686-release.exe
+          sha256sum setup-xtox-i686-release.exe > setup-xtox-i686-release.exe.sha256
       - name: Upload to versioned release
         if: contains(github.ref, 'refs/tags/v') && matrix.build_type == 'release'
         uses: ncipollo/release-action@v1
@@ -465,12 +465,12 @@ jobs:
           allowUpdates: true
           draft: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "setup-qtox-i686-release.exe,setup-qtox-i686-release.exe.sha256"
+          artifacts: "setup-xtox-i686-release.exe,setup-xtox-i686-release.exe.sha256"
       - name: Rename zip for nightly upload
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
-          cp install-prefix/qtox-i686-${{ matrix.build_type }}.zip qtox-nightly-i686-${{ matrix.build_type }}.zip
-          sha256sum qtox-nightly-i686-${{ matrix.build_type }}.zip > qtox-nightly-i686-${{ matrix.build_type }}.zip.sha256
+          cp install-prefix/xtox-i686-${{ matrix.build_type }}.zip xtox-nightly-i686-${{ matrix.build_type }}.zip
+          sha256sum xtox-nightly-i686-${{ matrix.build_type }}.zip > xtox-nightly-i686-${{ matrix.build_type }}.zip.sha256
       - name: Upload zip to nightly release
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: ncipollo/release-action@v1
@@ -482,12 +482,12 @@ jobs:
           prerelease: true
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "qtox-nightly-i686-${{ matrix.build_type }}.zip,qtox-nightly-i686-${{ matrix.build_type }}.zip.sha256"
+          artifacts: "xtox-nightly-i686-${{ matrix.build_type }}.zip,xtox-nightly-i686-${{ matrix.build_type }}.zip.sha256"
       - name: Rename exe for nightly upload
         if: github.event_name == 'push' && github.ref == 'refs/heads/master' && matrix.build_type == 'release'
         run: |
-          cp package-prefix/setup-qtox.exe qtox-nightly-i686-${{ matrix.build_type }}.exe
-          sha256sum qtox-nightly-i686-${{ matrix.build_type }}.exe > qtox-nightly-i686-${{ matrix.build_type }}.exe.sha256
+          cp package-prefix/setup-xtox.exe xtox-nightly-i686-${{ matrix.build_type }}.exe
+          sha256sum xtox-nightly-i686-${{ matrix.build_type }}.exe > xtox-nightly-i686-${{ matrix.build_type }}.exe.sha256
       - name: Upload exe to nightly release
         if: github.event_name == 'push' && github.ref == 'refs/heads/master' && matrix.build_type == 'release'
         uses: ncipollo/release-action@v1
@@ -499,7 +499,7 @@ jobs:
           prerelease: true
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "qtox-nightly-i686-${{ matrix.build_type }}.exe,qtox-nightly-i686-${{ matrix.build_type }}.exe.sha256"
+          artifacts: "xtox-nightly-i686-${{ matrix.build_type }}.exe,xtox-nightly-i686-${{ matrix.build_type }}.exe.sha256"
   build-osx-distributable:
     name: macOS distributable
     runs-on: macos-latest
@@ -516,16 +516,16 @@ jobs:
         run: brew update && brew upgrade && brew bundle --file ./osx/Brewfile-DepBuildDeps
       - name: Build dependencies
         run: ./.ci-scripts/build-osx-deps.sh
-      - name: Build qTox
-        run: ./.ci-scripts/build-qtox-macos.sh dist
+      - name: Build xTox
+        run: ./.ci-scripts/build-xtox-macos.sh dist
       - name: Upload dmg
         uses: actions/upload-artifact@v2
         with:
-          name: qTox-${{ github.sha }}.dmg
-          path: qTox.dmg
+          name: xTox-${{ github.sha }}.dmg
+          path: xTox.dmg
       - name: Create shasum for versioned release
         if: contains(github.ref, 'refs/tags/v')
-        run: sha256sum qTox.dmg > qTox.dmg.sha256
+        run: sha256sum xTox.dmg > xTox.dmg.sha256
       - name: Upload to versioned release
         if: contains(github.ref, 'refs/tags/v')
         uses: ncipollo/release-action@v1
@@ -533,12 +533,12 @@ jobs:
           allowUpdates: true
           draft: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "qTox.dmg,qTox.dmg.sha256"
+          artifacts: "xTox.dmg,xTox.dmg.sha256"
       - name: Rename artifact for nightly upload
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
-          cp qTox.dmg qTox-nightly.dmg
-          sha256sum qTox-nightly.dmg > qTox-nightly.dmg.sha256
+          cp xTox.dmg xTox-nightly.dmg
+          sha256sum xTox-nightly.dmg > xTox-nightly.dmg.sha256
       - name: Upload to nightly release
         uses: ncipollo/release-action@v1
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
@@ -550,7 +550,7 @@ jobs:
           prerelease: true
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "qTox-nightly.dmg,qTox-nightly.dmg.sha256"
+          artifacts: "xTox-nightly.dmg,xTox-nightly.dmg.sha256"
   build-osx-users:
     name: macOS user
     runs-on: macos-latest
@@ -560,8 +560,8 @@ jobs:
         run: brew update && brew upgrade && brew bundle --file ./osx/Brewfile
       - name: Install toxcore and toxext
         run: buildscripts/build_toxcore_linux.sh
-      - name: Build qTox
-        run: ./.ci-scripts/build-qtox-macos.sh user
+      - name: Build xTox
+        run: ./.ci-scripts/build-xtox-macos.sh user
   build-docs:
     name: Docs
     runs-on: ubuntu-latest
@@ -574,7 +574,7 @@ jobs:
       - name: Run
         run: ./.ci-scripts/build-docs.sh
       - name: Deploy
-        if: github.ref == 'refs/heads/master' && github.owner == 'qTox'
+        if: github.ref == 'refs/heads/master' && github.owner == 'xTox'
         env:
           access_key: ${{ secrets.DOXYGEN_DEPLOY_KEY }}
         run: ./.ci-scripts/deploy-docs.sh
@@ -596,7 +596,7 @@ jobs:
       - name: Run
         run: ./.ci-scripts/build-gitstats.sh
       - name: Deploy
-        if: github.ref == 'refs/heads/master' && github.owner == 'qTox'
+        if: github.ref == 'refs/heads/master' && github.owner == 'xTox'
         env:
           access_key: ${{ secrets.GITSTATS_DEPLOY_KEY }}
         run: ./.ci-scripts/deploy-gitstats.sh

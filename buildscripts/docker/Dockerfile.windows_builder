@@ -1,4 +1,4 @@
-#    Copyright © 2021 by The qTox Project Contributors
+#    Copyright © 2021 by The xTox Project Contributors
 #
 #    This program is libre software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -207,7 +207,7 @@ COPY download/download_mingw_debug_scripts.sh /build/download/download_mingw_deb
 RUN mkdir -p /src/mingw-debug-scripts && \
   cd /src/mingw-debug-scripts && \
   /build/download/download_mingw_debug_scripts.sh  && \
-  sed -i "s|your-app-name.exe|qtox.exe|g" debug-*.bat && \
+  sed -i "s|your-app-name.exe|xtox.exe|g" debug-*.bat && \
   cp -a debug-*.bat /debug_export && \
   rm -fr /src/mingw-debug-scripts
 
@@ -233,5 +233,5 @@ RUN mkdir -p /src/gdb && \
   rm -fr /src/gdb && \
   cp /windows/bin/gdb.exe /debug_export/gdb.exe
 
-RUN mkdir -p /qtox
-WORKDIR /qtox
+RUN mkdir -p /xtox
+WORKDIR /xtox

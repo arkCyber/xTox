@@ -1,20 +1,20 @@
 /*
-    Copyright © 2015-2019 by The qTox Project Contributors
+    Copyright © 2015-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "groupinviteform.h"
@@ -129,12 +129,12 @@ bool GroupInviteForm::addGroupInvite(const GroupInvite& inviteInfo)
         core);
     scroll->widget()->layout()->addWidget(widget);
     invites.append(widget);
-    connect(widget, &GroupInviteWidget::accepted, [this] (const GroupInvite& inviteInfo_) {
+    connect(widget, &GroupInviteWidget::accepted, this, [this](const GroupInvite& inviteInfo_) {
         deleteInviteWidget(inviteInfo_);
         emit groupInviteAccepted(inviteInfo_);
     });
 
-    connect(widget, &GroupInviteWidget::rejected, [this] (const GroupInvite& inviteInfo_) {
+    connect(widget, &GroupInviteWidget::rejected, this, [this](const GroupInvite& inviteInfo_) {
         deleteInviteWidget(inviteInfo_);
     });
     if (isVisible()) {
@@ -160,6 +160,11 @@ void GroupInviteForm::deleteInviteWidget(const GroupInvite& inviteInfo)
         std::find_if(invites.begin(), invites.end(), [=](const GroupInviteWidget* widget) {
             return inviteInfo == widget->getInviteInfo();
         });
+
+    if (deletingWidget == invites.end()) {
+        return;
+    }
+
     (*deletingWidget)->deleteLater();
     scroll->widget()->layout()->removeWidget(*deletingWidget);
     invites.erase(deletingWidget);

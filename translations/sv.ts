@@ -143,8 +143,8 @@ vilket kan leda till problem med videosamtal.</translation>
         <translation>Ursprunglig författare: %1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>Du använder qTox version %1.</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>Du använder xTox version %1.</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -159,10 +159,10 @@ vilket kan leda till problem med videosamtal.</translation>
         <translation>Qt-version: %1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>En lista över alla kända problem kan hittas på vår %1 på Github. Om du upptäcker ett fel eller säkerhetsproblem inom qTox, vänligen rapportera det i enlighet med riktlinjerna i vår wikiartikel %2.</translation>
+        <translation>En lista över alla kända problem kan hittas på vår %1 på Github. Om du upptäcker ett fel eller säkerhetsproblem inom xTox, vänligen rapportera det i enlighet med riktlinjerna i vår wikiartikel %2.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -324,12 +324,12 @@ vilket kan leda till problem med videosamtal.</translation>
         <translation>Uppdatering tillgänglig</translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
-        <translation>qTox är uppdaterad ✓</translation>
+        <source>xTox is up to date ✓</source>
+        <translation>xTox är uppdaterad ✓</translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
-        <translation>För närvarande körs en otestad/instabil version av qTox</translation>
+        <source>Currently running an untested/unstable version of xTox</source>
+        <translation>För närvarande körs en otestad/instabil version av xTox</translation>
     </message>
 </context>
 <context>
@@ -497,12 +497,12 @@ vilket kan leda till problem med videosamtal.</translation>
         <translation>Loggar (*.log)</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
-        <translation>Såvida du %1 vet vad du gör, var snäll att %2 ändra något här. Ändringar som görs här kan leda till problem med qTox och till och med till förlust av dina data, t.ex. historik.%3</translation>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
+        <translation>Såvida du %1 vet vad du gör, var snäll att %2 ändra något här. Ändringar som görs här kan leda till problem med xTox och till och med till förlust av dina data, t.ex. historik.%3</translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
-        <translation>Ändringar här tillämpas först efter omstart av qTox.</translation>
+        <source>Changes here are applied only after restarting xTox.</source>
+        <translation>Ändringar här tillämpas först efter omstart av xTox.</translation>
     </message>
     <message>
         <source>Save file</source>
@@ -648,8 +648,8 @@ vilket kan leda till problem med videosamtal.</translation>
         <translation>Skicka en fil</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>qTox kunde inte öppna %1</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>xTox kunde inte öppna %1</translation>
     </message>
     <message>
         <source>Call duration: </source>
@@ -669,8 +669,8 @@ vilket kan leda till problem med videosamtal.</translation>
         <translation>Misslyckades öppna temporär fil</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
-        <translation>qTox kunde inte spara skärmdumpen</translation>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
+        <translation>xTox kunde inte spara skärmdumpen</translation>
     </message>
     <message>
         <source>Copy</source>
@@ -1093,8 +1093,8 @@ så att du kan spara filen i Windows.</translation>
         <translation>Allmänna inställningar</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>Översättning läses inte in innan qTox startas om.</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>Översättning läses inte in innan xTox startas om.</translation>
     </message>
     <message>
         <source>Language:</source>
@@ -1114,9 +1114,9 @@ så att du kan spara filen i Windows.</translation>
         <translation>Ljusikon</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox kommer att starta minimerad i verktygsfältet.</translation>
+        <translation>xTox kommer att starta minimerad i verktygsfältet.</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1159,8 +1159,8 @@ så att du kan spara filen i Windows.</translation>
         <translation>Acceptera filer automatiskt</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>Starta qTox vid operativsystemets uppstart (nuvarande profil).</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>Starta xTox vid operativsystemets uppstart (nuvarande profil).</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
@@ -1183,13 +1183,13 @@ så att du kan spara filen i Windows.</translation>
         <translation> MB</translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
         <translation type="unfinished"></translation>
@@ -1535,8 +1535,8 @@ Dela det med dina vänner för att börja chatta.</translation>
         <translation>Skapa profil</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>Om profilen inte har ett lösenord, kan qTox hoppa över inloggningsskärmen</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>Om profilen inte har ett lösenord, kan xTox hoppa över inloggningsskärmen</translation>
     </message>
     <message>
         <source>Load automatically</source>
@@ -1769,9 +1769,9 @@ Vänligen se till att du skriver samma lösenord två gånger.</translation>
         <translation type="unfinished">Körbar fil</translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translation type="unfinished">Du har bett qTox att öppna en körbar fil. Körbara filer kan potentiellt skada din dator. Är du säker vill öppna den här filen?</translation>
+        <translation type="unfinished">Du har bett xTox att öppna en körbar fil. Körbara filer kan potentiellt skada din dator. Är du säker vill öppna den här filen?</translation>
     </message>
 </context>
 <context>
@@ -1977,8 +1977,8 @@ Om du blir spammad med vänförfrågningar, ändra NoSpam.</translation>
         <translation>Misslyckades att härleda nyckel från lösenord, profilen kommer inte använda det nya lösenordet.</translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation>Toxar på qTox</translation>
+        <source>Toxing on xTox</source>
+        <translation>Toxar på xTox</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2309,8 +2309,8 @@ ID:t innehåller NoSpam-koden (i blått) och kontrollsumman (i grått).</transla
         <translation>Fel</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>qTox kunde inte öppna dina chattloggar, de kommer att inaktiveras.</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>xTox kunde inte öppna dina chattloggar, de kommer att inaktiveras.</translation>
     </message>
     <message>
         <source>None</source>
@@ -2505,7 +2505,7 @@ ID:t innehåller NoSpam-koden (i blått) och kontrollsumman (i grått).</transla
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2535,9 +2535,9 @@ ID:t innehåller NoSpam-koden (i blått) och kontrollsumman (i grått).</transla
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>Klicka och dra för att markera en region. Tryck på %1 för att dölja/visa qTox-fönster, eller %2 för att avbryta.</translation>
+        <translation>Klicka och dra för att markera en region. Tryck på %1 för att dölja/visa xTox-fönster, eller %2 för att avbryta.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2550,9 +2550,9 @@ ID:t innehåller NoSpam-koden (i blått) och kontrollsumman (i grått).</transla
         <translation>Escape</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>Tryck på %1 för att skicka en skärmdump av urvalet, %2 för att visa/dölja qTox-fönster eller %3 för att avbryta.</translation>
+        <translation>Tryck på %1 för att skicka en skärmdump av urvalet, %2 för att visa/dölja xTox-fönster eller %3 för att avbryta.</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2676,7 +2676,7 @@ ID:t innehåller NoSpam-koden (i blått) och kontrollsumman (i grått).</transla
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2744,8 +2744,8 @@ ID:t innehåller NoSpam-koden (i blått) och kontrollsumman (i grått).</transla
         <translation>Storlek: </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation>Ny textstilinställning kanske inte läses in förrän qTox startas om.</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation>Ny textstilinställning kanske inte läses in förrän xTox startas om.</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2772,9 +2772,9 @@ ID:t innehåller NoSpam-koden (i blått) och kontrollsumman (i grått).</transla
         <translation>Nytt meddelande</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translation>Öppna qTox fönster när du får ett nytt meddelande och inga fönster är öppna ännu.</translation>
+        <translation>Öppna xTox fönster när du får ett nytt meddelande och inga fönster är öppna ännu.</translation>
     </message>
     <message>
         <source>Open window</source>
@@ -2991,7 +2991,7 @@ ID:t innehåller NoSpam-koden (i blått) och kontrollsumman (i grått).</transla
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation>Visa</translation>
     </message>
     <message>
@@ -3024,7 +3024,7 @@ ID:t innehåller NoSpam-koden (i blått) och kontrollsumman (i grått).</transla
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
         <translation type="unfinished"></translation>
     </message>

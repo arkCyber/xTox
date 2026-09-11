@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#    Copyright © 2021 by The qTox Project Contributors
+#    Copyright © 2021 by The xTox Project Contributors
 #
 #    This program is libre software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -24,13 +24,13 @@ import json
 import unittest
 import subprocess
 
-QTOX_ROOT = Path(__file__).parent.parent
-DOWNLOAD_FILE_PATHS = QTOX_ROOT / 'buildscripts' / 'download'
+XTOX_ROOT = Path(__file__).parent.parent
+DOWNLOAD_FILE_PATHS = XTOX_ROOT / 'buildscripts' / 'download'
 
 def parse_args():
     parser = ArgumentParser(description="""
     Update dependencies of a flathub manifest to match the versions used by
-    qtox. This script will iterate over all known dependencies in the manifest
+    xtox. This script will iterate over all known dependencies in the manifest
     and replace their tags with the ones specified by our download_xxx.sh
     scripts. The commit hash for the tag will be replaced with whatever is
     currently in the git remote
@@ -96,7 +96,7 @@ def commit_from_tag(url, tag):
 
 class CommitFromTagTest(unittest.TestCase):
     def test_commit_from_tag(self):
-        self.assertEqual(commit_from_tag(str(QTOX_ROOT), "v1.17.3"), "c0e9a3b79609681e5b9f6bbf8f9a36cb1993dc5f")
+        self.assertEqual(commit_from_tag(str(XTOX_ROOT), "v1.17.3"), "c0e9a3b79609681e5b9f6bbf8f9a36cb1993dc5f")
 
 def update_source(module, tag):
     module_source = module["sources"][0]

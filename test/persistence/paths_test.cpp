@@ -1,20 +1,20 @@
 /*
-    Copyright © 2017-2019 by The qTox Project Contributors
+    Copyright © 2017-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "src/persistence/paths.h"
@@ -38,12 +38,12 @@ private slots:
     void checkPathsPortable();
 #endif
 private:
-    static void verifyqToxPath(const QString& testPath, const QString& basePath, const QString& subPath);
+    static void verifyxToxPath(const QString& testPath, const QString& basePath, const QString& subPath);
 };
 
 namespace {
 #if PATHS_VERSION_TCS_COMPLIANT
-const QLatin1String globalSettingsFile{"qtox.ini"};
+const QLatin1String globalSettingsFile{"xtox.ini"};
 const QLatin1String profileFolder{"profiles"};
 const QLatin1String themeFolder{"themes"};
 const QLatin1String avatarsFolder{"avatars"};
@@ -60,7 +60,7 @@ void TestPaths::constructAuto()
 {
     Paths paths{Paths::Portable::Auto};
     // auto detection should succeed
-    // the test environment should not provide a `qtox.ini`
+    // the test environment should not provide a `xtox.ini`
     QVERIFY(paths.isPortable() == false);
 }
 
@@ -70,7 +70,7 @@ void TestPaths::constructAuto()
 void TestPaths::constructPortable()
 {
     Paths paths{Paths::Portable::Portable};
-    // portable construction should succeed even though qtox.ini doesn't exist
+    // portable construction should succeed even though xtox.ini doesn't exist
     QVERIFY(paths.isPortable() == true);
 }
 
@@ -81,14 +81,14 @@ void TestPaths::constructNonPortable()
 {
     Paths paths{Paths::Portable::NonPortable};
     // Non portable should succeed
-    // the test environment should not provide a `qtox.ini`
+    // the test environment should not provide a `xtox.ini`
     QVERIFY(paths.isPortable() == false);
 }
 
 /**
- * @brief Helper to verify qTox specific paths
+ * @brief Helper to verify xTox specific paths
  */
-void TestPaths::verifyqToxPath(const QString& testPath, const QString& basePath, const QString& subPath)
+void TestPaths::verifyxToxPath(const QString& testPath, const QString& basePath, const QString& subPath)
 {
     const QString expectPath = basePath % sep % subPath;
     QVERIFY(testPath == expectPath);
@@ -116,16 +116,16 @@ void TestPaths::checkPathsNonPortable()
     const QString appConfig{QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation)};
 
 
-    verifyqToxPath(paths->getProfilesDir(), appData, profileFolder % sep);
-    verifyqToxPath(paths->getGlobalSettingsPath(), appConfig, globalSettingsFile);
-    verifyqToxPath(paths->getScreenshotsDir(), appData, screenshotsFolder % sep);
-    verifyqToxPath(paths->getTransfersDir(), appData, transfersFolder % sep);
+    verifyxToxPath(paths->getProfilesDir(), appData, profileFolder % sep);
+    verifyxToxPath(paths->getGlobalSettingsPath(), appConfig, globalSettingsFile);
+    verifyxToxPath(paths->getScreenshotsDir(), appData, screenshotsFolder % sep);
+    verifyxToxPath(paths->getTransfersDir(), appData, transfersFolder % sep);
 
     QStringList themeFolders{};
     themeFolders += QStandardPaths::locate(QStandardPaths::AppDataLocation, themeFolder,
                                            QStandardPaths::LocateDirectory);
 
-    // look for themes beside the qTox binary with lowest priority
+    // look for themes beside the xTox binary with lowest priority
     const QString curPath{qApp->applicationDirPath()};
     themeFolders += curPath % sep % themeFolder % sep;
 
@@ -145,20 +145,20 @@ void TestPaths::checkPathsPortable()
     const QString basePath{qApp->applicationDirPath()};
 
     const QString avatarDir{paths->getAvatarsDir()};
-    verifyqToxPath(avatarDir, basePath, profileFolder % sep % avatarsFolder % sep);
+    verifyxToxPath(avatarDir, basePath, profileFolder % sep % avatarsFolder % sep);
 
     const QString toxSaveDir{paths->getToxSaveDir()};
-    verifyqToxPath(toxSaveDir, basePath, profileFolder % sep);
+    verifyxToxPath(toxSaveDir, basePath, profileFolder % sep);
 
     // avatars directory must be one level below toxsave to follow TCS
     QVERIFY(avatarDir.contains(toxSaveDir));
 
-    verifyqToxPath(paths->getProfilesDir(), basePath, profileFolder % sep);
-    verifyqToxPath(paths->getGlobalSettingsPath(), basePath, globalSettingsFile);
-    verifyqToxPath(paths->getScreenshotsDir(), basePath, screenshotsFolder % sep);
-    verifyqToxPath(paths->getTransfersDir(), basePath, transfersFolder % sep);
+    verifyxToxPath(paths->getProfilesDir(), basePath, profileFolder % sep);
+    verifyxToxPath(paths->getGlobalSettingsPath(), basePath, globalSettingsFile);
+    verifyxToxPath(paths->getScreenshotsDir(), basePath, screenshotsFolder % sep);
+    verifyxToxPath(paths->getTransfersDir(), basePath, transfersFolder % sep);
 
-    // look for themes beside the qTox binary with lowest priority
+    // look for themes beside the xTox binary with lowest priority
     const QString curPath{qApp->applicationDirPath()};
     QStringList themeFolders{curPath % sep % themeFolder % sep};
 

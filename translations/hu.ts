@@ -139,8 +139,8 @@ which may lead to problems with video calls.</source>
         <translation>Eredeti szerző: %1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>Ön a qTox %1 verzióját használja.</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>Ön a xTox %1 verzióját használja.</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -155,10 +155,10 @@ which may lead to problems with video calls.</source>
         <translation>Qt verzió: %1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>Az összes ismert probléma listája megtalálható a Github %1. Ha észrevesz egy hibát vagy biztonsági sérülékenységet a qTox-ban, kérjük jelentse azt a %2 wiki cikkünkben leírtaknak megfelelően.</translation>
+        <translation>Az összes ismert probléma listája megtalálható a Github %1. Ha észrevesz egy hibát vagy biztonsági sérülékenységet a xTox-ban, kérjük jelentse azt a %2 wiki cikkünkben leírtaknak megfelelően.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -320,11 +320,11 @@ which may lead to problems with video calls.</source>
         <translation>Frissítés elérhető</translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
-        <translation>A qTox naprakész ✓</translation>
+        <source>xTox is up to date ✓</source>
+        <translation>A xTox naprakész ✓</translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
+        <source>Currently running an untested/unstable version of xTox</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -492,11 +492,11 @@ which may lead to problems with video calls.</source>
         <translation>Naplók (*.log)</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
+        <source>Changes here are applied only after restarting xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -643,8 +643,8 @@ which may lead to problems with video calls.</source>
         <translation>Fájlküldés</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>A qTox nem tudta ezt megnyitni: %1</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>A xTox nem tudta ezt megnyitni: %1</translation>
     </message>
     <message>
         <source>Call duration: </source>
@@ -664,8 +664,8 @@ which may lead to problems with video calls.</source>
         <translation>Ideiglenes fájl megnyitása sikertelen</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
-        <translation>A qTox nem tudta elmenteni a képernyőképet</translation>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
+        <translation>A xTox nem tudta elmenteni a képernyőképet</translation>
     </message>
     <message>
         <source>Copy</source>
@@ -1086,8 +1086,8 @@ so you can save the file on Windows.</source>
         <translation>Általános beállítások</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>A fordítás csak a qTox újraindítása után lesz betöltve.</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>A fordítás csak a xTox újraindítása után lesz betöltve.</translation>
     </message>
     <message>
         <source>Language:</source>
@@ -1107,9 +1107,9 @@ so you can save the file on Windows.</source>
         <translation>Világos tálcaikon</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>A qTox a tálcán minimalizálva fog elindulni.</translation>
+        <translation>A xTox a tálcán minimalizálva fog elindulni.</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1152,8 +1152,8 @@ so you can save the file on Windows.</source>
         <translation>Mutassa a partnerek állapotváltozásait</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>qTox indítása az aktuális profillal az operációs rendszer indításakor.</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>xTox indítása az aktuális profillal az operációs rendszer indításakor.</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
@@ -1176,13 +1176,13 @@ so you can save the file on Windows.</source>
         <translation> MB</translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
         <translation type="unfinished"></translation>
@@ -1525,8 +1525,8 @@ Share it with your friends to begin chatting.</source>
         <translation>Profil létrehozása</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>Amennyiben a profil nincs jelszóval védve, a qTox automatikusan bejelentkezhet</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>Amennyiben a profil nincs jelszóval védve, a xTox automatikusan bejelentkezhet</translation>
     </message>
     <message>
         <source>Load automatically</source>
@@ -1757,7 +1757,7 @@ Please make sure to enter the same password twice.</source>
         <translation type="unfinished">Futtatható fájl</translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
         <translation type="unfinished">Meg akart nyitni egy futtatható fájlt. Ezek a fájlok potenciálisan veszélyeztethetik a számítógépét. Valóban meg szeretné nyitni ezt a fájlt?</translation>
     </message>
@@ -1964,8 +1964,8 @@ Ha kéretlen partnerfelkérésekkel bombázzák, változtassa meg a NoSpam-ot.</
         <translation>A kulcs kinyerése a jelszóból sikertelen, a profil nem fogja használni az új jelszót.</translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation>A qTox klienst használom</translation>
+        <source>Toxing on xTox</source>
+        <translation>A xTox klienst használom</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2293,8 +2293,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Hiba</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>A qTox nem tudta megnyitni a csevegésnaplót, ezért kikapcsolásra került.</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>A xTox nem tudta megnyitni a csevegésnaplót, ezért kikapcsolásra került.</translation>
     </message>
     <message>
         <source>None</source>
@@ -2489,7 +2489,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2519,9 +2519,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>Kattintson és húzzon egy régió kiválasztásához. Nyomja meg a %1-t a qTox ablakának elrejtéséhez/mutatásához, %2-t a megszakításhoz.</translation>
+        <translation>Kattintson és húzzon egy régió kiválasztásához. Nyomja meg a %1-t a xTox ablakának elrejtéséhez/mutatásához, %2-t a megszakításhoz.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2534,9 +2534,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Escape</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>A kiválasztott képernyőkép elküldéséhez nyomja meg a %1-t, a qTox ablak elrejtéséhez a %2-t vagy %3-t a megszakításhoz.</translation>
+        <translation>A kiválasztott képernyőkép elküldéséhez nyomja meg a %1-t, a xTox ablak elrejtéséhez a %2-t vagy %3-t a megszakításhoz.</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2660,7 +2660,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2728,8 +2728,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Méret: </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation>Az új szövegstílus-beállítások változtatásához a qToxot újra kell indítani.</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation>Az új szövegstílus-beállítások változtatásához a xToxot újra kell indítani.</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2756,9 +2756,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Új üzenet</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translation>qTox ablak megnyitása új üzenet érkezésekor, ha nincs megnyitott ablak.</translation>
+        <translation>xTox ablak megnyitása új üzenet érkezésekor, ha nincs megnyitott ablak.</translation>
     </message>
     <message>
         <source>Open window</source>
@@ -2975,7 +2975,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation>Mutat</translation>
     </message>
     <message>
@@ -3008,7 +3008,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
         <translation type="unfinished"></translation>
     </message>

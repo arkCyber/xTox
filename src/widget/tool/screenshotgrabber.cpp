@@ -1,20 +1,20 @@
 /*
-    Copyright © 2015-2019 by The qTox Project Contributors
+    Copyright © 2015-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "screenshotgrabber.h"
@@ -39,7 +39,7 @@ ScreenshotGrabber::ScreenshotGrabber()
     : QObject()
     , mKeysBlocked(false)
     , scene(nullptr)
-    , mQToxVisible(true)
+    , mXToxVisible(true)
 {
     window = new QGraphicsView(scene); // Top-level widget
     window->setWindowFlags(Qt::FramelessWindowHint | Qt::BypassWindowManagerHint);
@@ -105,7 +105,7 @@ bool ScreenshotGrabber::handleKeyPress(QKeyEvent* event)
     else if (event->key() == Qt::Key_Space) {
         mKeysBlocked = true;
 
-        if (mQToxVisible)
+        if (mXToxVisible)
             hideVisibleWindows();
         else
             restoreHiddenWindows();
@@ -169,7 +169,7 @@ void ScreenshotGrabber::useNothingSelectedTooltip()
 {
     helperTooltip->setHtml(
         tr("Click and drag to select a region. Press %1 to "
-           "hide/show qTox window, or %2 to cancel.",
+           "hide/show xTox window, or %2 to cancel.",
            "Help text shown when no region has been selected yet")
             .arg(QString("<b>%1</b>").arg(tr("Space", "[Space] key on the keyboard")),
                  QString("<b>%1</b>").arg(tr("Escape", "[Escape] key on the keyboard"))));
@@ -180,7 +180,7 @@ void ScreenshotGrabber::useRegionSelectedTooltip()
 {
     helperTooltip->setHtml(
         tr("Press %1 to send a screenshot of the selection, "
-           "%2 to hide/show qTox window, or %3 to cancel.",
+           "%2 to hide/show xTox window, or %3 to cancel.",
            "Help text shown when a region has been selected")
             .arg(QString("<b>%1</b>").arg(tr("Enter", "[Enter] key on the keyboard")),
                  QString("<b>%1</b>").arg(tr("Space", "[Space] key on the keyboard")),
@@ -241,7 +241,7 @@ void ScreenshotGrabber::hideVisibleWindows()
         }
     }
 
-    mQToxVisible = false;
+    mXToxVisible = false;
 }
 
 void ScreenshotGrabber::restoreHiddenWindows()
@@ -252,7 +252,7 @@ void ScreenshotGrabber::restoreHiddenWindows()
     }
 
     mHiddenWindows.clear();
-    mQToxVisible = true;
+    mXToxVisible = true;
 }
 
 void ScreenshotGrabber::beginRectChooser(QGraphicsSceneMouseEvent* event)

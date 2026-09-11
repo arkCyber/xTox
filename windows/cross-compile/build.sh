@@ -23,7 +23,7 @@
 # THE SOFTWARE.
 
 # Known issues:
-# - Doesn't build qTox updater, because it wasn't ported to cmake yet and
+# - Doesn't build xTox updater, because it wasn't ported to cmake yet and
 #   because it requires static Qt, which means we'd need to build Qt twice, and
 #   building Qt takes really long time.
 
@@ -34,7 +34,7 @@ RUN_TESTS=0
 
 while (( $# > 0 )); do
     case $1 in
-        --src-dir) QTOX_SRC_DIR=$2; shift 2 ;;
+        --src-dir) XTOX_SRC_DIR=$2; shift 2 ;;
         --arch) ARCH=$2; shift 2 ;;
         --run-tests) RUN_TESTS=1; shift ;;
         --build-type) BUILD_TYPE=$2; shift 2;;
@@ -44,10 +44,10 @@ done
 
 # Common directory paths
 
-QTOX_PREFIX_DIR="$(realpath install-prefix)"
-readonly QTOX_PREFIX_DIR
-QTOX_PACKAGE_DIR="$(realpath package-prefix)"
-readonly QTOX_PACKAGE_DIR
+XTOX_PREFIX_DIR="$(realpath install-prefix)"
+readonly XTOX_PREFIX_DIR
+XTOX_PACKAGE_DIR="$(realpath package-prefix)"
+readonly XTOX_PACKAGE_DIR
 
 
 if [ -z "$ARCH" ]
@@ -62,7 +62,7 @@ then
   exit 1
 fi
 
-if [ -z "$QTOX_SRC_DIR" ]; then
+if [ -z "$XTOX_SRC_DIR" ]; then
   echo "--src-dir must be specified"
 fi
 
@@ -89,7 +89,7 @@ then
         -DUPDATE_CHECK=ON \
         -DSTRICT_OPTIONS=ON \
         -DTEST_CROSSCOMPILING_EMULATOR=wine \
-        "$QTOX_SRC_DIR"
+        "$XTOX_SRC_DIR"
 elif [[ "$BUILD_TYPE" == "Debug" ]]
 then
   cmake -DCMAKE_TOOLCHAIN_FILE=/build/windows-toolchain.cmake \
@@ -100,14 +100,14 @@ then
         -DUPDATE_CHECK=ON \
         -DSTRICT_OPTIONS=ON \
         -DTEST_CROSSCOMPILING_EMULATOR=wine \
-        "$QTOX_SRC_DIR"
+        "$XTOX_SRC_DIR"
 fi
 
 make -j $(nproc)
 
-mkdir -p "${QTOX_PREFIX_DIR}"
-cp qtox.exe $QTOX_PREFIX_DIR
-cp -r /export/* $QTOX_PREFIX_DIR
+mkdir -p "${XTOX_PREFIX_DIR}"
+cp xtox.exe $XTOX_PREFIX_DIR
+cp -r /export/* $XTOX_PREFIX_DIR
 
 # Run tests
 set +u
@@ -124,40 +124,40 @@ set -u
 set +e
 if [[ "$BUILD_TYPE" == "Release" ]]
 then
-  $ARCH-w64-mingw32-strip -s $QTOX_PREFIX_DIR/*.exe
+  $ARCH-w64-mingw32-strip -s $XTOX_PREFIX_DIR/*.exe
 fi
-$ARCH-w64-mingw32-strip -s $QTOX_PREFIX_DIR/*.dll
-$ARCH-w64-mingw32-strip -s $QTOX_PREFIX_DIR/*/*.dll
+$ARCH-w64-mingw32-strip -s $XTOX_PREFIX_DIR/*.dll
+$ARCH-w64-mingw32-strip -s $XTOX_PREFIX_DIR/*/*.dll
 set -e
 
 if [[ "$BUILD_TYPE" == "Debug" ]]
 then
-  cp -r /debug_export/* ${QTOX_PREFIX_DIR}
+  cp -r /debug_export/* ${XTOX_PREFIX_DIR}
 fi
 
 # Create zip
-pushd $QTOX_PREFIX_DIR
-zip qtox-"$ARCH"-"$BUILD_TYPE".zip -r *
+pushd $XTOX_PREFIX_DIR
+zip xtox-"$ARCH"-"$BUILD_TYPE".zip -r *
 popd
 
 # Create installer
 if [[ "$BUILD_TYPE" == "Release" ]]
 then
-  mkdir -p $QTOX_PACKAGE_DIR
-  pushd $QTOX_PACKAGE_DIR
-  # The installer creation script expects all the files to be in qtox/*
-  mkdir -p qtox
-  cp -r $QTOX_PREFIX_DIR/* ./qtox
-  rm ./qtox/*.zip
+  mkdir -p $XTOX_PACKAGE_DIR
+  pushd $XTOX_PACKAGE_DIR
+  # The installer creation script expects all the files to be in xtox/*
+  mkdir -p xtox
+  cp -r $XTOX_PREFIX_DIR/* ./xtox
+  rm ./xtox/*.zip
 
-  cp -r $QTOX_SRC_DIR/windows/* .
+  cp -r $XTOX_SRC_DIR/windows/* .
   # Select the installer script for the correct architecture
   if [[ "$ARCH" == "i686" ]]
   then
-    makensis qtox.nsi
+    makensis xtox.nsi
   elif [[ "$ARCH" == "x86_64" ]]
   then
-    makensis qtox64.nsi
+    makensis xtox64.nsi
   fi
 
   popd
@@ -165,31 +165,31 @@ fi
 
 # dll check
 # Create lists of all .exe and .dll files
-find "$QTOX_PREFIX_DIR" -iname '*.dll' > dlls
-find "$QTOX_PREFIX_DIR" -iname '*.exe' > exes
+find "$XTOX_PREFIX_DIR" -iname '*.dll' > dlls
+find "$XTOX_PREFIX_DIR" -iname '*.exe' > exes
 
 # Create a list of dlls that are loaded during the runtime (not listed in the PE
 # import table, thus ldd doesn't print those)
-echo "$QTOX_PREFIX_DIR/libsnore-qt5/libsnore_backend_windowstoast.dll
-$QTOX_PREFIX_DIR/iconengines/qsvgicon.dll
-$QTOX_PREFIX_DIR/imageformats/qgif.dll
-$QTOX_PREFIX_DIR/imageformats/qico.dll
-$QTOX_PREFIX_DIR/imageformats/qjpeg.dll
-$QTOX_PREFIX_DIR/imageformats/qsvg.dll
-$QTOX_PREFIX_DIR/platforms/qdirect2d.dll
-$QTOX_PREFIX_DIR/platforms/qminimal.dll
-$QTOX_PREFIX_DIR/platforms/qoffscreen.dll
-$QTOX_PREFIX_DIR/platforms/qwindows.dll" > runtime-dlls
+echo "$XTOX_PREFIX_DIR/libsnore-qt5/libsnore_backend_windowstoast.dll
+$XTOX_PREFIX_DIR/iconengines/qsvgicon.dll
+$XTOX_PREFIX_DIR/imageformats/qgif.dll
+$XTOX_PREFIX_DIR/imageformats/qico.dll
+$XTOX_PREFIX_DIR/imageformats/qjpeg.dll
+$XTOX_PREFIX_DIR/imageformats/qsvg.dll
+$XTOX_PREFIX_DIR/platforms/qdirect2d.dll
+$XTOX_PREFIX_DIR/platforms/qminimal.dll
+$XTOX_PREFIX_DIR/platforms/qoffscreen.dll
+$XTOX_PREFIX_DIR/platforms/qwindows.dll" > runtime-dlls
 if [[ "$ARCH" == "i686" ]]
 then
-  echo "$QTOX_PREFIX_DIR/libssl-1_1.dll" >> runtime-dlls
+  echo "$XTOX_PREFIX_DIR/libssl-1_1.dll" >> runtime-dlls
 elif [[ "$ARCH" == "x86_64" ]]
 then
-  echo "$QTOX_PREFIX_DIR/libssl-1_1-x64.dll" >> runtime-dlls
+  echo "$XTOX_PREFIX_DIR/libssl-1_1-x64.dll" >> runtime-dlls
 fi
 
 # Create a tree of all required dlls
-# Assumes all .exe files are directly in $QTOX_PREFIX_DIR, not in subdirs
+# Assumes all .exe files are directly in $XTOX_PREFIX_DIR, not in subdirs
 while IFS= read -r line
 do
   if [[ "$ARCH" == "i686" ]]
@@ -199,7 +199,7 @@ do
   then
     WINE_DLL_DIR="/opt/wine-stable/lib64/wine/x86_64-windows /opt/wine-stable/lib/wine/i386-windows"
   fi
-  python3 /usr/local/bin/mingw-ldd.py $line --dll-lookup-dirs $QTOX_PREFIX_DIR $WINE_DLL_DIR --output-format tree >> dlls-required
+  python3 /usr/local/bin/mingw-ldd.py $line --dll-lookup-dirs $XTOX_PREFIX_DIR $WINE_DLL_DIR --output-format tree >> dlls-required
 done < <(cat exes runtime-dlls)
 
 # Check that no extra dlls get bundled

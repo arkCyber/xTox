@@ -1,7 +1,7 @@
 # Translating
 
-Translating qTox should be easy & straightforward for anyone using
-[**Weblate**](https://hosted.weblate.org/projects/tox/qtox/).
+Translating xTox should be easy & straightforward for anyone using
+[**Weblate**](https://hosted.weblate.org/projects/tox/xtox/).
 
 Overall translation: [![Translation status](https://hosted.weblate.org/widgets/tox/-/svg-badge.svg)](https://hosted.weblate.org/engage/tox/?utm_source=widget)
 

@@ -2,7 +2,7 @@
 
 # SPDX-License-Identifier: GPL-3.0-or-later AND MIT
 #     Copyright (c) 2017-2021 Maxim Biro <nurupo.contributions@gmail.com>
-#     Copyright (c) 2021 by The qTox Project Contributors
+#     Copyright (c) 2021 by The xTox Project Contributors
 
 set -euo pipefail
 

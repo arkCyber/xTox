@@ -143,8 +143,8 @@ mis võib põhjustada probleeme videokõnedega.</translation>
         <translation>Esialgne autor: %1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>Kasutad qToxi versiooni %1.</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>Kasutad xToxi versiooni %1.</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -159,10 +159,10 @@ mis võib põhjustada probleeme videokõnedega.</translation>
         <translation>Qt versioon: %1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>Nimekirja kõikidest teadaolevatest probleemidest saab näha meie %1, mis asub keskkonnas nimega Github. Kui avastad qToxis vea või turvaaugu, anna sellest teada vastavalt meie %2 wiki artiklis antud juhistele.</translation>
+        <translation>Nimekirja kõikidest teadaolevatest probleemidest saab näha meie %1, mis asub keskkonnas nimega Github. Kui avastad xToxis vea või turvaaugu, anna sellest teada vastavalt meie %2 wiki artiklis antud juhistele.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -324,12 +324,12 @@ mis võib põhjustada probleeme videokõnedega.</translation>
         <translation>Värskendus on saadaval</translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
-        <translation>qTox on ajakohane ✓</translation>
+        <source>xTox is up to date ✓</source>
+        <translation>xTox on ajakohane ✓</translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
-        <translation>Sa kasutad praegu qTox&apos;i testimata arendusversiooni</translation>
+        <source>Currently running an untested/unstable version of xTox</source>
+        <translation>Sa kasutad praegu xTox&apos;i testimata arendusversiooni</translation>
     </message>
 </context>
 <context>
@@ -497,12 +497,12 @@ mis võib põhjustada probleeme videokõnedega.</translation>
         <translation>Logid (*.log)</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
-        <translation>Kui sa just %1 ei tea, mida sa teed, siis palun %2 muuda siin midagi. Siin tehtud muudatused võivad põhjustada probleeme qToxiga, ja isegi su andmete (nt. ajalugu) kadumist. %3</translation>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
+        <translation>Kui sa just %1 ei tea, mida sa teed, siis palun %2 muuda siin midagi. Siin tehtud muudatused võivad põhjustada probleeme xToxiga, ja isegi su andmete (nt. ajalugu) kadumist. %3</translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
-        <translation>Need muudatused jõustuvad peale qToxi uuesti käivitamist.</translation>
+        <source>Changes here are applied only after restarting xTox.</source>
+        <translation>Need muudatused jõustuvad peale xToxi uuesti käivitamist.</translation>
     </message>
     <message>
         <source>Save file</source>
@@ -652,8 +652,8 @@ mis võib põhjustada probleeme videokõnedega.</translation>
         <translation>Avamine luhtus</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>qTox ei suutnud avada faili %1</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>xTox ei suutnud avada faili %1</translation>
     </message>
     <message>
         <source>Bad idea</source>
@@ -665,8 +665,8 @@ mis võib põhjustada probleeme videokõnedega.</translation>
         <translation>Ei suutnud avada ajutist faili</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
-        <translation>qTox ei suutnud ekraanitõmmist salvestada</translation>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
+        <translation>xTox ei suutnud ekraanitõmmist salvestada</translation>
     </message>
     <message>
         <source>Call duration: </source>
@@ -1093,16 +1093,16 @@ ja sa saad seda faili nüüd Windowsis salvestada.</translation>
         <translation>Üldseaded</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>Tõlke aktiveerimiseks tuleb qTox võib-olla uuesti käivitada.</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>Tõlke aktiveerimiseks tuleb xTox võib-olla uuesti käivitada.</translation>
     </message>
     <message>
         <source>Language:</source>
         <translation>Keel:</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>Käivita qTox koos operatsioonisüsteemiga (kasutades käesolevat profiili).</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>Käivita xTox koos operatsioonisüsteemiga (kasutades käesolevat profiili).</translation>
     </message>
     <message>
         <source>Autostart</source>
@@ -1122,9 +1122,9 @@ ja sa saad seda faili nüüd Windowsis salvestada.</translation>
         <translation>Kuva süsteemisalve ikooni</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox on käivitudes nähtav vaid süsteemisalves.</translation>
+        <translation>xTox on käivitudes nähtav vaid süsteemisalves.</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1183,17 +1183,17 @@ ja sa saad seda faili nüüd Windowsis salvestada.</translation>
         <translation> MB</translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
-        <translation>Klõps minimeerimisnupul (_) kahandab qToxi
+        <translation>Klõps minimeerimisnupul (_) kahandab xToxi
 tegumiriba asemel teavituste alale.</translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
-        <translation>Klõps sulgemisnupul (X) sulgeb qToxi akna ja
+        <translation>Klõps sulgemisnupul (X) sulgeb xToxi akna ja
 jätab ta tööle teavituste alal.</translation>
     </message>
     <message>
@@ -1537,8 +1537,8 @@ Jaga seda oma sõpradele, et nendega suhelda.</translation>
         <translation>Loo profiil</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>Kui profiil pole salasõnaga kaitstud, võib qTox sisselogimise aknast mööda minna, kui seda soovid</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>Kui profiil pole salasõnaga kaitstud, võib xTox sisselogimise aknast mööda minna, kui seda soovid</translation>
     </message>
     <message>
         <source>Load automatically</source>
@@ -1770,9 +1770,9 @@ Palun vaata, et sa mõlemal korral sisestad sama salasõna.</translation>
         <translation type="unfinished">Käivitatav fail</translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translation type="unfinished">Oled palunud qToxil avada käivitatava faili. Sellised failid võivad teoreetiliselt sinu arvutit kahjustada. Kas oled kindel, et soovid faili avada?</translation>
+        <translation type="unfinished">Oled palunud xToxil avada käivitatava faili. Sellised failid võivad teoreetiliselt sinu arvutit kahjustada. Kas oled kindel, et soovid faili avada?</translation>
     </message>
 </context>
 <context>
@@ -1979,8 +1979,8 @@ Kui saad hulgaliselt soovimatuid sõbrakutseid, muuda seda väärtust.</translat
         <translation>Salasõnast ei suudetud võtit tuletada; profiil ei kasuta uut salasõna.</translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation>Toxib rakendusega qTox</translation>
+        <source>Toxing on xTox</source>
+        <translation>Toxib rakendusega xTox</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2287,8 +2287,8 @@ See ID sisaldab NoSpam koodi (sinine) ja kontrollsumma (hall).</translation>
         <translation>Viga</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>qTox ei suutnud sinu vestluste logisid avada, need deaktiveeritakse.</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>xTox ei suutnud sinu vestluste logisid avada, need deaktiveeritakse.</translation>
     </message>
     <message>
         <source>None</source>
@@ -2507,7 +2507,7 @@ See ID sisaldab NoSpam koodi (sinine) ja kontrollsumma (hall).</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2537,9 +2537,9 @@ See ID sisaldab NoSpam koodi (sinine) ja kontrollsumma (hall).</translation>
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>Ala valaimiseks klõpsa ja lohista. Vajuta %1, et qToxi aken peita/kuvada, või klahvi %2, et katkestada.</translation>
+        <translation>Ala valaimiseks klõpsa ja lohista. Vajuta %1, et xToxi aken peita/kuvada, või klahvi %2, et katkestada.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2552,9 +2552,9 @@ See ID sisaldab NoSpam koodi (sinine) ja kontrollsumma (hall).</translation>
         <translation>Escape</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>Vajuta %1 klahvi, et saata kuvatõmmis valitud alast, %2, et qToxi aken peita/kuvada või klahvi %3, et katkestada.</translation>
+        <translation>Vajuta %1 klahvi, et saata kuvatõmmis valitud alast, %2, et xToxi aken peita/kuvada või klahvi %3, et katkestada.</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2678,7 +2678,7 @@ See ID sisaldab NoSpam koodi (sinine) ja kontrollsumma (hall).</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2746,8 +2746,8 @@ See ID sisaldab NoSpam koodi (sinine) ja kontrollsumma (hall).</translation>
         <translation>Suurus: </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation>Uued tekstikujunduse eelistused võivad jõustuda alles siis, kui qTox käivitatakse uuesti.</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation>Uued tekstikujunduse eelistused võivad jõustuda alles siis, kui xTox käivitatakse uuesti.</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2774,9 +2774,9 @@ See ID sisaldab NoSpam koodi (sinine) ja kontrollsumma (hall).</translation>
         <translation>Uus sõnum</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translation>Ava qToxi aken, kui saabub uus sõnum ja ühtki akent pole veel avatud.</translation>
+        <translation>Ava xToxi aken, kui saabub uus sõnum ja ühtki akent pole veel avatud.</translation>
     </message>
     <message>
         <source>Open window</source>
@@ -2893,7 +2893,7 @@ See ID sisaldab NoSpam koodi (sinine) ja kontrollsumma (hall).</translation>
     <message>
         <source>If enabled, every contact without an avatar will have a generated icon based on their Tox ID instead of the default picture. Requires restart to apply.</source>
         <comment>toolTip for show identicons</comment>
-        <translation>Lubatult saavad kõik avatarita kontaktid vaikimisi pildi asemel genereeritud ikooni, mis vastab nende Tox IDle. Rakendamiseks on vaja qTox taaskäivitada.</translation>
+        <translation>Lubatult saavad kõik avatarita kontaktid vaikimisi pildi asemel genereeritud ikooni, mis vastab nende Tox IDle. Rakendamiseks on vaja xTox taaskäivitada.</translation>
     </message>
     <message>
         <source>Smiley pack:</source>
@@ -2993,7 +2993,7 @@ See ID sisaldab NoSpam koodi (sinine) ja kontrollsumma (hall).</translation>
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation>Kuva</translation>
     </message>
     <message>
@@ -3026,9 +3026,9 @@ See ID sisaldab NoSpam koodi (sinine) ja kontrollsumma (hall).</translation>
         <translation>Toxcore käivitamine ei õnnestunud. Peale selle teate sulgemist lõpetab rakendus töö.</translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
-        <translation>Antud puhverserveri seadistusi kasutades Toxcore käivitamine ei õnnestunud. Seetõttu ka qTox&apos;i käivitamine ei õnnestu. Palun muuda oma seadistusi ja proovi uuesti.</translation>
+        <translation>Antud puhverserveri seadistusi kasutades Toxcore käivitamine ei õnnestunud. Seetõttu ka xTox&apos;i käivitamine ei õnnestu. Palun muuda oma seadistusi ja proovi uuesti.</translation>
     </message>
     <message>
         <source>Couldn&apos;t send friend request</source>

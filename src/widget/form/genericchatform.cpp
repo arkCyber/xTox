@@ -1,20 +1,20 @@
 /*
-    Copyright © 2014-2019 by The qTox Project Contributors
+    Copyright © 2014-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "genericchatform.h"
@@ -380,7 +380,7 @@ void GenericChatForm::show(ContentLayout* contentLayout_)
 #if QT_VERSION < QT_VERSION_CHECK(5, 12, 4) && QT_VERSION > QT_VERSION_CHECK(5, 11, 0)
     // HACK: switching order happens to avoid a Qt bug causing segfault, present between these versions.
     // this could cause flickering if our form is shown before added to the layout
-    // https://github.com/qTox/qTox/issues/5570
+    // https://github.com/xTox/xTox/issues/5570
     QWidget::show();
     contentLayout->mainContent->layout()->addWidget(this);
 #else
@@ -417,7 +417,11 @@ bool GenericChatForm::event(QEvent* e)
 
 void GenericChatForm::onChatContextMenuRequested(QPoint pos)
 {
-    QWidget* sender = static_cast<QWidget*>(QObject::sender());
+    auto* sender = qobject_cast<QWidget*>(QObject::sender());
+    if (!sender) {
+        return;
+    }
+
     pos = sender->mapToGlobal(pos);
 
     // If we right-clicked on a link, give the option to copy it

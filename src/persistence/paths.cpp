@@ -1,20 +1,20 @@
 /*
-    Copyright © 2019 by The qTox Project Contributors
+    Copyright © 2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "paths.h"
@@ -32,7 +32,7 @@
 #include <cassert>
 
 namespace {
-const QLatin1String globalSettingsFile{"qtox.ini"};
+const QLatin1String globalSettingsFile{"xtox.ini"};
 
 #if PATHS_VERSION_TCS_COMPLIANT
 const QLatin1String profileFolder{"profiles"};
@@ -54,10 +54,10 @@ const QLatin1String TCSToxFileFolder{"~/.config/tox/"};
 
 /**
  * @class Profile
- * @brief Handles all qTox internal paths
+ * @brief Handles all xTox internal paths
  *
- * The qTox internal file layout starts at `<BASE_PATH>`. This directory is platform
- * specific and depends on if qTox runs in portable mode.
+ * The xTox internal file layout starts at `<BASE_PATH>`. This directory is platform
+ * specific and depends on if xTox runs in portable mode.
  *
  * Example file layout for non-portable mode:
  * @code
@@ -69,14 +69,14 @@ const QLatin1String TCSToxFileFolder{"~/.config/tox/"};
  *
  * Example file layout for portable mode:
  * @code
- *  /qTox.bin
+ *  /xTox.bin
  *  /themes/
  *  /profiles/
  *  /profiles/avatars/
- *  /qtox.ini
+ *  /xtox.ini
  * @endcode
  *
- * All qTox or Tox specific directories should be looked up through this module.
+ * All xTox or Tox specific directories should be looked up through this module.
  */
 
 namespace {
@@ -146,7 +146,7 @@ bool Paths::setPortable(bool newPortable)
 }
 
 /**
- * @brief Check if qTox is running in portable mode.
+ * @brief Check if xTox is running in portable mode.
  * @return True if running in portable mode, false else.
  */
 bool Paths::isPortable() const
@@ -156,7 +156,7 @@ bool Paths::isPortable() const
 
 #if PATHS_VERSION_TCS_COMPLIANT
 /**
- * @brief Returns the path to the global settings file "qtox.ini"
+ * @brief Returns the path to the global settings file "xtox.ini"
  * @return The path to the folder.
  */
 QString Paths::getGlobalSettingsPath() const
@@ -273,7 +273,7 @@ QStringList Paths::getThemeDirs() const
                                                QStandardPaths::LocateDirectory);
     }
 
-    // look for themes beside the qTox binary with lowest priority
+    // look for themes beside the xTox binary with lowest priority
     const QString curPath = qApp->applicationDirPath();
     themeFolders += curPath % QDir::separator() % themeFolder % QDir::separator();
 

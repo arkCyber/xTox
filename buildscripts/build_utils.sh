@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # SPDX-License-Identifier: GPL-3.0-or-later
-#     Copyright (c) 2022 by The qTox Project Contributors
+#     Copyright (c) 2022 by The xTox Project Contributors
 
 
 set -euo pipefail

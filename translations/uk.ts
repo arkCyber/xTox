@@ -139,8 +139,8 @@ which may lead to problems with video calls.</source>
         <translation>Автор: %1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>Ви використовуєте qTox версії %1.</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>Ви використовуєте xTox версії %1.</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -155,10 +155,10 @@ which may lead to problems with video calls.</source>
         <translation>Версія Qt: %1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>Список знаних проблем знаходиться у Github за адресою %1. Якщо ви знайшли помилку чи ваду у системі безпеки qTox, будь ласка, повідомте про неї згідно до інструкції у нашій статті на wiki %2.</translation>
+        <translation>Список знаних проблем знаходиться у Github за адресою %1. Якщо ви знайшли помилку чи ваду у системі безпеки xTox, будь ласка, повідомте про неї згідно до інструкції у нашій статті на wiki %2.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -320,11 +320,11 @@ which may lead to problems with video calls.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
+        <source>xTox is up to date ✓</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
+        <source>Currently running an untested/unstable version of xTox</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -494,11 +494,11 @@ which may lead to problems with video calls.</source>
         <translation>Логи (*.log)</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
+        <source>Changes here are applied only after restarting xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -645,8 +645,8 @@ which may lead to problems with video calls.</source>
         <translation>Надіслати файл</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>qTox не може відкрити файл %1</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>xTox не може відкрити файл %1</translation>
     </message>
     <message>
         <source>Unable to open</source>
@@ -662,8 +662,8 @@ which may lead to problems with video calls.</source>
         <translation>Помилка відкриття тимчасового файлу</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
-        <translation>qTox не зміг зберегти скриншот</translation>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
+        <translation>xTox не зміг зберегти скриншот</translation>
     </message>
     <message>
         <source>Call duration: </source>
@@ -1088,8 +1088,8 @@ so you can save the file on Windows.</source>
         <translation>Основні параметри</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>Переклад буде застосовано після перезавантаження qTox.</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>Переклад буде застосовано після перезавантаження xTox.</translation>
     </message>
     <message>
         <source>Show system tray icon</source>
@@ -1101,13 +1101,13 @@ so you can save the file on Windows.</source>
         <translation>Увімкнути світлі піктограми.</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>Запускти qTox при завантаженні операційної системи (поточний профіль).</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>Запускти xTox при завантаженні операційної системи (поточний профіль).</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox буде запускатися згорнутим в лоток.</translation>
+        <translation>xTox буде запускатися згорнутим в лоток.</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1178,13 +1178,13 @@ so you can save the file on Windows.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
         <translation type="unfinished"></translation>
@@ -1530,8 +1530,8 @@ Share it with your friends to begin chatting.</source>
         <translation>Створити профіль</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>Якщо пароль профілю не задано, qTox може пропускати екран входу</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>Якщо пароль профілю не задано, xTox може пропускати екран входу</translation>
     </message>
     <message>
         <source>Load automatically</source>
@@ -1768,7 +1768,7 @@ Please make sure to enter the same password twice.</source>
         <translation type="unfinished">Виконуваний файл</translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
         <translation type="unfinished">Ви намагаєтеся відкрити виконуваний файл. Виконувані файли можуть нанести шкоди вашому комп’ютеру. Ви все ще хочете відкрити цей файл?</translation>
     </message>
@@ -1977,8 +1977,8 @@ Save format changes are possible, which may result in data loss.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation type="unfinished">Вітання з qTox</translation>
+        <source>Toxing on xTox</source>
+        <translation type="unfinished">Вітання з xTox</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2308,8 +2308,8 @@ It&apos;s difficult to translate &quot;Tox me maybe&quot; because in Ukrainian n
         <translation>Помилка</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>qTox не може відкрити ваші чат логи, їх буде вимкнено.</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>xTox не може відкрити ваші чат логи, їх буде вимкнено.</translation>
     </message>
     <message>
         <source>None</source>
@@ -2505,7 +2505,7 @@ It&apos;s difficult to translate &quot;Tox me maybe&quot; because in Ukrainian n
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2535,9 +2535,9 @@ It&apos;s difficult to translate &quot;Tox me maybe&quot; because in Ukrainian n
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation type="unfinished">Клікніть та перетягніть вказівник миші, щоб обрати область. Натисніть %1 щоб відобразити/приховати вікно qTox, або %2 для скасування.</translation>
+        <translation type="unfinished">Клікніть та перетягніть вказівник миші, щоб обрати область. Натисніть %1 щоб відобразити/приховати вікно xTox, або %2 для скасування.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2550,9 +2550,9 @@ It&apos;s difficult to translate &quot;Tox me maybe&quot; because in Ukrainian n
         <translation type="unfinished">Escape</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation type="unfinished">Натисніть %1 щоб надіслати знімок вибраної області, %2 щоб відобразити/приховати вікно qTox, або %3 для скасування.</translation>
+        <translation type="unfinished">Натисніть %1 щоб надіслати знімок вибраної області, %2 щоб відобразити/приховати вікно xTox, або %3 для скасування.</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2676,7 +2676,7 @@ It&apos;s difficult to translate &quot;Tox me maybe&quot; because in Ukrainian n
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2744,8 +2744,8 @@ It&apos;s difficult to translate &quot;Tox me maybe&quot; because in Ukrainian n
         <translation type="unfinished">Розмір: </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation type="unfinished">Нові налаштування стилю тексту можуть не застосуватись до перезавантаження qTox.</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation type="unfinished">Нові налаштування стилю тексту можуть не застосуватись до перезавантаження xTox.</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2772,9 +2772,9 @@ It&apos;s difficult to translate &quot;Tox me maybe&quot; because in Ukrainian n
         <translation type="unfinished">Нове повідомлення</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translation type="unfinished">Відкривати вікно qTox при отриманні нового повідомлення, якщо вікно qTox ще не відкрите.</translation>
+        <translation type="unfinished">Відкривати вікно xTox при отриманні нового повідомлення, якщо вікно xTox ще не відкрите.</translation>
     </message>
     <message>
         <source>Open window</source>
@@ -2991,7 +2991,7 @@ It&apos;s difficult to translate &quot;Tox me maybe&quot; because in Ukrainian n
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation type="unfinished">Відкрити</translation>
     </message>
     <message>
@@ -3024,7 +3024,7 @@ It&apos;s difficult to translate &quot;Tox me maybe&quot; because in Ukrainian n
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
         <translation type="unfinished"></translation>
     </message>

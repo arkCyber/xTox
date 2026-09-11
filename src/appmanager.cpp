@@ -1,20 +1,20 @@
 /*
-    Copyright © 2022 by The qTox Project Contributors
+    Copyright © 2022 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "appmanager.h"
@@ -75,7 +75,7 @@ void logMessageHandler(QtMsgType type, const QMessageLogContext& ctxt, const QSt
     {
         // snorenotify logs this when we call requestCloseNotification correctly. The behaviour still works, so we'll
         // just mask the warning for now. The issue has been reported upstream:
-        // https://github.com/qTox/qTox/pull/6073#pullrequestreview-420748519
+        // https://github.com/xTox/xTox/pull/6073#pullrequestreview-420748519
         return;
     }
 
@@ -189,15 +189,15 @@ int AppManager::run()
     PosixSignalNotifier::watchCommonTerminatingSignals();
 #endif
 
-    qapp->setApplicationName("qTox");
+    qapp->setApplicationName("xTox");
 #if QT_VERSION >= QT_VERSION_CHECK(5, 7, 0)
-    qapp->setDesktopFileName("io.github.qtox.qTox");
+    qapp->setDesktopFileName("io.github.xtox.xTox");
 #endif
     qapp->setApplicationVersion("\nGit commit: " + QString(GIT_VERSION));
 
     // Install Unicode 6.1 supporting font
     // Keep this as close to the beginning of `main()` as possible, otherwise
-    // on systems that have poor support for Unicode qTox will look bad.
+    // on systems that have poor support for Unicode xTox will look bad.
     if (QFontDatabase::addApplicationFont("://font/DejaVuSans.ttf") == -1) {
         qWarning() << "Couldn't load font";
     }
@@ -210,7 +210,7 @@ int AppManager::run()
 
     // Process arguments
     QCommandLineParser parser;
-    parser.setApplicationDescription("qTox, version: " + QString(GIT_VERSION));
+    parser.setApplicationDescription("xTox, version: " + QString(GIT_VERSION));
     parser.addHelpOption();
     parser.addVersionOption();
     parser.addPositionalArgument("uri", tr("Tox URI to parse"));
@@ -253,7 +253,7 @@ int AppManager::run()
     QString logFileDir = settings->getPaths().getAppCacheDirPath();
     QDir(logFileDir).mkpath(".");
 
-    QString logfile = logFileDir + "qtox.log";
+    QString logfile = logFileDir + "xtox.log";
     FILE* mainLogFilePtr = fopen(logfile.toLocal8Bit().constData(), "a");
 
     // Trim log file if over 1MB
@@ -267,12 +267,12 @@ int AppManager::run()
         QDir dir(logFileDir);
 
         // Check if log.1 already exists, and if so, delete it
-        if (dir.remove(logFileDir + "qtox.log.1"))
+        if (dir.remove(logFileDir + "xtox.log.1"))
             qDebug() << "Removed old log successfully";
         else
             qWarning() << "Unable to remove old log file";
 
-        if (!dir.rename(logFileDir + "qtox.log", logFileDir + "qtox.log.1"))
+        if (!dir.rename(logFileDir + "xtox.log", logFileDir + "xtox.log.1"))
             qCritical() << "Unable to move logs";
 
         // open a new logfile
@@ -323,9 +323,9 @@ int AppManager::run()
         eventType = "activate";
     } else {
         firstParam = parser.positionalArguments()[0];
-        // Tox URIs. If there's already another qTox instance running, we ask it to handle the URI
+        // Tox URIs. If there's already another xTox instance running, we ask it to handle the URI
         // and we exit
-        // Otherwise we start a new qTox instance and process it ourselves
+        // Otherwise we start a new xTox instance and process it ourselves
         if (firstParam.startsWith("tox:")) {
             eventType = "uri";
         } else if (firstParam.endsWith(".tox")) {
@@ -338,12 +338,12 @@ int AppManager::run()
 
     if (doIpc && !ipc->isCurrentOwner()) {
         time_t event = ipc->postEvent(eventType, firstParam.toUtf8(), ipcDest);
-        // If someone else processed it, we're done here, no need to actually start qTox
+        // If someone else processed it, we're done here, no need to actually start xTox
         if (ipc->waitUntilAccepted(event, 2)) {
             if (eventType == "activate") {
                 qDebug()
-                    << "Another qTox instance is already running. If you want to start a second "
-                       "instance, please open login screen (qtox -l) or start with a profile (qtox "
+                    << "Another xTox instance is already running. If you want to start a second "
+                       "instance, please open login screen (xtox -l) or start with a profile (xtox "
                        "-p <profile name>).";
             } else {
                 qDebug() << "Event" << eventType << "was handled by other client.";
@@ -408,7 +408,7 @@ AppManager::~AppManager() = default;
 void AppManager::cleanup()
 {
     // force save early even though destruction saves, because Windows OS will
-    // close qTox before cleanup() is finished if logging out or shutting down,
+    // close xTox before cleanup() is finished if logging out or shutting down,
     // once the top level window has exited, which occurs in ~Widget within
     // ~nexus-> Re-ordering Nexus destruction is not trivial.
     if (settings) {

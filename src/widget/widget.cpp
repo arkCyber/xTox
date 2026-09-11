@@ -1,20 +1,20 @@
 /*
-    Copyright © 2014-2022 by The qTox Project Contributors
+    Copyright © 2014-2022 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "widget.h"
@@ -176,7 +176,7 @@ void Widget::init()
 {
     ui->setupUi(this);
 
-    QIcon themeIcon = QIcon::fromTheme("qtox");
+    QIcon themeIcon = QIcon::fromTheme("xtox");
     if (!themeIcon.isNull()) {
         setWindowIcon(themeIcon);
     }
@@ -412,7 +412,7 @@ void Widget::init()
 
     fileMenu->menu()->addSeparator();
     logoutAction = fileMenu->menu()->addAction(QString());
-    connect(logoutAction, &QAction::triggered, [this]() { nexus.showLogin(); });
+    connect(logoutAction, &QAction::triggered, this, [this]() { nexus.showLogin(); });
 
     editMenu = globalMenu->insertMenu(viewMenu, new QMenu(this));
     editMenu->menu()->addSeparator();
@@ -429,7 +429,7 @@ void Widget::init()
     nextConversationAction = new QAction(this);
     nexus.windowMenu->insertAction(frontAction, nextConversationAction);
     nextConversationAction->setShortcut(QKeySequence::SelectNextPage);
-    connect(nextConversationAction, &QAction::triggered, [this]() {
+    connect(nextConversationAction, &QAction::triggered, this, [this]() {
         if (contentDialogManager->current() == QApplication::activeWindow())
             contentDialogManager->current()->cycleChats(true);
         else if (QApplication::activeWindow() == this)
@@ -439,7 +439,7 @@ void Widget::init()
     previousConversationAction = new QAction(this);
     nexus.windowMenu->insertAction(frontAction, previousConversationAction);
     previousConversationAction->setShortcut(QKeySequence::SelectPreviousPage);
-    connect(previousConversationAction, &QAction::triggered, [this] {
+    connect(previousConversationAction, &QAction::triggered, this, [this] {
         if (contentDialogManager->current() == QApplication::activeWindow())
             contentDialogManager->current()->cycleChats(false);
         else if (QApplication::activeWindow() == this)
@@ -454,7 +454,7 @@ void Widget::init()
 
     QAction* aboutAction = viewMenu->menu()->addAction(QString());
     aboutAction->setMenuRole(QAction::AboutRole);
-    connect(aboutAction, &QAction::triggered, [this]() {
+    connect(aboutAction, &QAction::triggered, this, [this]() {
         onShowSettings();
         settingsWidget->showAbout();
     });
@@ -566,7 +566,7 @@ void Widget::updateIcons()
     // from QIcon::fromTheme was a fallback icon, causing hasThemeIcon to
     // incorrectly return true.
     //
-    // In qTox this leads to the tray and window icons using the static qTox logo
+    // In xTox this leads to the tray and window icons using the static xTox logo
     // icon instead of an icon based on the current presence status.
     //
     // This workaround checks for an icon that definitely does not exist to
@@ -578,7 +578,7 @@ void Widget::updateIcons()
     static bool hasThemeIconBug = false;
 
     if (!checkedHasThemeIcon) {
-        hasThemeIconBug = QIcon::hasThemeIcon("qtox-asjkdfhawjkeghdfjgh");
+        hasThemeIconBug = QIcon::hasThemeIcon("xtox-asjkdfhawjkeghdfjgh");
         checkedHasThemeIcon = true;
 
         if (hasThemeIconBug) {
@@ -588,8 +588,8 @@ void Widget::updateIcons()
     }
 
     QIcon ico;
-    if (!hasThemeIconBug && QIcon::hasThemeIcon("qtox-" + assetSuffix)) {
-        ico = QIcon::fromTheme("qtox-" + assetSuffix);
+    if (!hasThemeIconBug && QIcon::hasThemeIcon("xtox-" + assetSuffix)) {
+        ico = QIcon::fromTheme("xtox-" + assetSuffix);
     } else {
         QString color = settings.getLightTrayIcon() ? QStringLiteral("light") : QStringLiteral("dark");
         QString path = ":/img/taskbar/" + color + "/taskbar_" + assetSuffix + ".svg";
@@ -783,7 +783,7 @@ void Widget::onBadProxyCore()
     settings.setProxyType(Settings::ProxyType::ptNone);
     QMessageBox critical(this);
     critical.setText(tr("Toxcore failed to start with your proxy settings. "
-                        "qTox cannot run; please modify your "
+                        "xTox cannot run; please modify your "
                         "settings and restart.",
                         "popup text"));
     critical.setIcon(QMessageBox::Critical);
@@ -1889,7 +1889,7 @@ ContentLayout* Widget::createContentDialog(DialogType type) const
             restoreGeometry(settings.getDialogSettingsGeometry());
             Translator::registerHandler(std::bind(&Dialog::retranslateUi, this), this);
             retranslateUi();
-            setWindowIcon(QIcon(":/img/icons/qtox.svg"));
+            setWindowIcon(QIcon(":/img/icons/xtox.svg"));
             reloadTheme();
 
             connect(core, &Core::usernameSet, this, &Dialog::retranslateUi);
@@ -2281,7 +2281,7 @@ bool Widget::event(QEvent* e)
 
 void Widget::onUserAwayCheck()
 {
-#ifdef QTOX_PLATFORM_EXT
+#ifdef XTOX_PLATFORM_EXT
     uint32_t autoAwayTime = settings.getAutoAwayTime() * 60 * 1000;
     bool online = static_cast<Status::Status>(ui->statusButton->property("status").toInt())
                   == Status::Status::Online;
@@ -2623,7 +2623,7 @@ void Widget::friendRequestsUpdate()
         friendRequestsButton->setObjectName("green");
         ui->statusLayout->insertWidget(2, friendRequestsButton);
 
-        connect(friendRequestsButton, &QPushButton::released, [this]() {
+        connect(friendRequestsButton, &QPushButton::released, this, [this]() {
             onAddClicked();
             addFriendForm->setMode(AddFriendForm::Mode::FriendRequest);
         });
@@ -2691,7 +2691,7 @@ void Widget::retranslateUi()
     statusBusy->setText(tr("Busy", "Button to set your status to 'Busy'"));
     actionLogout->setText(tr("Logout", "Tray action menu to logout user"));
     actionQuit->setText(tr("Exit", "Tray action menu to exit Tox"));
-    actionShow->setText(tr("Show", "Tray action menu to show qTox window"));
+    actionShow->setText(tr("Show", "Tray action menu to show xTox window"));
 
     if (!settings.getSeparateWindow() && (settingsWidget && settingsWidget->isShown())) {
         setWindowTitle(fromDialogType(DialogType::SettingDialog));
@@ -2755,9 +2755,9 @@ void Widget::connectFriendWidget(FriendWidget& friendWidget)
 void Widget::formatWindowTitle(const QString& content)
 {
     if (content.isEmpty()) {
-        setWindowTitle("qTox");
+        setWindowTitle("xTox");
     } else {
-        setWindowTitle(content + " - qTox");
+        setWindowTitle(content + " - xTox");
     }
 }
 

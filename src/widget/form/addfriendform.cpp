@@ -1,20 +1,20 @@
 /*
-    Copyright © 2014-2019 by The qTox Project Contributors
+    Copyright © 2014-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "addfriendform.h"
@@ -328,7 +328,11 @@ void AddFriendForm::deleteFriendRequest(const ToxId& toxId_)
 
 void AddFriendForm::onFriendRequestAccepted()
 {
-    QPushButton* acceptButton = static_cast<QPushButton*>(sender());
+    auto* acceptButton = qobject_cast<QPushButton*>(sender());
+    if (!acceptButton) {
+        return;
+    }
+
     QWidget* friendWidget = acceptButton->parentWidget();
     const int index = requestsLayout->indexOf(friendWidget);
     removeFriendRequestWidget(friendWidget);
@@ -341,7 +345,11 @@ void AddFriendForm::onFriendRequestAccepted()
 
 void AddFriendForm::onFriendRequestRejected()
 {
-    QPushButton* rejectButton = static_cast<QPushButton*>(sender());
+    auto* rejectButton = qobject_cast<QPushButton*>(sender());
+    if (!rejectButton) {
+        return;
+    }
+
     QWidget* friendWidget = rejectButton->parentWidget();
     const int index = requestsLayout->indexOf(friendWidget);
     removeFriendRequestWidget(friendWidget);

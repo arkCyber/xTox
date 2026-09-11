@@ -1,6 +1,6 @@
 # Coding Standards & Guidelines
 
-This document defines the qTox coding standards and style, all code
+This document defines the xTox coding standards and style, all code
 contributions are expected to adhere to the rules described below.
 
 Most stylistic features described below are described as clang-format rules
@@ -15,8 +15,8 @@ In case something is not specified in the following paragraphs, the
 
 ## Coding Standard
 
-qTox is written under **[ISO/IEC 14882:2011 (C++11)][ISO/IEC/C++11]** without
-GNU/GCC specific extensions (i.e. qTox should compile with `CXXFLAGS` set to
+xTox is written under **[ISO/IEC 14882:2011 (C++11)][ISO/IEC/C++11]** without
+GNU/GCC specific extensions (i.e. xTox should compile with `CXXFLAGS` set to
 `-std=c++11`, regardless of if `-std=gnu+11` is being used during compile
 time). Source code must be able to be compiled under multiple different
 compilers and operating systems including but not limited to GCC and Clang on
@@ -27,26 +27,26 @@ imposed:
 
 ### Compatibility
 
-qTox is linked against Qt 5, allowing the use of Qt constructs and library
+xTox is linked against Qt 5, allowing the use of Qt constructs and library
 features. The current minimum supported Qt version is Qt 5.5, meaning that all
 code must compile in a Qt 5.5 environment. Any usage post-Qt 5.5 features must
 be optional and be disabled when compiling/running in a Qt 5.5 environment.
 
 ### No Exceptions
 
-qTox is compiled without support for [C++11 exceptions][Exceptions], meaning
+xTox is compiled without support for [C++11 exceptions][Exceptions], meaning
 that any code contribution or dependency cannot throw a C++ exception at
-runtime or else the application will crash. For code present in the qTox
+runtime or else the application will crash. For code present in the xTox
 repository, this is enforced by the use of the `-fno-exceptions` flag in the
 CMake configuration.
 
 Note: This restriction prohibits the use of external libraries that may throw
-unhandled exceptions to qTox code. External libraries using exceptions, but
-never require qTox code to handle them directly, will work fine.
+unhandled exceptions to xTox code. External libraries using exceptions, but
+never require xTox code to handle them directly, will work fine.
 
 ### No RTTI
 
-qTox is compiled without support for [RTTI], as such code contributions using
+xTox is compiled without support for [RTTI], as such code contributions using
 `dynamic_cast()` or `std::dynamic_pointer_cast()` may fail to compile and may
 be rejected on this basis. The implications of this are that the signature of
 all polymorphic types must be known at compile time or stored in an
@@ -363,7 +363,7 @@ Include directives should include header files in the following order:
 | :---: | :--------------: | :--------------------------------------------------------------------------------------------------------------------------- |
 |   1   | Main             | The main header corresponding to a source (e.g. a source file `foo.cpp` includes `foo.h` as it's main header).               |
 |   2   | Local/Module     | Headers in the same folder as the current file. These headers should be included directly, without specifying the full path. |
-|   3   | Project          | Headers belonging to the qTox project. These should be specified using full header paths starting within "src/".             |
+|   3   | Project          | Headers belonging to the xTox project. These should be specified using full header paths starting within "src/".             |
 |   4\* | Qt               | Headers for Qt objects and functions.                                                                                        |
 |   5\* | Other            | Headers for any other dependencies (external libraries, tox, C/C++ STL, system headers, etc.                                 |
 
@@ -419,13 +419,13 @@ of fewer singleton classes over time.
 
 Singletons complicate destruction, complicate making multiple instances of
 something in the future, i.e. having two Tox profiles loaded at once is
-difficult to implement in qTox because both Settings and Profile are singleton.
+difficult to implement in xTox because both Settings and Profile are singleton.
 Singleton's also make unit testing and reasoning more difficult by more
 tightly coupling classes.
 
 ## Documentation
 
-When adding new code to qTox also add doxygen style comments before the
+When adding new code to xTox also add doxygen style comments before the
 implementation. If an old function is changed, make sure the existing
 documentation is updated to reflect the changes or if none exists, add it.
 
@@ -439,7 +439,7 @@ line. Doxygen keywords like `@brief`, `@param` and `@return` should be used
 such that doxygen can intelligently generate the appropriate documentation.
 
 On all updates to master, doxygen comments are automatically generated for the
-source code, available at https://qtox.github.io/doxygen.
+source code, available at https://xtox.github.io/doxygen.
 
 ```C++
 /*...license info...*/
@@ -507,7 +507,7 @@ In this example, string is not intended to be modified or copied (like
 appending) into other string:
 ```
     QApplication a(argc, argv);
-    a.setApplicationName(QStringLiteral("qTox"));
+    a.setApplicationName(QStringLiteral("xTox"));
 ```
 
 * Use `QLatin1String` when specialized overload exists.
@@ -534,13 +534,13 @@ Include `<QStringBuilder>` and use `%` operator for optimized single-pass
 concatenation with help of expression template's lazy evaluation:
 
 ```
-        if (!dir.rename(logFileDir % QLatin1String("qtox.log"),
-                        logFileDir % QLatin1String("qtox.log.1")))
+        if (!dir.rename(logFileDir % QLatin1String("xtox.log"),
+                        logFileDir % QLatin1String("xtox.log.1")))
             qCritical() << "Unable to move logs";
 ```
 ```
     QCommandLineParser parser;
-    parser.setApplicationDescription(QLatin1String("qTox, version: ")
+    parser.setApplicationDescription(QLatin1String("xTox, version: ")
     % QLatin1String(GIT_VERSION) % QLatin1String("\nBuilt: ")
     % QLatin1String(__TIME__) % QLatin1Char(' ') % QLatin1String(__DATE__));
 ```

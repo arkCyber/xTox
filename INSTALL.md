@@ -15,7 +15,7 @@
     - [Fedora](#fedora-git)
     - [openSUSE](#opensuse-git)
     - [Ubuntu](#ubuntu-git)
-  - [Clone qTox](#clone-qtox)
+  - [Clone xTox](#clone-xtox)
   - [GCC, Qt, FFmpeg, OpenAL Soft and qrencode](#other-deps)
     - [Arch](#arch-other-deps)
     - [Debian](#debian-other-deps)
@@ -27,7 +27,7 @@
     - [docker](#docker)
     - [Compile toxcore](#compile-toxcore)
     - [Compile extensions](#compile-extensions)
-  - [Compile qTox](#compile-qtox)
+  - [Compile xTox](#compile-xtox)
   - [Security hardening with AppArmor](#security-hardening-with-apparmor)
 - [BSD](#bsd)
   - [FreeBSD](#freebsd-easy)
@@ -57,9 +57,9 @@
 ## Optional dependencies
 
 They can be disabled/enabled by passing arguments to `cmake` command when
-building qTox.
+building xTox.
 
-If they are missing, qTox is built without support for the functionality.
+If they are missing, xTox is built without support for the functionality.
 
 ### Development dependencies
 
@@ -107,7 +107,7 @@ To enable: `-DDESKTOP_NOTIFICATIONS=True`
 ## Linux
 ### Simple install
 
-Easy qTox install is provided for variety of distributions:
+Easy xTox install is provided for variety of distributions:
 
 * [Arch](#arch)
 * [Debian](#debian)
@@ -125,70 +125,70 @@ Easy qTox install is provided for variety of distributions:
 PKGBUILD is available in the `community` repo, to install:
 
 ```bash
-pacman -S qtox
+pacman -S xtox
 ```
 
 <a name="debian-easy" />
 
 #### Debian
 
-qTox is available in the [Main](https://tracker.debian.org/pkg/qtox) repo, to install:
+xTox is available in the [Main](https://tracker.debian.org/pkg/xtox) repo, to install:
 
 ```bash
-sudo apt install qtox
+sudo apt install xtox
 ```
 
 <a name="fedora-easy" />
 
 #### Fedora
 
-qTox is available in the [RPM Fusion](https://rpmfusion.org/) repo, to install:
+xTox is available in the [RPM Fusion](https://rpmfusion.org/) repo, to install:
 
 ```bash
-dnf install qtox
+dnf install xtox
 ```
 
 <a name="gentoo-easy" />
 
 #### Gentoo
 
-qTox is available in Gentoo.
+xTox is available in Gentoo.
 
 To install:
 
 ```bash
-emerge qtox
+emerge xtox
 ```
 
 <a name="opensuse-easy" />
 
 #### openSUSE
 
-qTox is available in openSUSE Factory.
+xTox is available in openSUSE Factory.
 
 To install in openSUSE 15.0 or newer:
 
 ```bash
-zypper in qtox
+zypper in xtox
 ```
 
 To install in openSUSE 42.3:
 
 ```bash
 zypper ar -f https://download.opensuse.org/repositories/server:/messaging/openSUSE_Leap_42.3 server:messaging
-zypper in qtox
+zypper in xtox
 ```
 
 <a name="slackware-easy" />
 
 #### Slackware
 
-qTox SlackBuild and all of its dependencies can be found here:
-http://slackbuilds.org/repository/14.2/network/qTox/
+xTox SlackBuild and all of its dependencies can be found here:
+http://slackbuilds.org/repository/14.2/network/xTox/
 
 ----
 
-If your distribution is not listed, or you want / need to compile qTox, there
+If your distribution is not listed, or you want / need to compile xTox, there
 are provided instructions.
 
 
@@ -203,14 +203,14 @@ dependencies followed by compilation.
 
 #### Ubuntu
 
-qTox is available in the [Universe](https://packages.ubuntu.com/focal/qtox) repo, to install:
+xTox is available in the [Universe](https://packages.ubuntu.com/focal/xtox) repo, to install:
 
 ```bash
-sudo apt install qtox
+sudo apt install xtox
 ```
 
 ### Install git
-In order to clone the qTox repository you need Git.
+In order to clone the xTox repository you need Git.
 
 
 <a name="arch-git" />
@@ -254,27 +254,27 @@ sudo apt-get install git
 ```
 
 
-### Clone qTox
+### Clone xTox
 
 Afterwards open a new terminal, change to a directory of your choice and clone
 the repository:
 
 ```bash
 cd /home/$USER
-git clone https://github.com/qTox/qTox.git qTox
-cd qTox
+git clone https://github.com/xTox/xTox.git xTox
+cd xTox
 ```
 
 The following steps assumes that you cloned the repository at
-`/home/$USER/qTox`.  If you decided to choose another location, replace
+`/home/$USER/xTox`.  If you decided to choose another location, replace
 corresponding parts.
 
 
 ### Docker
 
-Development can be done within one of the many provided docker containers. See the available configurations in docker-compose.yml. These docker images have all the required dependencies for development already installed. Run `docker compose run --rm ubuntu_lts` and proceed to [compiling qTox](#compile-qtox). If you want to avoid compiling as root in the docker image, you can run `USER_ID=$(id -u) GROUP_ID=$(id -g) docker compose run --rm ubuntu_lts` instead.
+Development can be done within one of the many provided docker containers. See the available configurations in docker-compose.yml. These docker images have all the required dependencies for development already installed. Run `docker compose run --rm ubuntu_lts` and proceed to [compiling xTox](#compile-xtox). If you want to avoid compiling as root in the docker image, you can run `USER_ID=$(id -u) GROUP_ID=$(id -g) docker compose run --rm ubuntu_lts` instead.
 
-NOTE: qtox will not run in the docker container unless your x11 session allows connections from other users. If X11 is giving you issues in the docker image, try `xhost +` on your host machine
+NOTE: xtox will not run in the docker container unless your x11 session allows connections from other users. If X11 is giving you issues in the docker image, try `xhost +` on your host machine
 
 <a name="other-deps" />
 
@@ -311,7 +311,7 @@ sudo ldconfig
 
 #### Compile extensions
 
-qTox uses the toxext library and some of the extensions that go with it.
+xTox uses the toxext library and some of the extensions that go with it.
 
 You will likely have to compile these yourself.
 
@@ -333,7 +333,7 @@ make -j$(nproc)
 sudo make install
 ```
 
-### Compile qTox
+### Compile xTox
 
 **Make sure that all the dependencies are installed.**  If you experience
 problems with compiling, it's most likely due to missing dependencies, so please
@@ -349,16 +349,16 @@ export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/lib64/pkgconfig"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig"
 ```
 
-Run in qTox directory to compile:
+Run in xTox directory to compile:
 
 ```bash
 cmake .
 make -j$(nproc)
 ```
 
-Now you can start compiled qTox with `./qtox`
+Now you can start compiled xTox with `./xtox`
 
-Congratulations, you've compiled qTox `:)`
+Congratulations, you've compiled xTox `:)`
 
 
 #### Debian / Ubuntu / Mint
@@ -388,17 +388,17 @@ See [AppArmor] to enable confinement for increased security.
 
 #### FreeBSD
 
-qTox is available as a binary package. To install the qTox package:
+xTox is available as a binary package. To install the xTox package:
 
 ```bash
-pkg install qTox
+pkg install xTox
 ```
 
-The qTox port is also available at ``net-im/qTox``. To build and install qTox
+The xTox port is also available at ``net-im/xTox``. To build and install xTox
 from sources using the port:
 
 ```bash
-cd /usr/ports/net-im/qTox
+cd /usr/ports/net-im/xTox
 make install clean
 ```
 
@@ -408,7 +408,7 @@ make install clean
 
 Supported OS X versions: >=10.15.
 
-Compiling qTox on OS X for development requires 2 tools:
+Compiling xTox on OS X for development requires 2 tools:
 [Xcode](https://developer.apple.com/xcode/) and [homebrew](https://brew.sh).
 
 ### Manual Compiling
@@ -420,11 +420,11 @@ Install homebrew if you don't have it:
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-First, clone qTox.
+First, clone xTox.
 
 ```bash
-git clone https://github.com/qTox/qTox
-cd qTox
+git clone https://github.com/xTox/xTox
+cd xTox
 ```
 
 Then install required dependencies available via `brew`.
@@ -439,7 +439,7 @@ Then, install [toxcore](https://github.com/toktok/c-toxcore/blob/master/INSTALL.
 buildscripts/build_toxcore_linux.sh
 ```
 
-Finally, build qTox.
+Finally, build xTox.
 
 #### Compiling
 
@@ -451,10 +451,10 @@ make -j$(sysctl -n hw.ncpu)
 make install
 ```
 
-#### Running qTox
+#### Running xTox
 
-`qTox.dmg` should be in your build directory. You can install qTox from the dmg
-to your Applications folder, or run qTox directly from the dmg.
+`xTox.dmg` should be in your build directory. You can install xTox from the dmg
+to your Applications folder, or run xTox directly from the dmg.
 
 <a name="windows" />
 

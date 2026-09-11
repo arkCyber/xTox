@@ -2,7 +2,7 @@
 
 # MIT License
 #
-# Copyright © 2019 by The qTox Project Contributors
+# Copyright © 2019 by The xTox Project Contributors
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -27,18 +27,18 @@ set -exuo pipefail
 
 usage() {
     echo "$0 --src-dir SRC_DIR"
-    echo "Builds an app image in the CWD based off qtox installation at SRC_DIR"
+    echo "Builds an app image in the CWD based off xtox installation at SRC_DIR"
 }
 
 while (( $# > 0 )); do
     case $1 in
-        --src-dir) QTOX_SRC_DIR=$2; shift 2 ;;
+        --src-dir) XTOX_SRC_DIR=$2; shift 2 ;;
         --help|-h) usage; exit 1 ;;
         *) echo "Unexpected argument $1"; usage; exit 1;;
     esac
 done
 
-if [ -z "${QTOX_SRC_DIR+x}" ]; then
+if [ -z "${XTOX_SRC_DIR+x}" ]; then
     echo "--src-dir is a required argument"
     usage
     exit 1
@@ -47,32 +47,32 @@ fi
 # directory paths
 BUILD_DIR=$(realpath .)
 readonly BUILD_DIR
-QTOX_APP_DIR="$BUILD_DIR"/appdir
-readonly QTOX_APP_DIR
-readonly LOCAL_LIB_DIR="$QTOX_APP_DIR"/local/lib
+XTOX_APP_DIR="$BUILD_DIR"/appdir
+readonly XTOX_APP_DIR
+readonly LOCAL_LIB_DIR="$XTOX_APP_DIR"/local/lib
 # ldqt binary
 readonly LDQT_BIN="/usr/lib/qt5/bin/linuxdeployqt"
 
 # update information to be embeded in AppImage
-readonly UPDATE_INFO="gh-releases-zsync|qTox|qTox|latest|qTox-*.x86_64.AppImage.zsync"
-export GIT_VERSION=$(git -C "${QTOX_SRC_DIR}" rev-parse --short HEAD)
+readonly UPDATE_INFO="gh-releases-zsync|xTox|xTox|latest|xTox-*.x86_64.AppImage.zsync"
+export GIT_VERSION=$(git -C "${XTOX_SRC_DIR}" rev-parse --short HEAD)
 
-echo $QTOX_APP_DIR
-cmake "${QTOX_SRC_DIR}" -DDESKTOP_NOTIFICATIONS=ON -DUPDATE_CHECK=ON -DCMAKE_BUILD_TYPE=Release
+echo $XTOX_APP_DIR
+cmake "${XTOX_SRC_DIR}" -DDESKTOP_NOTIFICATIONS=ON -DUPDATE_CHECK=ON -DCMAKE_BUILD_TYPE=Release
 make -j$(nproc)
 rm -fr appdir
 make DESTDIR=appdir install
 
 unset QTDIR; unset QT_PLUGIN_PATH; unset LD_LIBRARY_PATH;
 
-readonly QTOX_DESKTOP_FILE="$QTOX_APP_DIR"/usr/local/share/applications/*.desktop
+readonly XTOX_DESKTOP_FILE="$XTOX_APP_DIR"/usr/local/share/applications/*.desktop
 export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib/x86_64-linux-gnu/
 
-eval "$LDQT_BIN $QTOX_DESKTOP_FILE -bundle-non-qt-libs -extra-plugins=libsnore-qt5"
+eval "$LDQT_BIN $XTOX_DESKTOP_FILE -bundle-non-qt-libs -extra-plugins=libsnore-qt5"
 
 # Move the required files to the correct directory
-mv "$QTOX_APP_DIR"/usr/* "$QTOX_APP_DIR/"
-rm -rf "$QTOX_APP_DIR/usr"
+mv "$XTOX_APP_DIR"/usr/* "$XTOX_APP_DIR/"
+rm -rf "$XTOX_APP_DIR/usr"
 
 # Warning: This is hard coded to debain:stretch.
 libs=(
@@ -97,4 +97,4 @@ for lib in "${libs[@]}"; do
     patchelf --set-rpath '$ORIGIN' "$LOCAL_LIB_DIR/$lib_file_name"
 done
 
-appimagetool -u "$UPDATE_INFO" $QTOX_APP_DIR qTox-${GIT_VERSION}.x86_64.AppImage
+appimagetool -u "$UPDATE_INFO" $XTOX_APP_DIR xTox-${GIT_VERSION}.x86_64.AppImage

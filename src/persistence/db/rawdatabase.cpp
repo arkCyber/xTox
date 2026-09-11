@@ -1,20 +1,20 @@
 /*
-    Copyright © 2014-2019 by The qTox Project Contributors
+    Copyright © 2014-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "rawdatabase.h"
@@ -90,7 +90,7 @@ RawDatabase::RawDatabase(const QString& path_, const QString& password, const QB
     , currentSalt{salt} // we need the salt later if a new password should be set
     , currentHexKey{deriveKey(password, salt)}
 {
-    workerThread->setObjectName("qTox Database");
+    workerThread->setObjectName("xTox Database");
     moveToThread(workerThread.get());
     workerThread->start();
 
@@ -185,7 +185,7 @@ bool RawDatabase::open(const QString& path_, const QString& hexKey)
 
 bool RawDatabase::openEncryptedDatabaseAtLatestSupportedVersion(const QString& hexKey)
 {
-    // old qTox database are saved with SQLCipher 3.x defaults. For a period after 1.16.3 but before 1.17.0, databases
+    // old xTox database are saved with SQLCipher 3.x defaults. For a period after 1.16.3 but before 1.17.0, databases
     // could be partially upgraded to SQLCipher 4.0 defaults, since SQLCipher 3.x isn't capable of setitng all the same
     // params. If SQLCipher 4.x happened to be used, they would have been fully upgraded to 4.0 default params.
     // We need to support all three of these cases, so also upgrade to the latest possible params while we're here

@@ -1,20 +1,20 @@
 /*
-    Copyright © 2022 by The qTox Project Contributors
+    Copyright © 2022 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "dbupgrader.h"
@@ -236,16 +236,25 @@ bool DbUpgrader::dbSchemaUpgrade(std::shared_ptr<RawDatabase>& db, IMessageBoxMa
 
     if (databaseSchemaVersion > SCHEMA_VERSION) {
         messageBoxManager.showError(QObject::tr("Failed to load chat history"),
-            QObject::tr("Database version (%1) is newer than we currently support (%2). Please upgrade qTox.")
+            QObject::tr("Database version (%1) is newer than we currently support (%2). Please upgrade xTox.")
             .arg(databaseSchemaVersion).arg(SCHEMA_VERSION));
         qWarning().nospace() << "Database version (" << databaseSchemaVersion
                              << ") is newer than we currently support (" << SCHEMA_VERSION
-                             << "). Please upgrade qTox";
+                             << "). Please upgrade xTox";
         // We don't know what future versions have done, we have to disable db access until we re-upgrade
         return false;
     } else if (databaseSchemaVersion == SCHEMA_VERSION) {
         // No work to do
         return true;
+    }
+
+    // databaseSchemaVersion is read from the (possibly corrupted or attacker
+    // controlled) database file. The asserts below are compiled out in release
+    // builds, so a negative version would index upgradeFns out of bounds and
+    // call an arbitrary function pointer. Validate it at runtime instead.
+    if (databaseSchemaVersion < 0) {
+        qCritical() << "Invalid database version" << databaseSchemaVersion << ", aborting upgrade";
+        return false;
     }
 
     using DbSchemaUpgradeFn = bool (*)(RawDatabase&);
@@ -423,10 +432,10 @@ bool DbUpgrader::dbSchema1to2(RawDatabase& db)
 bool DbUpgrader::dbSchema2to3(RawDatabase& db)
 {
     // Any faux_offline_pending message with the content "/me " are action
-    // messages that qTox previously let a user enter, but that will cause an
+    // messages that xTox previously let a user enter, but that will cause an
     // action type message to be sent to toxcore, with 0 length, which will
     // always fail. They must be be moved from faux_offline_pending to broken_messages
-    // to avoid qTox from erroring trying to send them on every connect
+    // to avoid xTox from erroring trying to send them on every connect
 
     const QString emptyActionMessageString = "/me ";
 
@@ -582,8 +591,8 @@ bool DbUpgrader::dbSchema6to7(RawDatabase& db)
 bool DbUpgrader::dbSchema7to8(RawDatabase& db)
 {
     // Dummy upgrade. This upgrade does not change the schema, however on
-    // version 7 if qtox saw a system message it would assert and crash. This
-    // upgrade ensures that old versions of qtox do not try to load the new
+    // version 7 if xtox saw a system message it would assert and crash. This
+    // upgrade ensures that old versions of xtox do not try to load the new
     // database
 
     QVector<RawDatabase::Query> upgradeQueries;

@@ -31,15 +31,15 @@ it still will be there next time you might need it. `:-)`
 
 ### Must read
 * If you aren't sure, you can ask on the
-  [**IRC channel**](https://web.libera.chat/#qtox) or read our
-  [**wiki**](https://github.com/qTox/qTox/wiki) first.
+  [**IRC channel**](https://web.libera.chat/#xtox) or read our
+  [**wiki**](https://github.com/xTox/xTox/wiki) first.
 * Do a quick **search**. Others might have already reported the issue.
 * Write in **English**!
 * Provide **version** information (you can find version numbers in menu
   `Settings → About`):
 ```
 OS:
-qTox version:
+xTox version:
 Commit hash:
 toxcore:
 Qt:
@@ -62,10 +62,10 @@ Qt:
 ## Before you start…
 
 Before you start contributing, first decide for a specific topic you want to
-work on. Pull requests, which are spanning multiple topics (e.g. "general qTox
+work on. Pull requests, which are spanning multiple topics (e.g. "general xTox
 code cleanup") or introduce fundamental architectural changes are rare and
 require additional attention and maintenance. Please also read the following
-simple rules we need to keep qTox a "smooth experience" for everybody involved.
+simple rules we need to keep xTox a "smooth experience" for everybody involved.
 
 ## Must read:
 * Use [**commit message format**](#commit-message-format).
@@ -80,7 +80,7 @@ simple rules we need to keep qTox a "smooth experience" for everybody involved.
   change is needed.
 * If your commit fixes a reported issue (for example #4134), add the following
   message to the commit `Fixes #4134.`.  [Here is an
-  example](https://github.com/qTox/qTox/commit/87160526d5bafcee7869d6741a06045e13d731d5).
+  example](https://github.com/xTox/xTox/commit/87160526d5bafcee7869d6741a06045e13d731d5).
 
 
 ## Pull request
@@ -114,7 +114,7 @@ changed lines, unless it has to.
 We have very precise rules over how our git commit messages can be formatted.
 This leads to **more readable messages** that are easy to follow when looking
 through the **project history**.  But also, we use the git commit messages to
-**generate the qTox change log** using
+**generate the xTox change log** using
 [clog-cli](https://github.com/clog-tool/clog-cli).
 
 
@@ -168,7 +168,7 @@ For example:
 
 * `audio` – change affects audio
 * `video` – change affects video
-* `settings` – change affects qTox settings
+* `settings` – change affects xTox settings
 * `chatform`
 * `tray` – change affects tray icon
 * `l10n` – translation update
@@ -217,7 +217,7 @@ space or two newlines. The rest of the commit message is then used for this.
 
 ## Reviewing
 
-Currently `reviewable.io` is being used to review changes that land in qTox.
+Currently `reviewable.io` is being used to review changes that land in xTox.
 
 How to review:
 
@@ -261,7 +261,7 @@ not, it doesn't need testing until PR author fixes merge conflicts.  You might
 want to leave a comment on the PR saying that it needs a rebase :smile:
 
 As for testing itself, there's a nice entry on the wiki:
-https://github.com/qTox/qTox/wiki/Testing
+https://github.com/xTox/xTox/wiki/Testing
 
 
 ## Git config
@@ -301,6 +301,6 @@ Symbols that should be forbidden for filenames under Windows:
 `<` `>` `:` `"` `/` `\` `|` `?` `*`
 
 
-[pull request]: https://github.com/qTox/qTox/pulls
+[pull request]: https://github.com/xTox/xTox/pulls
 [`test-pr.sh`]: /test-pr.sh
 [coding_standards.md]: /doc/coding_standards.md

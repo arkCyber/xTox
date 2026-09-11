@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#    Copyright © 2021 by The qTox Project Contributors
+#    Copyright © 2021 by The xTox Project Contributors
 #
 #    This program is libre software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@ set -euo pipefail
 
 usage() {
     echo "$0 [--minimal|--full] --build-type [Debug|Release]"
-    echo "Build script to build/test qtox from a CI environment."
+    echo "Build script to build/test xtox from a CI environment."
     echo "--minimal or --full are requied, --build-type is required."
 }
 
@@ -36,7 +36,7 @@ while (( $# > 0 )); do
 done
 
 if [ -z "${MINIMAL+x}" ]; then
-    echo "Please build either minimal or full version of qtox"
+    echo "Please build either minimal or full version of xtox"
     usage
     exit 1
 fi
@@ -61,7 +61,7 @@ else
 fi
 
 
-SRCDIR=/qtox
+SRCDIR=/xtox
 export CTEST_OUTPUT_ON_FAILURE=1
 
 if [ $MINIMAL -eq 1 ]; then

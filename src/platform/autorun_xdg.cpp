@@ -1,20 +1,20 @@
 /*
-    Copyright © 2014-2019 by The qTox Project Contributors
+    Copyright © 2014-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <QApplication>
@@ -35,7 +35,7 @@ QString getAutostartDirPath()
 
 QString getAutostartFilePath(const Settings& settings, QString dir)
 {
-    return dir + "/qTox - " + settings.getCurrentProfile() + ".desktop";
+    return dir + "/xTox - " + settings.getCurrentProfile() + ".desktop";
 }
 
 QString currentBinPath()
@@ -66,7 +66,7 @@ bool Platform::setAutorun(const Settings& settings, bool on)
             return false;
         desktop.write("[Desktop Entry]\n");
         desktop.write("Type=Application\n");
-        desktop.write("Name=qTox\n");
+        desktop.write("Name=xTox\n");
         desktop.write("Exec=");
         desktop.write(profileRunCommand(settings).toUtf8());
         desktop.write("\n");

@@ -144,8 +144,8 @@ bu da video görüşmelerinde sorunlara yol açabilir.</translation>
         <translation>Özgün yazar: %1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>qTox&apos;un %1 sürümünü kullanıyorsunuz.</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>xTox&apos;un %1 sürümünü kullanıyorsunuz.</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -160,10 +160,10 @@ bu da video görüşmelerinde sorunlara yol açabilir.</translation>
         <translation>Qt sürümü: %1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>Bilinen tüm sorunların bir listesi Github %1 bölümümüzde bulunabilir. qTox&apos;da bir hata veya güvenlik açığı keşfederseniz, lütfen %2 viki makalemizdeki yönergelere göre bildirin.</translation>
+        <translation>Bilinen tüm sorunların bir listesi Github %1 bölümümüzde bulunabilir. xTox&apos;da bir hata veya güvenlik açığı keşfederseniz, lütfen %2 viki makalemizdeki yönergelere göre bildirin.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -326,12 +326,12 @@ bu da video görüşmelerinde sorunlara yol açabilir.</translation>
         <translation>Güncelleme var</translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
-        <translation>qTox güncel</translation>
+        <source>xTox is up to date ✓</source>
+        <translation>xTox güncel</translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
-        <translation>Şu anda test edilmemiş/kararsız bir qTox sürümü çalışıyor</translation>
+        <source>Currently running an untested/unstable version of xTox</source>
+        <translation>Şu anda test edilmemiş/kararsız bir xTox sürümü çalışıyor</translation>
     </message>
 </context>
 <context>
@@ -499,12 +499,12 @@ bu da video görüşmelerinde sorunlara yol açabilir.</translation>
         <translation>Günlükler (* .log)</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
-        <translation>Ne yaptığınızı %1 bilmiyorsanız, lütfen buradaki hiçbir şeyi %2 değiştirmeyin. Burada yapılan değişiklikler qTox ile sorun yaşamanıza, hatta verilerinizin kaybolmasına (örn. geçmiş) neden olabilir.%3</translation>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
+        <translation>Ne yaptığınızı %1 bilmiyorsanız, lütfen buradaki hiçbir şeyi %2 değiştirmeyin. Burada yapılan değişiklikler xTox ile sorun yaşamanıza, hatta verilerinizin kaybolmasına (örn. geçmiş) neden olabilir.%3</translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
-        <translation>Buradaki değişiklikler yalnızca qTox yeniden başlatıldıktan sonra uygulanır.</translation>
+        <source>Changes here are applied only after restarting xTox.</source>
+        <translation>Buradaki değişiklikler yalnızca xTox yeniden başlatıldıktan sonra uygulanır.</translation>
     </message>
     <message>
         <source>Save file</source>
@@ -520,7 +520,7 @@ bu da video görüşmelerinde sorunlara yol açabilir.</translation>
     </message>
     <message>
         <source>Make Tox portable</source>
-        <translation>qTox&apos;u taşınabilir yap</translation>
+        <translation>xTox&apos;u taşınabilir yap</translation>
     </message>
     <message>
         <source>Reset to default settings</source>
@@ -654,8 +654,8 @@ bu da video görüşmelerinde sorunlara yol açabilir.</translation>
         <translation>Açılamadı</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>qTox %1 ögesini açamadı</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>xTox %1 ögesini açamadı</translation>
     </message>
     <message>
         <source>Bad idea</source>
@@ -667,8 +667,8 @@ bu da video görüşmelerinde sorunlara yol açabilir.</translation>
         <translation>Geçici dosya açılamadı</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
-        <translation>qTox ekran görüntüsünü kaydedemedi</translation>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
+        <translation>xTox ekran görüntüsünü kaydedemedi</translation>
     </message>
     <message>
         <source>Call duration: </source>
@@ -1095,16 +1095,16 @@ geçersiz karakterler _ olarak değiştirildi.</translation>
         <translation>Genel Ayarlar</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>Çeviri, qTox yeniden başlayana kadar yüklenemeyebilir.</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>Çeviri, xTox yeniden başlayana kadar yüklenemeyebilir.</translation>
     </message>
     <message>
         <source>Language:</source>
         <translation>Dil:</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>qTox&apos;u işletim sistemi başlangıcında başlat (şu anki profil).</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>xTox&apos;u işletim sistemi başlangıcında başlat (şu anki profil).</translation>
     </message>
     <message>
         <source>Autostart</source>
@@ -1124,9 +1124,9 @@ geçersiz karakterler _ olarak değiştirildi.</translation>
         <translation>Sistem tepsi simgesi göster</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox tepsiye küçültülmüş olarak başlayacak.</translation>
+        <translation>xTox tepsiye küçültülmüş olarak başlayacak.</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1185,17 +1185,17 @@ geçersiz karakterler _ olarak değiştirildi.</translation>
         <translation> MB</translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
-        <translation>Küçült (_) düğmesine bastıktan sonra qTox,
+        <translation>Küçült (_) düğmesine bastıktan sonra xTox,
 sistem görev çubuğu yerine tepsiye küçültülecek.</translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
-        <translation>Kapat (X) düğmesine bastıktan sonra qTox,
+        <translation>Kapat (X) düğmesine bastıktan sonra xTox,
 tamamen kapanmak yerine tepsiye kapanacak.</translation>
     </message>
     <message>
@@ -1537,8 +1537,8 @@ Sohbete başlamak için arkadaşlarınızla paylaşın.</translation>
         <translation>Profil Oluştur</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>Profilin parolası yoksa, qTox giriş ekranını atlayabilir</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>Profilin parolası yoksa, xTox giriş ekranını atlayabilir</translation>
     </message>
     <message>
         <source>Load automatically</source>
@@ -1770,9 +1770,9 @@ Lütfen aynı parolayı iki kez girdiğinizden emin olun.</translation>
         <translation>Çalıştırılabilir dosya</translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translation>qTox&apos;tan çalıştırılabilir bir dosyayı açmasını istediniz. Çalıştırılabilir dosyalar bilgisayarınıza zarar verebilir. Bu dosyayı açmak istediğinize emin misiniz?</translation>
+        <translation>xTox&apos;tan çalıştırılabilir bir dosyayı açmasını istediniz. Çalıştırılabilir dosyalar bilgisayarınıza zarar verebilir. Bu dosyayı açmak istediğinize emin misiniz?</translation>
     </message>
 </context>
 <context>
@@ -1977,8 +1977,8 @@ Arkadaşlık istemleriyle rahatsız ediliyorsanız, NoSpam&apos;ı değiştirin.
         <translation>Paroladan anahtar türetilemedi, profil yeni parolayı kullanmayacak.</translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation>qTox&apos;da tox&apos;lanıyor</translation>
+        <source>Toxing on xTox</source>
+        <translation>xTox&apos;da tox&apos;lanıyor</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2319,8 +2319,8 @@ Bu kimlik NoSpam kodunu (mavi) ve sağlama toplamını (gri) içerir.</translati
         <translation>Hata</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>qTox sohbet günlüklerinizi açamadı, devre dışı bırakılacaklar.</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>xTox sohbet günlüklerinizi açamadı, devre dışı bırakılacaklar.</translation>
     </message>
     <message>
         <source>Dark</source>
@@ -2505,8 +2505,8 @@ Bu kimlik NoSpam kodunu (mavi) ve sağlama toplamını (gri) içerir.</translati
         <translation>Sohbet geçmişi yüklenemedi</translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
-        <translation>Veri tabanı sürümü (%1) şu anda desteklediğimizden (%2) daha yeni. Lütfen qTox&apos;u yükseltin.</translation>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
+        <translation>Veri tabanı sürümü (%1) şu anda desteklediğimizden (%2) daha yeni. Lütfen xTox&apos;u yükseltin.</translation>
     </message>
 </context>
 <context>
@@ -2535,9 +2535,9 @@ Bu kimlik NoSpam kodunu (mavi) ve sağlama toplamını (gri) içerir.</translati
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>Bir alanı seçmek için tıklayıp sürükleyin. qTox penceresini gizlemek/göstermek için %1 , veya iptal için %2 tuşuna basın.</translation>
+        <translation>Bir alanı seçmek için tıklayıp sürükleyin. xTox penceresini gizlemek/göstermek için %1 , veya iptal için %2 tuşuna basın.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2550,9 +2550,9 @@ Bu kimlik NoSpam kodunu (mavi) ve sağlama toplamını (gri) içerir.</translati
         <translation>Escape</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>Seçimin bir ekran görüntüsü göndermek için %1, qTox penceresini gizlemek/göstermek için %2, veya iptal için %3 tuşuna basın.</translation>
+        <translation>Seçimin bir ekran görüntüsü göndermek için %1, xTox penceresini gizlemek/göstermek için %2, veya iptal için %3 tuşuna basın.</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2676,8 +2676,8 @@ Bu kimlik NoSpam kodunu (mavi) ve sağlama toplamını (gri) içerir.</translati
         <translation>Kişisel ayarlar yüklenemedi</translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
-        <translation>Ayarlar %1 sürümünden %2 sürümüne yükseltilemedi. qTox başlatılamıyor.</translation>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
+        <translation>Ayarlar %1 sürümünden %2 sürümüne yükseltilemedi. xTox başlatılamıyor.</translation>
     </message>
     <message>
         <source>Failed to load global settings</source>
@@ -2744,8 +2744,8 @@ Bu kimlik NoSpam kodunu (mavi) ve sağlama toplamını (gri) içerir.</translati
         <translation>Boyut: </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation>Yeni yazı şekillendirme tercihi qTox yeniden başlayana kadar uygulanmayabilir.</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation>Yeni yazı şekillendirme tercihi xTox yeniden başlayana kadar uygulanmayabilir.</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2772,9 +2772,9 @@ Bu kimlik NoSpam kodunu (mavi) ve sağlama toplamını (gri) içerir.</translati
         <translation>Yeni ileti</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translation>Bir ileti aldığınızda, henüz açık pencere yoksa, qTox&apos;un penceresini aç.</translation>
+        <translation>Bir ileti aldığınızda, henüz açık pencere yoksa, xTox&apos;un penceresini aç.</translation>
     </message>
     <message>
         <source>Open window</source>
@@ -2991,7 +2991,7 @@ Bu kimlik NoSpam kodunu (mavi) ve sağlama toplamını (gri) içerir.</translati
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation>Göster</translation>
     </message>
     <message>
@@ -3024,9 +3024,9 @@ Bu kimlik NoSpam kodunu (mavi) ve sağlama toplamını (gri) içerir.</translati
         <translation>Toxcore başlatılamadı, bu iletiyi kapattıktan sonra uygulama sonlandırılacak.</translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
-        <translation>Toxcore, vekil ayarlarınızla başlatılamadı. qTox çalıştırılamıyor; lütfen ayarlarınızı değiştirin ve yeniden başlatın.</translation>
+        <translation>Toxcore, vekil ayarlarınızla başlatılamadı. xTox çalıştırılamıyor; lütfen ayarlarınızı değiştirin ve yeniden başlatın.</translation>
     </message>
     <message>
         <source>Couldn&apos;t send friend request</source>

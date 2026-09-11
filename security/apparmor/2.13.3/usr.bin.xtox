@@ -1,27 +1,27 @@
-#   Copyright © 2019 by The qTox Project Contributors
+#   Copyright © 2019 by The xTox Project Contributors
 #
-#   This file is part of qTox, a Qt-based graphical interface for Tox.
-#   qTox is libre software: you can redistribute it and/or modify
+#   This file is part of xTox, a Qt-based graphical interface for Tox.
+#   xTox is libre software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
 #   the Free Software Foundation, either version 3 of the License, or
 #   (at your option) any later version.
 #
-#   qTox is distributed in the hope that it will be useful,
+#   xTox is distributed in the hope that it will be useful,
 #   but WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
 #   You should have received a copy of the GNU General Public License
-#   along with qTox.  If not, see <http://www.gnu.org/licenses/>
+#   along with xTox.  If not, see <http://www.gnu.org/licenses/>
 
 #include <tunables/global>
-#include <tunables/usr.bin.qtox>
+#include <tunables/usr.bin.xtox>
 
 # using variables in profile name is not yet recommended due to issues with
 # AppArmor tools
 # TODO: use this alternative in the future when available
-#profile qtox @{qtox_prefix}/bin/qtox {
-profile qtox /usr{,/local}/bin/qtox {
+#profile xtox @{xtox_prefix}/bin/xtox {
+profile xtox /usr{,/local}/bin/xtox {
   #include <abstractions/audio>
   #include <abstractions/base>
   #include <abstractions/dbus-accessibility>
@@ -41,11 +41,11 @@ profile qtox /usr{,/local}/bin/qtox {
   #include <abstractions/video>
 
   # Site-specific additions and overrides. See local/README for details.
-  #include if exists <local/usr.bin.qtox>
+  #include if exists <local/usr.bin.xtox>
 
   # Main executable
 
-  @{qtox_prefix}/bin/qtox mr,
+  @{xtox_prefix}/bin/xtox mr,
 
   # Other executables
 
@@ -57,7 +57,7 @@ profile qtox /usr{,/local}/bin/qtox {
   # Additional libraries
 
   # Allow /usr/local/lib/libtoxcore.so...
-  @{qtox_prefix}/lib/*.so* mr,
+  @{xtox_prefix}/lib/*.so* mr,
 
   # Networking
 
@@ -258,8 +258,8 @@ profile qtox /usr{,/local}/bin/qtox {
   # System files
 
   /usr/share/hunspell/* r,
-  @{qtox_additional_rw_dirs}/ r,
-  @{qtox_additional_rw_dirs}/** rw,
+  @{xtox_additional_rw_dirs}/ r,
+  @{xtox_additional_rw_dirs}/** rw,
 
   # Sensitive directory access!!!
   # Allow navigating directories with file dialog, to access directory you
@@ -306,25 +306,25 @@ profile qtox /usr{,/local}/bin/qtox {
   owner @{HOME}/[^.]*/** l -> @{HOME}/#[0-9]*[0-9],
 
   owner /{,var/}run/user/@{uid}/#[0-9]*[0-9] rw, # file dialog
-  owner /{,var/}run/user/@{uid}/qTox*.slave-socket rwl -> /{,var/}run/user/@{uid}/#[0-9]*[0-9], # file dialog
+  owner /{,var/}run/user/@{uid}/xTox*.slave-socket rwl -> /{,var/}run/user/@{uid}/#[0-9]*[0-9], # file dialog
   owner @{HOME}/.aspell.??.{pws,prepl} rk, # for spellchecking
   owner @{HOME}/.cache/Tox/ w,
-  owner @{HOME}/.cache/Tox/qTox/{,**} rw,
+  owner @{HOME}/.cache/Tox/xTox/{,**} rw,
   owner @{HOME}/.cache/fontconfig/** rwk,
-  owner @{HOME}/.cache/qTox/{,**} rw,
+  owner @{HOME}/.cache/xTox/{,**} rw,
   owner @{HOME}/.cache/thumbnails/** rw, # receiving image file produces thumbnail?
   owner @{HOME}/.config/menus/ r, # file dialog
   owner @{HOME}/.config/menus/applications-merged/ r, # file dialog
-  owner @{HOME}/.config/qToxrc rw,
-  owner @{HOME}/.config/qToxrc.?????? rwl -> @{HOME}/.config/#[0-9]*[0-9], # QSaveFile?
-  owner @{HOME}/.config/qToxrc.lock rwk,
+  owner @{HOME}/.config/xToxrc rw,
+  owner @{HOME}/.config/xToxrc.?????? rwl -> @{HOME}/.config/#[0-9]*[0-9], # QSaveFile?
+  owner @{HOME}/.config/xToxrc.lock rwk,
   owner @{HOME}/.config/tox/** l -> @{HOME}/.config/tox/**, # QSaveFile?
   owner @{HOME}/.config/tox/{,**} rwk,
   owner @{HOME}/.fonts/.uuid* rw,
   owner @{HOME}/.fonts/.uuid.* l -> @{HOME}/.fonts/.uuid.*,
   owner @{HOME}/.fonts/.uuid.*/ rw,
   owner @{HOME}/.local/share/Tox/{,**} rw,
-  owner @{HOME}/.local/share/qTox/{,**} rw,
+  owner @{HOME}/.local/share/xTox/{,**} rw,
   owner @{HOME}/.local/share/user-places.xbel r, # file dialog
   owner @{PROC}/@{pid}/cmdline r,
 

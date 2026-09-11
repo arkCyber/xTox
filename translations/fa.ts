@@ -139,8 +139,8 @@ which may lead to problems with video calls.</source>
         <translation>خالق اصلی: %1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>شما در حال استفاده از qTox ویراست %1 هستید.</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>شما در حال استفاده از xTox ویراست %1 هستید.</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -155,10 +155,10 @@ which may lead to problems with video calls.</source>
         <translation>نسخه Qt: %1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>لیست تمامی مسایل شناسایی شده را میتوانید در %1 روی گیت هاب مشاهده کنید. اگر با خطایی مواجه میشوید یا یک خطای امنیتی در qTox پیدا میکنید، لطفا این مسایل را بر اساس راهنمای موجود در %2 به ما گزارش کنید.</translation>
+        <translation>لیست تمامی مسایل شناسایی شده را میتوانید در %1 روی گیت هاب مشاهده کنید. اگر با خطایی مواجه میشوید یا یک خطای امنیتی در xTox پیدا میکنید، لطفا این مسایل را بر اساس راهنمای موجود در %2 به ما گزارش کنید.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -320,11 +320,11 @@ which may lead to problems with video calls.</source>
         <translation>به‌روز‌رسانی در دسترس است</translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
-        <translation>qTox به‌روز است✓</translation>
+        <source>xTox is up to date ✓</source>
+        <translation>xTox به‌روز است✓</translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
+        <source>Currently running an untested/unstable version of xTox</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -492,11 +492,11 @@ which may lead to problems with video calls.</source>
         <translation>لاگ (*.log)</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
+        <source>Changes here are applied only after restarting xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -643,8 +643,8 @@ which may lead to problems with video calls.</source>
         <translation>یک فایل ارسال کنید</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>qTox نتوانست %1 را باز کند</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>xTox نتوانست %1 را باز کند</translation>
     </message>
     <message>
         <source>Unable to open</source>
@@ -660,9 +660,9 @@ which may lead to problems with video calls.</source>
         <translation>باز کردن فایل موقت، موفق نبود</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
         <translatorcomment>laut Duden ist Screenshot schon deutsch</translatorcomment>
-        <translation>qTox نتوانست عکس نماگرفت را ذخیره کند</translation>
+        <translation>xTox نتوانست عکس نماگرفت را ذخیره کند</translation>
     </message>
     <message>
         <source>Call duration: </source>
@@ -1093,8 +1093,8 @@ so you can save the file on Windows.</source>
         <translation>تنظیمات عمومی</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>ترجمه تا زمانی که qTox باز راه اندازی نشود بارگزاری نخواهد شد.</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>ترجمه تا زمانی که xTox باز راه اندازی نشود بارگزاری نخواهد شد.</translation>
     </message>
     <message>
         <source>Language:</source>
@@ -1114,9 +1114,9 @@ so you can save the file on Windows.</source>
         <translation>آیکن دارای رنگ روشن</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox در زمان آغاز تنها به صورت آیکن شده باشد.</translation>
+        <translation>xTox در زمان آغاز تنها به صورت آیکن شده باشد.</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1159,8 +1159,8 @@ so you can save the file on Windows.</source>
         <translation>تغیر وضعیت مخاطب را نشان بده</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>راه اندازی qTox در زمان ورود به سیستم عامل (کاربر کنونی).</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>راه اندازی xTox در زمان ورود به سیستم عامل (کاربر کنونی).</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
@@ -1183,13 +1183,13 @@ so you can save the file on Windows.</source>
         <translation> مگابایت</translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
         <translation type="unfinished"></translation>
@@ -1532,8 +1532,8 @@ Share it with your friends to begin chatting.</source>
         <translation>ساخت پروفایل</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>اگر پروفایل دارای رمز عبور نباشد، qTox میتواند صفحه ورود را نشان ندهد</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>اگر پروفایل دارای رمز عبور نباشد، xTox میتواند صفحه ورود را نشان ندهد</translation>
     </message>
     <message>
         <source>Load automatically</source>
@@ -1765,9 +1765,9 @@ Please make sure to enter the same password twice.</source>
         <translation type="unfinished">فایل اجرایی</translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translation type="unfinished">شما از qTox خواسته اید که یک فایل اجرایی را باز کند. فایل های اجرایی میتوانند به شکل بالقوه صدمه جدی به سیستم شما بزنند. آیا اطمینان دارید که میخواهید این فایل را اجرا کنید؟</translation>
+        <translation type="unfinished">شما از xTox خواسته اید که یک فایل اجرایی را باز کند. فایل های اجرایی میتوانند به شکل بالقوه صدمه جدی به سیستم شما بزنند. آیا اطمینان دارید که میخواهید این فایل را اجرا کنید؟</translation>
     </message>
 </context>
 <context>
@@ -1972,8 +1972,8 @@ Save format changes are possible, which may result in data loss.</source>
         <translation>ایجاد کلید با استفاده از کلمه عبور ناموفق بود، نمایه از کلمه عبور جدید استفاده نخواهد کرد.</translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation>در حال Tox کردن روی qTox</translation>
+        <source>Toxing on xTox</source>
+        <translation>در حال Tox کردن روی xTox</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2311,8 +2311,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>خطا</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>امکان بازکردن لاگ های چت شما برای qTox وجود نداشت، این امکان غیر فعال میشود.</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>امکان بازکردن لاگ های چت شما برای xTox وجود نداشت، این امکان غیر فعال میشود.</translation>
     </message>
     <message>
         <source>Dark</source>
@@ -2497,7 +2497,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2527,9 +2527,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>برای انتخاب یک ناحیه روی صفحه کلیک کرده و به اطراف بکشید. کلید %1 را برای نمایش دادن/پنهان کردن صفحه qTox و یا کلید %2 را جهت لغو استفاده کنید.</translation>
+        <translation>برای انتخاب یک ناحیه روی صفحه کلیک کرده و به اطراف بکشید. کلید %1 را برای نمایش دادن/پنهان کردن صفحه xTox و یا کلید %2 را جهت لغو استفاده کنید.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2542,9 +2542,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>کلید Escape</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>کلید %1 را برای ارسال تصویر انتخابی از صفحه، %2 را برای نمایش دادن/پنهان کردن صفحه qTox و کلید %3 را جهت لغو استفاده کنید..</translation>
+        <translation>کلید %1 را برای ارسال تصویر انتخابی از صفحه، %2 را برای نمایش دادن/پنهان کردن صفحه xTox و کلید %3 را جهت لغو استفاده کنید..</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2668,7 +2668,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2736,8 +2736,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>اندازه: </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation>سبک جدید ترجیحی برای متن تا راه اندازی مجدد qTox، بارگذاری نخواهد شد.</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation>سبک جدید ترجیحی برای متن تا راه اندازی مجدد xTox، بارگذاری نخواهد شد.</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2764,9 +2764,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>پیام جدید</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translation>زمانی که یک پیام جدید دریافت می‌کنید و پنجره برنامه باز نیست، پنجره qTox را باز کن.</translation>
+        <translation>زمانی که یک پیام جدید دریافت می‌کنید و پنجره برنامه باز نیست، پنجره xTox را باز کن.</translation>
     </message>
     <message>
         <source>Open window</source>
@@ -2984,7 +2984,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation>نمایش</translation>
     </message>
     <message>
@@ -3017,7 +3017,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -3040,7 +3040,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>Exit</source>
         <comment>Tray action menu to exit Tox</comment>
-        <translation type="unfinished">خروج از برنامه qTox</translation>
+        <translation type="unfinished">خروج از برنامه xTox</translation>
     </message>
     <message>
         <source>Change status</source>

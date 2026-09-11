@@ -2,7 +2,7 @@
 
 # SPDX-License-Identifier: GPL-3.0-or-later AND MIT
 #     Copyright (c) 2017-2021 Maxim Biro <nurupo.contributions@gmail.com>
-#     Copyright (c) 2021 by The qTox Project Contributors
+#     Copyright (c) 2021 by The xTox Project Contributors
 
 check_sha256()
 {
@@ -40,7 +40,7 @@ download_verify_extract_tarball()
   local HASH="$2"
 
   # Try linux style mktemp and fallback on osx style
-  TEMPDIR=$(mktemp -d -p . 2>/dev/null || mktemp -d -t qtox_download)
+  TEMPDIR=$(mktemp -d -p . 2>/dev/null || mktemp -d -t xtox_download)
 
   if [ $? -ne 0 ]; then
     return 1

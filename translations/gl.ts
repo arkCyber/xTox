@@ -139,8 +139,8 @@ which may lead to problems with video calls.</source>
         <translation>Autor orixinal: %1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>Vostede está a usar a versión %1 de qTox.</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>Vostede está a usar a versión %1 de xTox.</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -155,10 +155,10 @@ which may lead to problems with video calls.</source>
         <translation>Versión de Qt: %1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>A lista dos problemas coñecidos está no noso %1 en Github. Se vostede atopa un problema ou unha vulnerabilidade de seguridade en qTox, por favor, repórtea seguindo as normas da sección %2 do noso wiki.</translation>
+        <translation>A lista dos problemas coñecidos está no noso %1 en Github. Se vostede atopa un problema ou unha vulnerabilidade de seguridade en xTox, por favor, repórtea seguindo as normas da sección %2 do noso wiki.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -320,11 +320,11 @@ which may lead to problems with video calls.</source>
         <translation>Actualización dispoñible</translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
-        <translation>qTox está actualizado ✓</translation>
+        <source>xTox is up to date ✓</source>
+        <translation>xTox está actualizado ✓</translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
+        <source>Currently running an untested/unstable version of xTox</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -493,11 +493,11 @@ which may lead to problems with video calls.</source>
         <translation>Rexistros (*.log)</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
+        <source>Changes here are applied only after restarting xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -644,8 +644,8 @@ which may lead to problems with video calls.</source>
         <translation>Enviar un ficheiro</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>qTox non puido abrir %1</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>xTox non puido abrir %1</translation>
     </message>
     <message>
         <source>Unable to open</source>
@@ -661,9 +661,9 @@ which may lead to problems with video calls.</source>
         <translation>A apertura do ficheiro temporal fallou</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
         <translatorcomment>laut Duden ist Screenshot schon deutsch</translatorcomment>
-        <translation>qTox non puido gardar a captura de pantalla</translation>
+        <translation>xTox non puido gardar a captura de pantalla</translation>
     </message>
     <message>
         <source>Call duration: </source>
@@ -1094,8 +1094,8 @@ so you can save the file on Windows.</source>
         <translation>Axustes xerais</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>A tradución pode non cargar ata que qTox sexa reiniciado.</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>A tradución pode non cargar ata que xTox sexa reiniciado.</translation>
     </message>
     <message>
         <source>Language:</source>
@@ -1115,9 +1115,9 @@ so you can save the file on Windows.</source>
         <translation>Icona lixeira</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox comezará minimizado na bandexa.</translation>
+        <translation>xTox comezará minimizado na bandexa.</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1160,8 +1160,8 @@ so you can save the file on Windows.</source>
         <translation>Amosar os cambios de estado dos contactos</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>Arrincar qTox ao inicio do sistema operativo (perfil actual).</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>Arrincar xTox ao inicio do sistema operativo (perfil actual).</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
@@ -1184,13 +1184,13 @@ so you can save the file on Windows.</source>
         <translation> MB</translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
         <translation type="unfinished"></translation>
@@ -1535,8 +1535,8 @@ Share it with your friends to begin chatting.</source>
         <translation>Crear Perfil</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>Se o perfil non ten un contrasinal, qTox sáltase a pantalla de rexistro</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>Se o perfil non ten un contrasinal, xTox sáltase a pantalla de rexistro</translation>
     </message>
     <message>
         <source>Load automatically</source>
@@ -1768,9 +1768,9 @@ Please make sure to enter the same password twice.</source>
         <translation type="unfinished">Arquivo executable</translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translation type="unfinished">Pediu a qTox que abra un ficheiro executable. Os ficheiros executables poden danar o ordenador. Ten a certeza de querer abrir este ficheiro?</translation>
+        <translation type="unfinished">Pediu a xTox que abra un ficheiro executable. Os ficheiros executables poden danar o ordenador. Ten a certeza de querer abrir este ficheiro?</translation>
     </message>
 </context>
 <context>
@@ -1976,8 +1976,8 @@ O formato do ficheiro de gardado podería cambiar, o que pode causar a perda de 
         <translation>Non se puido derivar a chave desde o contrasinal, o perfil non vai empregar o novo contrasinal.</translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation>Toxeando en qTox</translation>
+        <source>Toxing on xTox</source>
+        <translation>Toxeando en xTox</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2315,8 +2315,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Erro</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>qTox non puido abrir os seus rexistros de charla, estarán desactivados.</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>xTox non puido abrir os seus rexistros de charla, estarán desactivados.</translation>
     </message>
     <message>
         <source>Dark</source>
@@ -2501,7 +2501,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2531,9 +2531,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>Faga clic e arrastre para seleccionar unha rexión. Prema %1 para ocultar/amosar a xanela de qTox ou %2 para cancelar.</translation>
+        <translation>Faga clic e arrastre para seleccionar unha rexión. Prema %1 para ocultar/amosar a xanela de xTox ou %2 para cancelar.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2546,9 +2546,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Escape</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>Prema %1 para enviar unha captura de pantalla da selección, %2 para ocultar/amosar a xanela de qTox ou %3 para cancelar.</translation>
+        <translation>Prema %1 para enviar unha captura de pantalla da selección, %2 para ocultar/amosar a xanela de xTox ou %3 para cancelar.</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2672,7 +2672,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2740,8 +2740,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Tamaño: </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation>É posible que o novo estilo de texto non se cargue ata que QTox se reinicie.</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation>É posible que o novo estilo de texto non se cargue ata que XTox se reinicie.</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2768,9 +2768,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Nova mensaxe</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translation>Abre a xanela de qTox cando reciba unha nova mensaxe e aínda non está aberta ningunha xanela.</translation>
+        <translation>Abre a xanela de xTox cando reciba unha nova mensaxe e aínda non está aberta ningunha xanela.</translation>
     </message>
     <message>
         <source>Open window</source>
@@ -2988,7 +2988,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation>Amosar</translation>
     </message>
     <message>
@@ -3021,7 +3021,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
         <translation type="unfinished"></translation>
     </message>

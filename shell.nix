@@ -1,2 +1,2 @@
 { pkgs ? import <nixpkgs> { } }:
-pkgs.mkShell { inputsFrom = with pkgs; [ qtox ]; }
+pkgs.mkShell { inputsFrom = with pkgs; [ xtox ]; }

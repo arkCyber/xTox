@@ -1,20 +1,20 @@
 /*
-    Copyright © 2014-2019 by The qTox Project Contributors
+    Copyright © 2014-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "advancedform.h"
@@ -70,12 +70,12 @@ AdvancedForm::AdvancedForm(Settings& settings_, Style& style, IMessageBoxManager
 
     QString warningBody = tr("Unless you %1 know what you are doing, "
                              "please do %2 change anything here. Changes "
-                             "made here may lead to problems with qTox, and even "
+                             "made here may lead to problems with xTox, and even "
                              "to loss of your data, e.g. history."
                              "%3")
                               .arg(QString("<b>%1</b>").arg(tr("really")))
                               .arg(QString("<b>%1</b>").arg(tr("not")))
-                              .arg(QString("<p>%1</p>").arg(tr("Changes here are applied only after restarting qTox.")));
+                              .arg(QString("<p>%1</p>").arg(tr("Changes here are applied only after restarting xTox.")));
 
     QString warning = QString("<div style=\"color:#ff0000;\">"
                               "<p><b>%1</b></p><p>%2</p></div>")
@@ -109,7 +109,7 @@ void AdvancedForm::on_btnExportLog_clicked()
     }
 
     QString logFileDir = settings.getPaths().getAppCacheDirPath();
-    QString logfile = logFileDir + "qtox.log";
+    QString logfile = logFileDir + "xtox.log";
 
     QFile file(logfile);
     if (file.exists()) {
@@ -128,7 +128,7 @@ void AdvancedForm::on_btnExportLog_clicked()
 void AdvancedForm::on_btnCopyDebug_clicked()
 {
     QString logFileDir = settings.getPaths().getAppCacheDirPath();
-    QString logfile = logFileDir + "qtox.log";
+    QString logfile = logFileDir + "xtox.log";
 
     QFile file(logfile);
     if (!file.exists()) {

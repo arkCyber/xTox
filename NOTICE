@@ -1,0 +1,39 @@
+xTox
+====
+
+xTox is a community fork of qTox.
+
+Original project
+----------------
+qTox — https://github.com/qTox/qTox
+"A Qt-based graphical interface for Tox."
+
+Copyright © 2014-2024 by The qTox Project Contributors and individual
+contributors. All original copyright notices are retained in the source files.
+
+License
+-------
+This project, including the portions derived from qTox, is distributed under
+the GNU General Public License as published by the Free Software Foundation,
+either version 3 of the License, or (at your option) any later version.
+See the LICENSE file for the full license text.
+
+Third-party components
+----------------------
+xTox links against and/or bundles third-party libraries, each covered by its own
+license. Notable dependencies include:
+
+  - c-toxcore       — https://github.com/TokTok/c-toxcore   (GPLv3+)
+  - toxext           — https://github.com/toxext/toxext      (see upstream)
+  - toxext_messages  — https://github.com/toxext/toxext_messages (see upstream)
+  - Qt 5             — https://www.qt.io                     (LGPLv3 / GPLv3)
+  - FFmpeg/libav     — https://ffmpeg.org                    (LGPL/GPL)
+  - libsodium        — https://doc.libsodium.org             (ISC)
+  - OpenAL Soft      — https://openal-soft.org               (LGPL)
+  - Opus             — https://opus-codec.org                (BSD)
+  - libexif          — https://libexif.github.io             (LGPL)
+  - libqrencode      — https://fukuchi.org/works/qrencode/   (LGPL)
+  - SQLCipher        — https://www.zetetic.net/sqlcipher/    (BSD-style)
+
+See the LICENSES/ directory and the individual source trees for the complete
+license texts.

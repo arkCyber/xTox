@@ -11,12 +11,12 @@
 doc/html/*
 
 # Executables
-qtox
+xtox
 *.exe
 build-*-Release
 build-*-Profile
 build-*-Debug
-.qtox-wrapped
+.xtox-wrapped
 
 # Folders
 _[Bb]uild*/
@@ -38,7 +38,7 @@ _testmain.go
 
 # OSX
 .DS_Store
-/qtox.app
+/xtox.app
 
 # Qt
 *.user
@@ -55,3 +55,20 @@ target/
 
 # Tarballs
 *.tar.*
+
+# Local dependency checkouts (c-toxcore, toxext, ...)
+/toxcore/
+/toxext/
+/toxext_messages/
+
+# Editors / IDEs
+.vscode/
+.idea/
+
+# Local build helpers and generated artifacts
+/patches/
+/PR_SECURITY_HARDENING.md
+/osx/Brewfile.lock.json
+compile_commands.json
+CMakeCache.txt
+CMakeFiles/

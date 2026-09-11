@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # SPDX-License-Identifier: GPL-3.0-or-later AND MIT
-#    Copyright © 2019-2021 by The qTox Project Contributors
+#    Copyright © 2019-2021 by The xTox Project Contributors
 
 set -euo pipefail
 

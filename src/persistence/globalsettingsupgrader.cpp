@@ -1,20 +1,20 @@
 /*
-    Copyright © 2022 by The qTox Project Contributors
+    Copyright © 2022 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "globalsettingsupgrader.h"
@@ -54,12 +54,20 @@ bool GlobalSettingsUpgrader::doUpgrade(Settings& settings, int fromVer, int toVe
     if (fromVer > toVer) {
         qWarning().nospace() << "Settings version (" << fromVer
                              << ") is newer than we currently support (" << toVer
-                             << "). Please upgrade qTox";
+                             << "). Please upgrade xTox";
         return false;
     }
 
     using SettingsUpgradeFn = bool (*)(Settings&);
     std::vector<SettingsUpgradeFn> upgradeFns = {version0to1};
+
+    // fromVer comes from the (possibly corrupted or attacker controlled) settings
+    // file. The asserts below are compiled out in release builds, so a negative
+    // version would index upgradeFns out of bounds. Validate it at runtime instead.
+    if (fromVer < 0 || fromVer > static_cast<int>(upgradeFns.size())) {
+        qCritical() << "Invalid settings version" << fromVer << ", aborting upgrade";
+        return false;
+    }
 
     assert(fromVer < static_cast<int>(upgradeFns.size()));
     assert(toVer == static_cast<int>(upgradeFns.size()));

@@ -60,7 +60,7 @@ git config --global alias.logs 'log --show-signature'
   which does that for you automatically.
 - **use** [`merge-pr.sh`] script to merge PRs. First checkout the target
   branch, usually either `master` or a release dev branch e.g. `v1.17-dev`,
-  make sure it's up to date with qTox/qTox, then e.g. `./merge-pr.sh 1234`.
+  make sure it's up to date with xTox/xTox, then e.g. `./merge-pr.sh 1234`.
 
   You don't have to use it, but then you're running into risk of breaking
   CI build of master & other PRs, since it verifies all commit messages,
@@ -84,7 +84,7 @@ git config --global alias.logs 'log --show-signature'
 # Continous Integration
 
 All CI is done through GitHub actions. Nightly builds are published to
-qTox/qTox releases.
+xTox/xTox releases.
 
 # Issues
 
@@ -113,7 +113,7 @@ We have two labels to rate user impact `U-high` and `U-low`.
 
 Use `U-high` if
 - Many users have reported this issue
-- The problem is triggered often during typical use of qTox
+- The problem is triggered often during typical use of xTox
 - The problem causes data loss
 - There is no workaround
 
@@ -138,7 +138,7 @@ Use `D-hard` if you think that:
 - The issue is described only vaguely
 - The exact way to reproduce the issue is not known
 - The issue happens only on a specifc OS
-- The issue is not only caused by code from qTox
+- The issue is not only caused by code from xTox
 
 ### Determining initial priority
 
@@ -156,15 +156,15 @@ apply the normal rating process.
 
 # Translations from Weblate
 
-Weblate provides an easy way for people to translate qTox.
+Weblate provides an easy way for people to translate xTox.
 
 New translable strings need to be generated into a form Weblate can consume
 using `./tools/update-translation-files.sh ALL` and commiting the result. This
 should be done as soon as strings are available since weblate follows our
 branch, so is checked for in CI.
 
-To get translations into qTox, fast-forward merge from
-https://hosted.weblate.org/git/tox/qtox/.
+To get translations into xTox, fast-forward merge from
+https://hosted.weblate.org/git/tox/xtox/.
 
 If a new translation language has been added, update the following files:
   - `translations/CMakeLists.txt`
@@ -228,12 +228,12 @@ If a new translation language has been added, update the following files:
   the signatures to the draft release.
 - Add a title and description to the draft release, then publish the release.
 - Update download links on https://tox.chat to point to the new release.
-- Write a short blog post for https://github.com/qTox/blog/ and advertise the
+- Write a short blog post for https://github.com/xTox/blog/ and advertise the
   post on Tox IRC channels, popular Tox groups, reddit, or whatever other platforms.
-- Merge [`./flatpak/io.github.qtox.qTox.json`] into the manifest of our
+- Merge [`./flatpak/io.github.xtox.xTox.json`] into the manifest of our
   [Flathub repository]. Keep the [Flathub repository]'s version of "sources" for
-  qTox.
-- After the build passed for qTox on all architectures on
+  xTox.
+- After the build passed for xTox on all architectures on
   [the Flathub build bot], merge the PR into the master branch of our
   [Flathub repository].
 
@@ -246,7 +246,7 @@ Aside from contents of [`CONTRIBUTING.md`] you should also know the contents of
 this file.
 
 Once you're confident about your knowledge and you've been around the project
-helping for a while, ask to be added to the `qTox` organization on GitHub.
+helping for a while, ask to be added to the `xTox` organization on GitHub.
 
 
 [commit message format]: /CONTRIBUTING.md#commit-message-format
@@ -257,7 +257,7 @@ helping for a while, ask to be added to the `qTox` organization on GitHub.
 [`./tools/update-nodes.sh`]: /tools/update-nodes.sh
 [`./tools/update-versions.sh`]: /tools/update-versions.sh
 [`./tools/format-code.sh`]: /tools/format-code.sh
-[Flathub repository]: https://github.com/flathub/io.github.qtox.qTox
-[`./flatpak/io.github.qtox.qTox.json`]: flatpak/io.github.qtox.qTox.json
+[Flathub repository]: https://github.com/flathub/io.github.xtox.xTox
+[`./flatpak/io.github.xtox.xTox.json`]: flatpak/io.github.xtox.xTox.json
 [the Flathub build bot]: https://flathub.org/builds/#/
-[qTox-nightly-release]: https://github.com/qTox/qTox-nightly-releases
+[xTox-nightly-release]: https://github.com/xTox/xTox-nightly-releases

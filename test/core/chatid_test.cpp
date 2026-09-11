@@ -1,20 +1,20 @@
 /*
-    Copyright © 2017-2019 by The qTox Project Contributors
+    Copyright © 2017-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "src/core/chatid.h"
@@ -49,6 +49,7 @@ private slots:
     void dataTest();
     void sizeTest();
     void hashableTest();
+    void invalidLengthIsRejected();
 };
 
 void TestChatId::toStringTest()
@@ -106,6 +107,32 @@ void TestChatId::hashableTest()
     QVERIFY(qHash(pk1) == qHash(pk2));
     ToxPk pk3{echoPk};
     QVERIFY(qHash(pk1) != qHash(pk3));
+}
+
+/**
+ * @brief Constructing an id from a byte array of the wrong length must yield an
+ *        empty id instead of storing a short buffer.
+ * @note Callers (and toxcore) rely on getData() pointing at exactly getSize()
+ *       bytes. An attacker controlled byte array (corrupted profile database,
+ *       drag and drop MIME data, ...) of the wrong length would otherwise cause
+ *       an out of bounds read. Only the assert used to catch this, and asserts
+ *       are compiled out in release builds.
+ */
+void TestChatId::invalidLengthIsRejected()
+{
+    QVERIFY(ToxPk{QByteArray()}.isEmpty());
+    QVERIFY(ToxPk{QByteArray(1, 'a')}.isEmpty());
+    QVERIFY(ToxPk{QByteArray(ToxPk::size - 1, 'a')}.isEmpty());
+    QVERIFY(ToxPk{QByteArray(ToxPk::size + 1, 'a')}.isEmpty());
+
+    QVERIFY(GroupId{QByteArray()}.isEmpty());
+    QVERIFY(GroupId{QByteArray(1, 'a')}.isEmpty());
+    QVERIFY(GroupId{QByteArray(GroupId::size - 1, 'a')}.isEmpty());
+    QVERIFY(GroupId{QByteArray(GroupId::size + 1, 'a')}.isEmpty());
+
+    // A correctly sized array must still be accepted
+    QVERIFY(!ToxPk{QByteArray(ToxPk::size, 'a')}.isEmpty());
+    QVERIFY(!GroupId{QByteArray(GroupId::size, 'a')}.isEmpty());
 }
 
 QTEST_GUILESS_MAIN(TestChatId)

@@ -23,11 +23,11 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string notr="true">qTox</string>
+   <string notr="true">xTox</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../res.qrc">
-    <normaloff>:/img/icons/qtox.svg</normaloff>:/img/icons/qtox.svg</iconset>
+    <normaloff>:/img/icons/xtox.svg</normaloff>:/img/icons/xtox.svg</iconset>
   </property>
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
@@ -324,7 +324,7 @@
          <item>
           <widget class="QCheckBox" name="autoLoginCB">
            <property name="toolTip">
-            <string>If the profile does not have a password, qTox can skip the login screen</string>
+            <string>If the profile does not have a password, xTox can skip the login screen</string>
            </property>
            <property name="accessibleDescription">
             <string>Load automatically checkbox</string>

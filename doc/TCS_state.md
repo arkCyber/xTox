@@ -1,14 +1,14 @@
-# qTox TCS Support state
+# xTox TCS Support state
 
 All section number refer to a section in the [TCS document].
 
 |Symbol|Description|
 |------|-----------|
-|Y| qTox implements this point|
-|N| qTox is missing this point, add issue number|
-|U| Unknown if qTox supports this point|
+|Y| xTox implements this point|
+|N| xTox is missing this point, add issue number|
+|U| Unknown if xTox supports this point|
 
-|TCS Section | qTox State |
+|TCS Section | xTox State |
 |------------|------------|
 | 1.0.1  |U|
 | 1.0.2  |U|

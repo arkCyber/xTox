@@ -1,20 +1,20 @@
 /*
-    Copyright © 2014-2019 by The qTox Project Contributors
+    Copyright © 2014-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "src/ipc.h"
@@ -32,6 +32,15 @@
 
 namespace
 {
+    // Bounded strlen for fixed size buffers that are not guaranteed to be NUL-terminated
+    size_t boundedStrlen(const char* str, size_t maxLen)
+    {
+        size_t len = 0;
+        while (len < maxLen && str[len] != '\0')
+            ++len;
+        return len;
+    }
+
 #ifdef Q_OS_WIN
     const char* getCurUsername()
     {
@@ -52,7 +61,7 @@ namespace
             qWarning() << "Failed to get current username. Will use a global IPC.";
             user = "";
         }
-        return QString("qtox-" IPC_PROTOCOL_VERSION "-") + QString::fromUtf8(user);
+        return QString("xtox-" IPC_PROTOCOL_VERSION "-") + QString::fromUtf8(user);
     }
 } // namespace
 
@@ -136,11 +145,14 @@ IPC::~IPC()
 time_t IPC::postEvent(const QString& name, const QByteArray& data, uint32_t dest)
 {
     QByteArray binName = name.toUtf8();
-    if (binName.length() > static_cast<int32_t>(sizeof(IPCEvent::name))) {
+    // Keep one byte free for the terminating NUL. The receiving side reads both
+    // fields as NUL-terminated C strings (QString::fromUtf8 / QByteArray), so a
+    // completely filled buffer would cause an out-of-bounds read there.
+    if (binName.length() >= static_cast<int32_t>(sizeof(IPCEvent::name))) {
         return 0;
     }
 
-    if (data.length() > static_cast<int32_t>(sizeof(IPCEvent::data))) {
+    if (data.length() >= static_cast<int32_t>(sizeof(IPCEvent::data))) {
         return 0;
     }
 
@@ -162,7 +174,9 @@ time_t IPC::postEvent(const QString& name, const QByteArray& data, uint32_t dest
     if (evt) {
         memset(evt, 0, sizeof(IPCEvent));
         memcpy(evt->name, binName.constData(), binName.length());
+        evt->name[binName.length()] = '\0';
         memcpy(evt->data, data.constData(), data.length());
+        evt->data[data.length()] = '\0';
         mem->lastEvent = evt->posted = result = qMax(mem->lastEvent + 1, time(nullptr));
         evt->dest = dest;
         evt->sender = getpid();
@@ -284,7 +298,7 @@ bool IPC::runEventHandler(IPCEventHandler handler, const QByteArray& arg, void* 
     } else {
         QMetaObject::invokeMethod(this, "runEventHandler", Qt::BlockingQueuedConnection,
                                   Q_RETURN_ARG(bool, result), Q_ARG(IPCEventHandler, handler),
-                                  Q_ARG(const QByteArray&, arg));
+                                  Q_ARG(const QByteArray&, arg), Q_ARG(void*, userData));
     }
 
     return result;
@@ -318,10 +332,16 @@ void IPC::processEvents()
 
     const std::lock_guard<std::mutex> lock(eventHandlersMutex);
     while (IPCEvent* evt = fetchEvent()) {
-        QString name = QString::fromUtf8(evt->name);
+        // The shared memory may have been written by another (possibly older) xTox
+        // process, so never assume the fixed size char arrays are NUL-terminated.
+        const QByteArray nameBytes(evt->name,
+                                   static_cast<int>(boundedStrlen(evt->name, sizeof(evt->name))));
+        QString name = QString::fromUtf8(nameBytes);
         auto it = eventHandlers.find(name);
         if (it != eventHandlers.end()) {
-            evt->accepted = runEventHandler(it.value().handler, evt->data, it.value().userData);
+            const QByteArray eventData(
+                evt->data, static_cast<int>(boundedStrlen(evt->data, sizeof(evt->data))));
+            evt->accepted = runEventHandler(it.value().handler, eventData, it.value().userData);
             qDebug() << "Processed event:" << name << "posted:" << evt->posted
                      << "accepted:" << evt->accepted;
             if (evt->dest == 0) {

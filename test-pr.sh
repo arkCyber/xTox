@@ -1,23 +1,23 @@
 #!/usr/bin/env bash
 
 #   Copyright © 2016 Zetok Zalbavar <zetok@openmailbox.org>
-#   Copyright © 2019 by The qTox Project Contributors
+#   Copyright © 2019 by The xTox Project Contributors
 #
-#   This file is part of qTox, a Qt-based graphical interface for Tox.
-#   qTox is libre software: you can redistribute it and/or modify
+#   This file is part of xTox, a Qt-based graphical interface for Tox.
+#   xTox is libre software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
 #   the Free Software Foundation, either version 3 of the License, or
 #   (at your option) any later version.
 #
-#   qTox is distributed in the hope that it will be useful,
+#   xTox is distributed in the hope that it will be useful,
 #   but WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #   GNU General Public License for more details.
 #
 #   You should have received a copy of the GNU General Public License
-#   along with qTox.  If not, see <http://www.gnu.org/licenses/>
+#   along with xTox.  If not, see <http://www.gnu.org/licenses/>
 # Script for testing pull requests. Works only when there are no merge
-# conflicts. Assumes that working dir is a qTox git repo.
+# conflicts. Assumes that working dir is a xTox git repo.
 #
 
 # usage:
@@ -55,7 +55,7 @@ main() {
     add_remote "https"
     get_sources
 
-    merge git -c user.email='<>' -c user.name='qTox testing' \
+    merge git -c user.email='<>' -c user.name='xTox testing' \
         merge --no-gpg-sign \
             && after_merge_msg $merge_branch \
             || after_merge_failure_msg $merge_branch

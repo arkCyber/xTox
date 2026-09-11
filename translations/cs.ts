@@ -143,8 +143,8 @@ může dojít během video hovoru k výpadkům či jiným problémům.</translat
         <translation>Původní autor: %1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>Používáte qTox verzi %1.</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>Používáte xTox verzi %1.</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -159,10 +159,10 @@ může dojít během video hovoru k výpadkům či jiným problémům.</translat
         <translation>Qt verze: %1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>Seznam všech známých problémů naleznete na Githubu, na stránce %1. Pokud zjistíte chybu v aplikaci qTox nebo odhalíte zranitelnost v zabezpečení, nahlaste ji prosím dle průvodce pro %2.</translation>
+        <translation>Seznam všech známých problémů naleznete na Githubu, na stránce %1. Pokud zjistíte chybu v aplikaci xTox nebo odhalíte zranitelnost v zabezpečení, nahlaste ji prosím dle průvodce pro %2.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -324,12 +324,12 @@ může dojít během video hovoru k výpadkům či jiným problémům.</translat
         <translation>Aktualizace je k dispozici</translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
-        <translation>qTox je aktuální ✓</translation>
+        <source>xTox is up to date ✓</source>
+        <translation>xTox je aktuální ✓</translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
-        <translation>Aktuálně je spuštěna netestovaná/nestabilní verze qToxu</translation>
+        <source>Currently running an untested/unstable version of xTox</source>
+        <translation>Aktuálně je spuštěna netestovaná/nestabilní verze xToxu</translation>
     </message>
 </context>
 <context>
@@ -498,12 +498,12 @@ může dojít během video hovoru k výpadkům či jiným problémům.</translat
         <translation>Protokoly (*.log)</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
-        <translation>Pokud si nejste 1% jisti tím, co jednotlivá nastavení ovlivňují, pak tu %2 neměňte! Změny provedené zde mohou vést k problémům s aplikací qTox a dokonce ke ztrátě vašich dat (např. historie konverzací). %3</translation>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
+        <translation>Pokud si nejste 1% jisti tím, co jednotlivá nastavení ovlivňují, pak tu %2 neměňte! Změny provedené zde mohou vést k problémům s aplikací xTox a dokonce ke ztrátě vašich dat (např. historie konverzací). %3</translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
-        <translation>Provedené změny se projeví až po restartu aplikace qTox.</translation>
+        <source>Changes here are applied only after restarting xTox.</source>
+        <translation>Provedené změny se projeví až po restartu aplikace xTox.</translation>
     </message>
     <message>
         <source>Save file</source>
@@ -649,8 +649,8 @@ může dojít během video hovoru k výpadkům či jiným problémům.</translat
         <translation>Odeslat soubor</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>qTox nemohl otevřít %1</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>xTox nemohl otevřít %1</translation>
     </message>
     <message>
         <source>Failed to open temporary file</source>
@@ -658,7 +658,7 @@ může dojít během video hovoru k výpadkům či jiným problémům.</translat
         <translation>Nepodařilo se otevřít dočasný soubor</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
         <translation>Nepodařilo se uložit snímek obrazovky</translation>
     </message>
     <message>
@@ -1093,17 +1093,17 @@ takže můžete soubor uložit i v systému Windows.</translation>
         <translation>Obecné nastavení</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>Překlad se nemusí nahrát správně dokud nedojde k restartu qTox.</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>Překlad se nemusí nahrát správně dokud nedojde k restartu xTox.</translation>
     </message>
     <message>
         <source>Language:</source>
         <translation>Jazyk:</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox se spustí minimalizovaný v liště.</translation>
+        <translation>xTox se spustí minimalizovaný v liště.</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1159,8 +1159,8 @@ takže můžete soubor uložit i v systému Windows.</translation>
         <translation>Upozornění při změně stavu kontaktů</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>Spustit qTox při startu operačního systému (aktuální profil).</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>Spustit xTox při startu operačního systému (aktuální profil).</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
@@ -1183,17 +1183,17 @@ takže můžete soubor uložit i v systému Windows.</translation>
         <translation> MB</translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
-        <translation>Po stisknutí tlačítka minimalizovat (_) bude qTox k dispozici v systémové liště,
+        <translation>Po stisknutí tlačítka minimalizovat (_) bude xTox k dispozici v systémové liště,
 nikoli na hlavním panelu s aplikacemi.</translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
-        <translation>Po stisknutí tlačítka zavřít (X) bude qTox k dispozici v systémové liště,
+        <translation>Po stisknutí tlačítka zavřít (X) bude xTox k dispozici v systémové liště,
 nedojde k jeho úplnému ukončení.</translation>
     </message>
     <message>
@@ -1535,8 +1535,8 @@ Zašlete ho svým přátelům a navažte kontakt.</translation>
         <translation>Síla hesla: %p%</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>Pokud profl nemá přiřezené heslo qTox může přeskočit přihlašovací obrazovku</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>Pokud profl nemá přiřezené heslo xTox může přeskočit přihlašovací obrazovku</translation>
     </message>
     <message>
         <source>New Profile</source>
@@ -1772,9 +1772,9 @@ Ujistěte se, že zadáváte stejné heslo dvakrát.</translation>
         <translation type="unfinished">Spustitelný soubor</translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translation type="unfinished">Požadujete aby qTox spustil soubor Spustitelné soubory mohou být rizikem pro váš počítač. Jste si jistý, že chcete tento soubor spustit?</translation>
+        <translation type="unfinished">Požadujete aby xTox spustil soubor Spustitelné soubory mohou být rizikem pro váš počítač. Jste si jistý, že chcete tento soubor spustit?</translation>
     </message>
 </context>
 <context>
@@ -1981,8 +1981,8 @@ Pokud jste obtěžováni žádostmi o přidání, měli byste si změnit vaše N
         <translation>Nepodařilo se odvodit klíč z hesla, profil nové heslo nepoužije.</translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation>Toxuji na qToxe</translation>
+        <source>Toxing on xTox</source>
+        <translation>Toxuji na xToxe</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2313,8 +2313,8 @@ ID zahrnuje kód NoSpam (modře) a kontrolní součet (šedě).</translation>
         <translation>Chyba</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>qTox nemohl otevřít vaše protokoly chatu, budou deaktivovány.</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>xTox nemohl otevřít vaše protokoly chatu, budou deaktivovány.</translation>
     </message>
     <message>
         <source>None</source>
@@ -2509,7 +2509,7 @@ ID zahrnuje kód NoSpam (modře) a kontrolní součet (šedě).</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2539,9 +2539,9 @@ ID zahrnuje kód NoSpam (modře) a kontrolní součet (šedě).</translation>
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>Klikněte a táhněte pro vybrání oblasti. Ztlačte %1 pro skrytí/zobrazení okna qTox, nebo %2 pro zrušení.</translation>
+        <translation>Klikněte a táhněte pro vybrání oblasti. Ztlačte %1 pro skrytí/zobrazení okna xTox, nebo %2 pro zrušení.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2554,9 +2554,9 @@ ID zahrnuje kód NoSpam (modře) a kontrolní součet (šedě).</translation>
         <translation>Esc</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>Ztlačte %1 pro odeslání vybrané oblasti, %2 pro skrytí/zobrazení okna qTox, nebo %3 pro zrušení.</translation>
+        <translation>Ztlačte %1 pro odeslání vybrané oblasti, %2 pro skrytí/zobrazení okna xTox, nebo %3 pro zrušení.</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2680,7 +2680,7 @@ ID zahrnuje kód NoSpam (modře) a kontrolní součet (šedě).</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2748,8 +2748,8 @@ ID zahrnuje kód NoSpam (modře) a kontrolní součet (šedě).</translation>
         <translation>Velikost: </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation>Nový styl textu se nemusí načíst do restartu qTox.</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation>Nový styl textu se nemusí načíst do restartu xTox.</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2776,9 +2776,9 @@ ID zahrnuje kód NoSpam (modře) a kontrolní součet (šedě).</translation>
         <translation>Nová zpráva</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translation>Otevřít okno qTox když obdržíte novou zprávu a žádné okno ještě není otevřené.</translation>
+        <translation>Otevřít okno xTox když obdržíte novou zprávu a žádné okno ještě není otevřené.</translation>
     </message>
     <message>
         <source>Open window</source>
@@ -2995,7 +2995,7 @@ ID zahrnuje kód NoSpam (modře) a kontrolní součet (šedě).</translation>
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation>Zobrazit</translation>
     </message>
     <message>
@@ -3028,9 +3028,9 @@ ID zahrnuje kód NoSpam (modře) a kontrolní součet (šedě).</translation>
         <translation>Nepodařilo se spustit Toxcore, po potvrzení této zprávy bude aplikace ukončena.</translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
-        <translation>Vaše nastavení proxy serveru způsobilo selhání Toxcore. qTox nemůže být spustěn; prosím upravte nastavení a restartujte program.</translation>
+        <translation>Vaše nastavení proxy serveru způsobilo selhání Toxcore. xTox nemůže být spustěn; prosím upravte nastavení a restartujte program.</translation>
     </message>
     <message>
         <source>Couldn&apos;t send friend request</source>

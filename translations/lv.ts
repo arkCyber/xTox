@@ -143,8 +143,8 @@ kas var radīt video zvanu problēmas.</translation>
         <translation>Sākotnējais autors: %1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>Jūs lietojat qTox versiju %1.</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>Jūs lietojat xTox versiju %1.</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -159,10 +159,10 @@ kas var radīt video zvanu problēmas.</translation>
         <translation>Qt versija: %1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>Visu zināmo problēmu sarakstu Jūs varat atrast mūsu %1 vietnē Github. Ja Jūs atklājat kādu kļūdu vai neaizsargātību qTox drošības jomā, lūdzu ziņojiet par to saskaņā ar mūsu %2 wiki raksta vadlīnijām.</translation>
+        <translation>Visu zināmo problēmu sarakstu Jūs varat atrast mūsu %1 vietnē Github. Ja Jūs atklājat kādu kļūdu vai neaizsargātību xTox drošības jomā, lūdzu ziņojiet par to saskaņā ar mūsu %2 wiki raksta vadlīnijām.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -324,12 +324,12 @@ kas var radīt video zvanu problēmas.</translation>
         <translation>Pieejams atjauninājums</translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
-        <translation>qTox ir atjaunināts ✓</translation>
+        <source>xTox is up to date ✓</source>
+        <translation>xTox ir atjaunināts ✓</translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
-        <translation>Šobrīd tiek palaista nestabila qTox versija</translation>
+        <source>Currently running an untested/unstable version of xTox</source>
+        <translation>Šobrīd tiek palaista nestabila xTox versija</translation>
     </message>
 </context>
 <context>
@@ -498,12 +498,12 @@ kas var radīt video zvanu problēmas.</translation>
         <translation>Žurnāls (*.log)</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
-        <translation>Ja vien %1 tiešām zinat, ko Jūs darat, šeit %2 neko nemainat. Izmaiņas šeit var rasties problēmas ar qTox un var zaudēt datus piem. sarunas vēsture.%3</translation>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
+        <translation>Ja vien %1 tiešām zinat, ko Jūs darat, šeit %2 neko nemainat. Izmaiņas šeit var rasties problēmas ar xTox un var zaudēt datus piem. sarunas vēsture.%3</translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
-        <translation>Izmaiņas tiks veiktas tikai pēc qTox restartēšanas.</translation>
+        <source>Changes here are applied only after restarting xTox.</source>
+        <translation>Izmaiņas tiks veiktas tikai pēc xTox restartēšanas.</translation>
     </message>
     <message>
         <source>Save file</source>
@@ -649,8 +649,8 @@ kas var radīt video zvanu problēmas.</translation>
         <translation>Sūtīt failu</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>qTox nevarēja atvērt %1</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>xTox nevarēja atvērt %1</translation>
     </message>
     <message>
         <source>Unable to open</source>
@@ -666,9 +666,9 @@ kas var radīt video zvanu problēmas.</translation>
         <translation>Neizdevās atvērt pagaidu failu</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
         <translatorcomment>laut Duden ist Screenshot schon deutsch</translatorcomment>
-        <translation>qTox nevarēja saglabāt ekrānuzņēmumu</translation>
+        <translation>xTox nevarēja saglabāt ekrānuzņēmumu</translation>
     </message>
     <message>
         <source>Call duration: </source>
@@ -1100,8 +1100,8 @@ lai varētu saglabāt failus Windows operētājsistēmā.</translation>
         <translation>Vispārīgie iestatījumi</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>Tulkojums neizmainīsies, kamēr no jauna neatvērsiet qTox.</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>Tulkojums neizmainīsies, kamēr no jauna neatvērsiet xTox.</translation>
     </message>
     <message>
         <source>Language:</source>
@@ -1121,9 +1121,9 @@ lai varētu saglabāt failus Windows operētājsistēmā.</translation>
         <translation>Gaiša ikona</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox palaidīsies minimizēts sistēmas panelī.</translation>
+        <translation>xTox palaidīsies minimizēts sistēmas panelī.</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1166,8 +1166,8 @@ lai varētu saglabāt failus Windows operētājsistēmā.</translation>
         <translation>Rādīt kontaktpersonu statusa izmaiņas</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>Startēt qTox, kad ielādējas operētājsistēma (pašreizējo profilu).</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>Startēt xTox, kad ielādējas operētājsistēma (pašreizējo profilu).</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
@@ -1190,17 +1190,17 @@ lai varētu saglabāt failus Windows operētājsistēmā.</translation>
         <translation> MB</translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
-        <translation>Spiežot loga minimizēšanas pogu, qTox samazināsies rīkjoslā
+        <translation>Spiežot loga minimizēšanas pogu, xTox samazināsies rīkjoslā
 vietā uzdevumjoslā.</translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
-        <translation>Spiežot logu aizvēršanas pogu, qTox samazināsies rīkjoslā
+        <translation>Spiežot logu aizvēršanas pogu, xTox samazināsies rīkjoslā
 vietā pilnīgi aizveroties.</translation>
     </message>
     <message>
@@ -1545,8 +1545,8 @@ Share it with your friends to begin chatting.</source>
         <translation>Izveidot profilu</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>Ja profilam nav paroles, qTox var izlaist pieteikšanās logu</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>Ja profilam nav paroles, xTox var izlaist pieteikšanās logu</translation>
     </message>
     <message>
         <source>Load automatically</source>
@@ -1778,7 +1778,7 @@ Please make sure to enter the same password twice.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
         <translation type="unfinished"></translation>
     </message>
@@ -1987,8 +1987,8 @@ Iespējama saglabāšanas formāta izmaiņas, kas var novest pie datu zaudēšan
         <translation>Neizdevās iegūt atslēgu no paroles, profils neizmantos jauno paroli.</translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation>Tērzēt qTox</translation>
+        <source>Toxing on xTox</source>
+        <translation>Tērzēt xTox</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2326,8 +2326,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Kļūda</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>qTox nevar atvērt tērzēšanas vēsturi, tā tiks atslēgta.</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>xTox nevar atvērt tērzēšanas vēsturi, tā tiks atslēgta.</translation>
     </message>
     <message>
         <source>Dark</source>
@@ -2512,7 +2512,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2542,9 +2542,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>Noklikšķiniet un velciet, lai atlasītu reģionu. Nospiediet %1, lai paslēptu/rādītu qTox logu, vai %2, lai atceltu.</translation>
+        <translation>Noklikšķiniet un velciet, lai atlasītu reģionu. Nospiediet %1, lai paslēptu/rādītu xTox logu, vai %2, lai atceltu.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2557,9 +2557,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Atcelt</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>Nospiediet %1, lai nosūtītu atlases ekrānuzņēmumu, %2, lai paslēptu/rādītu qTox logu, vai %3, lai atceltu.</translation>
+        <translation>Nospiediet %1, lai nosūtītu atlases ekrānuzņēmumu, %2, lai paslēptu/rādītu xTox logu, vai %3, lai atceltu.</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2683,7 +2683,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2751,8 +2751,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Lielumu: </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation>Teksta jaunais stils tiks pielietots pēc qTox atkārtotas palaišanas.</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation>Teksta jaunais stils tiks pielietots pēc xTox atkārtotas palaišanas.</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2779,9 +2779,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Jauna ziņa</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translation>Atvērt qTox logu, kad Jūs esat saņēmis jaunu ziņu, ja līdz šim tā nav bijusi atvērta.</translation>
+        <translation>Atvērt xTox logu, kad Jūs esat saņēmis jaunu ziņu, ja līdz šim tā nav bijusi atvērta.</translation>
     </message>
     <message>
         <source>Open window</source>
@@ -2999,7 +2999,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3032,7 +3032,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
         <translation type="unfinished"></translation>
     </message>

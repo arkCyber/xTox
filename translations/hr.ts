@@ -139,8 +139,8 @@ which may lead to problems with video calls.</source>
         <translation>Autor: %1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>Koristiš qTox verziju %1.</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>Koristiš xTox verziju %1.</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -155,10 +155,10 @@ which may lead to problems with video calls.</source>
         <translation>Qt verzija: %1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>Popis poznatih problema nalazi se na stranici %1 na Githubu. Ako otkriješ grešku ili sigurnosni problem u qToxu, prijavi ih prema uputama u wiki članku %2.</translation>
+        <translation>Popis poznatih problema nalazi se na stranici %1 na Githubu. Ako otkriješ grešku ili sigurnosni problem u xToxu, prijavi ih prema uputama u wiki članku %2.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -320,11 +320,11 @@ which may lead to problems with video calls.</source>
         <translation>Postoji nova verzija</translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
-        <translation>Verzija qToxa je aktualna ✓</translation>
+        <source>xTox is up to date ✓</source>
+        <translation>Verzija xToxa je aktualna ✓</translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
+        <source>Currently running an untested/unstable version of xTox</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -494,11 +494,11 @@ which may lead to problems with video calls.</source>
         <translation>Dnevnici (*.log)</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
+        <source>Changes here are applied only after restarting xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -645,8 +645,8 @@ which may lead to problems with video calls.</source>
         <translation>Pošalji datoteku</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>qTox nije mogao otvoriti %1</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>xTox nije mogao otvoriti %1</translation>
     </message>
     <message>
         <source>Call duration: </source>
@@ -666,8 +666,8 @@ which may lead to problems with video calls.</source>
         <translation>Neuspjelo otvaranje privremene datoteke</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
-        <translation>qTox nije mogao spremiti snimku ekrana</translation>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
+        <translation>xTox nije mogao spremiti snimku ekrana</translation>
     </message>
     <message>
         <source>Copy</source>
@@ -1088,8 +1088,8 @@ so you can save the file on Windows.</source>
         <translation>Opće postavke</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>Prijevod možda neće biti učitan, sve dok se qTox ponovo ne pokrene.</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>Prijevod možda neće biti učitan, sve dok se xTox ponovo ne pokrene.</translation>
     </message>
     <message>
         <source>Language:</source>
@@ -1109,9 +1109,9 @@ so you can save the file on Windows.</source>
         <translation>Svijetla ikona</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox će se pokrenuti smanjen u programskoj traci.</translation>
+        <translation>xTox će se pokrenuti smanjen u programskoj traci.</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1154,8 +1154,8 @@ so you can save the file on Windows.</source>
         <translation>Prikaži promjene stanja kontakta</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>Pokreni qTox nakon pokretanja operacijskog sustava (za ovaj profil).</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>Pokreni xTox nakon pokretanja operacijskog sustava (za ovaj profil).</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
@@ -1178,13 +1178,13 @@ so you can save the file on Windows.</source>
         <translation> MB</translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
         <translation type="unfinished"></translation>
@@ -1531,8 +1531,8 @@ Share it with your friends to begin chatting.</source>
         <translation>Stvori profil</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>Ako profil nema lozinku, qTox može preskočiti ekran za prijavu</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>Ako profil nema lozinku, xTox može preskočiti ekran za prijavu</translation>
     </message>
     <message>
         <source>Load automatically</source>
@@ -1763,9 +1763,9 @@ Please make sure to enter the same password twice.</source>
         <translation type="unfinished">Izvršna datoteka</translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translation type="unfinished">Tražiš od qToxa da otvori izvršnu datoteku. Zlonamjerne izvršne datoteke mogu oštetiti podatke. Zaista želiš pokrenuti ovu datoteku?</translation>
+        <translation type="unfinished">Tražiš od xToxa da otvori izvršnu datoteku. Zlonamjerne izvršne datoteke mogu oštetiti podatke. Zaista želiš pokrenuti ovu datoteku?</translation>
     </message>
 </context>
 <context>
@@ -1972,8 +1972,8 @@ Ako te zatrpavaju zahtjevima za prijateljstvo, promijeni NoSpam.</translation>
         <translation>Neuspjelo izvlačenje ključa iz lozinke, profil neće koristiti novu lozinku.</translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation>Toksiranje kroz qTox</translation>
+        <source>Toxing on xTox</source>
+        <translation>Toksiranje kroz xTox</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2301,8 +2301,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Pogreška</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>qTox nije mogao otvoriti tvoje dnevnike čavrljanja, bit će deaktivirani.</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>xTox nije mogao otvoriti tvoje dnevnike čavrljanja, bit će deaktivirani.</translation>
     </message>
     <message>
         <source>None</source>
@@ -2497,7 +2497,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2527,9 +2527,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>Pritisni i povuci za odabir regije. Pritisni %1 za skrivanje/prikaz qTox prozora ili %2 za prekid.</translation>
+        <translation>Pritisni i povuci za odabir regije. Pritisni %1 za skrivanje/prikaz xTox prozora ili %2 za prekid.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2542,9 +2542,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>ESC</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>Pritisni %1 za slanje snimke ekrana odabira, %2 za prikaz qTox prozora ili %3 za prekid.</translation>
+        <translation>Pritisni %1 za slanje snimke ekrana odabira, %2 za prikaz xTox prozora ili %3 za prekid.</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2668,7 +2668,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2736,8 +2736,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Veličina: </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation>Nove postavke stila će se možda učitati tek nakon ponovnog pokretanja qToxa.</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation>Nove postavke stila će se možda učitati tek nakon ponovnog pokretanja xToxa.</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2764,9 +2764,9 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Nova poruka</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translation>Otvori prozor qToxa kad primiš novu poruku, a da nijedan prozor još nije otvoren.</translation>
+        <translation>Otvori prozor xToxa kad primiš novu poruku, a da nijedan prozor još nije otvoren.</translation>
     </message>
     <message>
         <source>Open window</source>
@@ -2983,7 +2983,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation>Prikaži</translation>
     </message>
     <message>
@@ -3016,7 +3016,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
         <translation type="unfinished"></translation>
     </message>

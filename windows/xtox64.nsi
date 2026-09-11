@@ -2,16 +2,16 @@ Unicode True
 ###################
 #META
 ###################
-!define APP_NAME "qTox"
+!define APP_NAME "xTox"
 !define COMP_NAME "Tox"
-!define WEB_SITE "https://github.com/qTox/qTox"
+!define WEB_SITE "https://github.com/xTox/xTox"
 !define VERSION "1.0.0.0"
-!define DESCRIPTION "qTox Installer"
+!define DESCRIPTION "xTox Installer"
 !define COPYRIGHT "The Tox Project"
-!define INSTALLER_NAME "setup-qtox.exe"
-!define MAIN_APP_EXE "bin\qtox.exe"
+!define INSTALLER_NAME "setup-xtox.exe"
+!define MAIN_APP_EXE "bin\xtox.exe"
 !define REG_ROOT "HKLM"
-!define REG_APP_PATH "Software\Microsoft\Windows\CurrentVersion\App Paths\qtox.exe"
+!define REG_APP_PATH "Software\Microsoft\Windows\CurrentVersion\App Paths\xtox.exe"
 !define UNINSTALL_PATH "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APP_NAME}"
 !define REG_START_MENU "Start Menu Folder"
 var SM_Folder
@@ -20,7 +20,7 @@ Name "${APP_NAME}"
 Caption "${APP_NAME}"
 OutFile "${INSTALLER_NAME}"
 BrandingText "${APP_NAME}"
-InstallDir "$PROGRAMFILES\${APP_NAME}"
+InstallDir "$PROGRAMFILES64\${APP_NAME}"
 SetCompressor /SOLID lzma
 
 VIProductVersion "${VERSION}"
@@ -164,7 +164,7 @@ VIAddVersionKey "FileVersion" "${VERSION}"
 !insertmacro MUI_PAGE_DIRECTORY
 !ifdef REG_START_MENU
   !define MUI_STARTMENUPAGE_NODISABLE
-  !define MUI_STARTMENUPAGE_DEFAULTFOLDER "qTox"
+  !define MUI_STARTMENUPAGE_DEFAULTFOLDER "xTox"
   !define MUI_STARTMENUPAGE_REGISTRY_ROOT "${REG_ROOT}"
   !define MUI_STARTMENUPAGE_REGISTRY_KEY "${UNINSTALL_PATH}"
   !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "${REG_START_MENU}"
@@ -173,20 +173,20 @@ VIAddVersionKey "FileVersion" "${VERSION}"
 !insertmacro MUI_PAGE_INSTFILES
 
 Function finishpageaction
-${CreateShortcut} "$DESKTOP\qTox.lnk" "$INSTDIR\${MAIN_APP_EXE}" "" "" ""
+${CreateShortcut} "$DESKTOP\xTox.lnk" "$INSTDIR\${MAIN_APP_EXE}" "" "" ""
 FunctionEnd
 
 !define MUI_FINISHPAGE_SHOWREADME ""
 !define MUI_FINISHPAGE_SHOWREADME_TEXT "Create Desktop Shortcut"
 !define MUI_FINISHPAGE_SHOWREADME_FUNCTION finishpageaction
 
-!define MUI_FINISHPAGE_RUN_FUNCTION Launch_qTox_without_Admin
+!define MUI_FINISHPAGE_RUN_FUNCTION Launch_xTox_without_Admin
 !define MUI_FINISHPAGE_RUN
-!define MUI_FINISHPAGE_LINK "Find qTox on GitHub"
-!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/qTox/qTox"
+!define MUI_FINISHPAGE_LINK "Find xTox on GitHub"
+!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/xTox/xTox"
 !insertmacro MUI_PAGE_FINISH
 
-Function Launch_qTox_without_Admin
+Function Launch_xTox_without_Admin
    SetOutPath $INSTDIR
    ShellExecAsUser::ShellExecAsUser "" "$INSTDIR\${MAIN_APP_EXE}" ""
 FunctionEnd
@@ -215,13 +215,13 @@ FunctionEnd
       FileReadUTF16LE $0 $1 1024
       FileReadUTF16LE $0 $2 1024
     FileClose $0
-    FileOpen $0 "$TEMP\qTox-install-file-permissions.txt" w
+    FileOpen $0 "$TEMP\xTox-install-file-permissions.txt" w
       FileWriteUTF16LE  $0 "$INSTDIR"
       FileWriteUTF16LE  $0 "$\r$\n"
       DetailPrint "Writing to file: $2"
       FileWriteUTF16LE  $0 "$2"
     FileClose $0
-    nsExec::Exec 'icacls "" /restore "$TEMP\qTox-install-file-permissions.txt"'
+    nsExec::Exec 'icacls "" /restore "$TEMP\xTox-install-file-permissions.txt"'
   SectionEnd
 
   Section -openlogfile
@@ -245,41 +245,42 @@ Section "Install"
 
   ${CreateDirectory} "$INSTDIR\bin"
   ${SetOutPath} "$INSTDIR\bin"
-  ${File} "qtox\*.*"
+  ${File} "xtox\*.*"
 
   ${CreateDirectory} "$INSTDIR\bin\imageformats"
   ${SetOutPath} "$INSTDIR\bin\imageformats"
-  File /nonfatal "qtox\imageformats\*.*"
+  File /nonfatal "xtox\imageformats\*.*"
   ${SetOutPath} "$INSTDIR\bin"
 
   ${CreateDirectory} "$INSTDIR\bin\iconengines"
   ${SetOutPath} "$INSTDIR\bin\iconengines"
-  File /nonfatal "qtox\iconengines\*.*"
+  File /nonfatal "xtox\iconengines\*.*"
   ${SetOutPath} "$INSTDIR\bin"
 
   ${CreateDirectory} "$INSTDIR\bin\platforms"
   ${SetOutPath} "$INSTDIR\bin\platforms"
-  File /nonfatal "qtox\platforms\*.*"
+  File /nonfatal "xtox\platforms\*.*"
   ${SetOutPath} "$INSTDIR\bin"
 
   ${CreateDirectory} "$INSTDIR\bin\libsnore-qt5"
   ${SetOutPath} "$INSTDIR\bin\libsnore-qt5"
-  File /nonfatal "qtox\libsnore-qt5\*.*"
+  File /nonfatal "xtox\libsnore-qt5\*.*"
   ${SetOutPath} "$INSTDIR\bin"
 
   # Create shortcuts
-  ${CreateDirectory} "$SMPROGRAMS\qTox"
-  ${CreateShortCut} "$SMPROGRAMS\qTox\qTox.lnk" "$INSTDIR\${MAIN_APP_EXE}" "" "" ""
-  ${CreateShortCut} "$SMPROGRAMS\qTox\Uninstall qTox.lnk" "$INSTDIR\uninstall.exe" "" "" ""
+  ${CreateDirectory} "$SMPROGRAMS\xTox"
+  ${CreateShortCut} "$SMPROGRAMS\xTox\xTox.lnk" "$INSTDIR\${MAIN_APP_EXE}" "" "" ""
+  ${CreateShortCut} "$SMPROGRAMS\xTox\Uninstall xTox.lnk" "$INSTDIR\uninstall.exe" "" "" ""
 
   # Write setup/app info into the registry
+  SetRegView 64
   ${WriteRegStr} "${REG_ROOT}" "${REG_APP_PATH}" "" "$INSTDIR\${MAIN_APP_EXE}"
   ${WriteRegStr} "${REG_ROOT}" "${REG_APP_PATH}" "Path" "$INSTDIR\bin\"
-  ${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "DisplayName" "qTox"
+  ${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "DisplayName" "xTox"
   ${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "DisplayVersion" "1.17.5"
-  ${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "Publisher" "The qTox Project"
+  ${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "Publisher" "The xTox Project"
   ${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "UninstallString" "$INSTDIR\uninstall.exe"
-  ${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "URLInfoAbout" "https://qtox.github.io"
+  ${WriteRegStr} ${REG_ROOT} "${UNINSTALL_PATH}" "URLInfoAbout" "https://xtox.github.io"
 
   # Register the tox: protocol
   ${WriteRegStr} HKCR "tox" "" "URL:tox Protocol"
@@ -287,7 +288,7 @@ Section "Install"
   ${WriteRegStr} HKCR "tox\shell\open\command" "" "$INSTDIR\${MAIN_APP_EXE} %1"
 
   # Register the .tox file associations
-  ${WriteRegStr} "HKCR" "Applications\qtox.exe\SupportedTypes" ".tox" ""
+  ${WriteRegStr} "HKCR" "Applications\xtox.exe\SupportedTypes" ".tox" ""
   ${WriteRegStr} HKCR ".tox" "" "toxsave"
   ${WriteRegStr} HKCR "toxsave" "" "Tox save file"
   ${WriteRegStr} HKCR "toxsave\DefaultIcon" "" "$INSTDIR\${MAIN_APP_EXE}"
@@ -313,7 +314,7 @@ Section Uninstall
 
   GetLineCount:
     ClearErrors
-    FileReadUTF16LE $UninstLog $R0
+    FileRead $UninstLog $R0
     IntOp $R1 $R1 + 1
     StrCpy $R0 $R0 -2
     Push $R0
@@ -351,12 +352,13 @@ Section Uninstall
   Pop $R0
 
   ;Remove start menu entries
-  RMDir /r /REBOOTOK "$SMPROGRAMS\qTox"
+  RMDir /r /REBOOTOK "$SMPROGRAMS\xTox"
 
   ;Remove registry keys
+  SetRegView 64
   DeleteRegKey ${REG_ROOT} "${REG_APP_PATH}"
   DeleteRegKey ${REG_ROOT} "${UNINSTALL_PATH}"
-  DeleteRegKey HKCR "Applications\qtox.exe"
+  DeleteRegKey HKCR "Applications\xtox.exe"
   DeleteRegKey HKCR ".tox"
   DeleteRegKey HKCR "tox"
   DeleteRegKey HKCR "toxsave"

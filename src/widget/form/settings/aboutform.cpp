@@ -1,20 +1,20 @@
 /*
-    Copyright © 2014-2019 by The qTox Project Contributors
+    Copyright © 2014-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "aboutform.h"
@@ -47,7 +47,7 @@ enum class updateIndex
 /**
  * @class AboutForm
  *
- * This form contains information about qTox and libraries versions, external
+ * This form contains information about xTox and libraries versions, external
  * links and licence text. Shows progress during an update.
  */
 
@@ -87,7 +87,7 @@ AboutForm::AboutForm(UpdateCheck* updateCheck_, Style& style_)
  * @brief Update versions and links.
  *
  * Update commit hash if built with git, show author and known issues info
- * It also updates qTox, toxcore and Qt versions.
+ * It also updates xTox, toxcore and Qt versions.
  */
 void AboutForm::replaceVersions()
 {
@@ -98,7 +98,7 @@ void AboutForm::replaceVersions()
                               + QString::number(tox_version_minor()) + "."
                               + QString::number(tox_version_patch());
 
-    bodyUI->youAreUsing->setText(tr("You are using qTox version %1.").arg(QString(GIT_DESCRIBE)));
+    bodyUI->youAreUsing->setText(tr("You are using xTox version %1.").arg(QString(GIT_DESCRIBE)));
 
 #if UPDATE_CHECK_ENABLED
     if (updateCheck != nullptr) {
@@ -109,10 +109,10 @@ void AboutForm::replaceVersions()
         qWarning() << "AboutForm passed null UpdateCheck!";
     }
 #else
-    qDebug() << "AboutForm not showing updates, qTox built without UPDATE_CHECK";
+    qDebug() << "AboutForm not showing updates, xTox built without UPDATE_CHECK";
 #endif
 
-    QString commitLink = "https://github.com/qTox/qTox/commit/" + QString(GIT_VERSION);
+    QString commitLink = "https://github.com/xTox/xTox/commit/" + QString(GIT_VERSION);
     bodyUI->gitVersion->setText(
         tr("Commit hash: %1").arg(createLink(commitLink, QString(GIT_VERSION))));
 
@@ -121,7 +121,7 @@ void AboutForm::replaceVersions()
 
     QString issueBody = QString("##### Brief Description\n\n"
                                 "OS: %1\n"
-                                "qTox version: %2\n"
+                                "xTox version: %2\n"
                                 "Commit hash: %3\n"
                                 "toxcore: %4\n"
                                 "Qt: %5\n…\n\n"
@@ -135,7 +135,7 @@ void AboutForm::replaceVersions()
                                 "(links, images, etc go here)\n\n"
                                 "----\n\n"
                                 "More information on how to write good bug reports in the wiki: "
-                                "https://github.com/qTox/qTox/wiki/Writing-Useful-Bug-Reports.\n\n"
+                                "https://github.com/xTox/xTox/wiki/Writing-Useful-Bug-Reports.\n\n"
                                 "Please remove any unnecessary template section before submitting.")
                             .arg(QSysInfo::prettyProductName(), GIT_DESCRIBE, GIT_VERSION,
                                  TOXCORE_VERSION, QT_VERSION_STR);
@@ -145,19 +145,19 @@ void AboutForm::replaceVersions()
     bodyUI->knownIssues->setText(
         tr("A list of all known issues may be found at our %1 at Github."
            " If you discover a bug or security vulnerability within"
-           " qTox, please report it according to the guidelines in our"
+           " xTox, please report it according to the guidelines in our"
            " %2 wiki article.",
 
            "`%1` is replaced by translation of `bug tracker`"
            "\n`%2` is replaced by translation of `Writing Useful Bug Reports`")
-            .arg(createLink("https://github.com/qTox/qTox/issues",
+            .arg(createLink("https://github.com/xTox/xTox/issues",
                             tr("bug-tracker", "Replaces `%1` in the `A list of all known…`")))
-            .arg(createLink("https://github.com/qTox/qTox/wiki/Writing-Useful-Bug-Reports",
+            .arg(createLink("https://github.com/xTox/xTox/wiki/Writing-Useful-Bug-Reports",
                             tr("Writing Useful Bug Reports",
                                "Replaces `%2` in the `A list of all known…`"))));
 
     bodyUI->clickToReport->setText(
-        createLink("https://github.com/qTox/qTox/issues/new?body=" + QString::fromUtf8(QUrl(issueBody).toEncoded()),
+        createLink("https://github.com/xTox/xTox/issues/new?body=" + QString::fromUtf8(QUrl(issueBody).toEncoded()),
                    QString("<b>%1</b>").arg(tr("Click here to report a bug."))));
 
 
@@ -167,7 +167,7 @@ void AboutForm::replaceVersions()
             .arg(
                 tr("See a full list of %1 at Github",
                    "`%1` is replaced with translation of word `contributors`")
-                    .arg(createLink("https://qtox.github.io/gitstats/authors.html",
+                    .arg(createLink("https://xtox.github.io/gitstats/authors.html",
                                     tr("contributors", "Replaces `%1` in `See a full list of…`"))));
 
     bodyUI->authorInfo->setText(authorInfo);

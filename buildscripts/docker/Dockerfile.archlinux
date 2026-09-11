@@ -1,4 +1,4 @@
-#    Copyright © 2021 by The qTox Project Contributors
+#    Copyright © 2021 by The xTox Project Contributors
 #
 #    This program is libre software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -48,4 +48,4 @@ RUN mkdir -p /src/tox && \
     /build/build_toxcore_linux.sh && \
     rm -fr /src/tox
 
-WORKDIR /qtox
+WORKDIR /xtox

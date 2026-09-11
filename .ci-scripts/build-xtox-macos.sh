@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#    Copyright © 2016-2021 by The qTox Project Contributors
+#    Copyright © 2016-2021 by The xTox Project Contributors
 #
 #    This program is libre software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
 # Fail out on error
 set -eu -o pipefail
 
-readonly BIN_NAME="qTox.dmg"
+readonly BIN_NAME="xTox.dmg"
 
 SCRIPT_DIR=$(dirname $(realpath "$0"))
 
@@ -38,7 +38,7 @@ else
     exit 1
 fi
 
-build_qtox() {
+build_xtox() {
     cmake -DUPDATE_CHECK=ON \
         -DSPELL_CHECK=OFF \
         -DSTRICT_OPTIONS=ON \
@@ -64,7 +64,7 @@ make_hash() {
 }
 
 main() {
-    build_qtox
+    build_xtox
     check
     make_hash
 }

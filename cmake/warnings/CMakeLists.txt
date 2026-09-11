@@ -1,7 +1,7 @@
-project(qtox_warnings)
+project(xtox_warnings)
 
 add_library(${PROJECT_NAME} INTERFACE)
-add_library(qtox::warnings ALIAS ${PROJECT_NAME})
+add_library(xtox::warnings ALIAS ${PROJECT_NAME})
 
 if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
     if("${CMAKE_CXX_COMPILER_FRONTEND_VARIANT}" STREQUAL "MSVC")

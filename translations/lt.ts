@@ -143,8 +143,8 @@ dėl to gali kilti vaizdo skambučių problemų.</translation>
         <translation>Pradinis autorius: %1</translation>
     </message>
     <message>
-        <source>You are using qTox version %1.</source>
-        <translation>Naudojate qTox versiją: %1.</translation>
+        <source>You are using xTox version %1.</source>
+        <translation>Naudojate xTox versiją: %1.</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
@@ -159,10 +159,10 @@ dėl to gali kilti vaizdo skambučių problemų.</translation>
         <translation>Qt versija: %1</translation>
     </message>
     <message>
-        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
+        <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within xTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>Visų žinomų klaidų sąrašą galima rasti mūsų %1, Github puslapyje. Jeigu qTox programoje rasite klaidą ar saugumo spragą, prašome apie ją pranešti, kaip tai yra nurodyta mūsų gairėse, vikio straipsnyje, pavadinimu &quot;%2&quot;.</translation>
+        <translation>Visų žinomų klaidų sąrašą galima rasti mūsų %1, Github puslapyje. Jeigu xTox programoje rasite klaidą ar saugumo spragą, prašome apie ją pranešti, kaip tai yra nurodyta mūsų gairėse, vikio straipsnyje, pavadinimu &quot;%2&quot;.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -324,12 +324,12 @@ dėl to gali kilti vaizdo skambučių problemų.</translation>
         <translation>Yra prieinamas atnaujinimas</translation>
     </message>
     <message>
-        <source>qTox is up to date ✓</source>
-        <translation>qTox yra naujausios versijos ✓</translation>
+        <source>xTox is up to date ✓</source>
+        <translation>xTox yra naujausios versijos ✓</translation>
     </message>
     <message>
-        <source>Currently running an untested/unstable version of qTox</source>
-        <translation>Šiuo metu naudojama neišbandyta/nestabili „qTox“ versija</translation>
+        <source>Currently running an untested/unstable version of xTox</source>
+        <translation>Šiuo metu naudojama neišbandyta/nestabili „xTox“ versija</translation>
     </message>
 </context>
 <context>
@@ -498,12 +498,12 @@ dėl to gali kilti vaizdo skambučių problemų.</translation>
         <translation>Žurnalai (*.log)</translation>
     </message>
     <message>
-        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
-        <translation>Jei %1 nežinote, ką darote, čia nieko nekeiskite.&quot; Čia atlikti pakeitimai gali sukelti problemų su „qTox“ ir net gali būti prarasti jūsų duomenis, pvz., istoriją.%3</translation>
+        <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with xTox, and even to loss of your data, e.g. history.%3</source>
+        <translation>Jei %1 nežinote, ką darote, čia nieko nekeiskite.&quot; Čia atlikti pakeitimai gali sukelti problemų su „xTox“ ir net gali būti prarasti jūsų duomenis, pvz., istoriją.%3</translation>
     </message>
     <message>
-        <source>Changes here are applied only after restarting qTox.</source>
-        <translation>Pakeitimai čia taikomi tik iš naujo paleidus „qTox“.</translation>
+        <source>Changes here are applied only after restarting xTox.</source>
+        <translation>Pakeitimai čia taikomi tik iš naujo paleidus „xTox“.</translation>
     </message>
     <message>
         <source>Save file</source>
@@ -649,8 +649,8 @@ dėl to gali kilti vaizdo skambučių problemų.</translation>
         <translation>Siųsti failą</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to open %1</source>
-        <translation>qTox nepavyko atverti %1</translation>
+        <source>xTox wasn&apos;t able to open %1</source>
+        <translation>xTox nepavyko atverti %1</translation>
     </message>
     <message>
         <source>Unable to open</source>
@@ -666,7 +666,7 @@ dėl to gali kilti vaizdo skambučių problemų.</translation>
         <translation>Nepavyko atverti laikinojo failo</translation>
     </message>
     <message>
-        <source>qTox wasn&apos;t able to save the screenshot</source>
+        <source>xTox wasn&apos;t able to save the screenshot</source>
         <translation>Nepavyko įrašyti ekrano kopijos</translation>
     </message>
     <message>
@@ -1093,8 +1093,8 @@ tad dabar galite įrašyti failą Windows sistemoje.</translation>
         <translation>Bendrosios nuostatos</translation>
     </message>
     <message>
-        <source>The translation may not load until qTox restarts.</source>
-        <translation>Vertimas gali nepasirodyti, kol nepaleisite qTox iš naujo.</translation>
+        <source>The translation may not load until xTox restarts.</source>
+        <translation>Vertimas gali nepasirodyti, kol nepaleisite xTox iš naujo.</translation>
     </message>
     <message>
         <source>Show system tray icon</source>
@@ -1106,13 +1106,13 @@ tad dabar galite įrašyti failą Windows sistemoje.</translation>
         <translation>Naudoti šviesią sistemos juostelės piktogramą.</translation>
     </message>
     <message>
-        <source>Start qTox on operating system startup (current profile).</source>
-        <translation>Paleisti qTox įjungus kompiuterį (prisijungus mano vardu).</translation>
+        <source>Start xTox on operating system startup (current profile).</source>
+        <translation>Paleisti xTox įjungus kompiuterį (prisijungus mano vardu).</translation>
     </message>
     <message>
-        <source>qTox will start minimized in tray.</source>
+        <source>xTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox pasileis pasislėpęs sistemos juostelėje.</translation>
+        <translation>xTox pasileis pasislėpęs sistemos juostelėje.</translation>
     </message>
     <message>
         <source>Start in tray</source>
@@ -1183,17 +1183,17 @@ tad dabar galite įrašyti failą Windows sistemoje.</translation>
         <translation> MB</translation>
     </message>
     <message>
-        <source>After pressing minimize (_) qTox will minimize to tray,
+        <source>After pressing minimize (_) xTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
-        <translation>Spustelėjus sumažinimo mygtuką (_) qTox pasislėps
+        <translation>Spustelėjus sumažinimo mygtuką (_) xTox pasislėps
 sistemos juostelėje, o ne programų juostoje.</translation>
     </message>
     <message>
-        <source>After pressing close (X) qTox will close to tray,
+        <source>After pressing close (X) xTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
-        <translation>Spustelėjus uždarymo mygtuką (X), qTox pasislėps sistemos juostelėje,
+        <translation>Spustelėjus uždarymo mygtuką (X), xTox pasislėps sistemos juostelėje,
 vietoje to, kad būtų visiškai uždarytas.</translation>
     </message>
     <message>
@@ -1551,8 +1551,8 @@ Pasidalinkite ja su draugais, kad pradėtumėte kalbėtis.</translation>
         <translation>Aktyvuoti profilį</translation>
     </message>
     <message>
-        <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>Jei profilis neturi slaptažodžio, qTox gali prisijungti automatiškai</translation>
+        <source>If the profile does not have a password, xTox can skip the login screen</source>
+        <translation>Jei profilis neturi slaptažodžio, xTox gali prisijungti automatiškai</translation>
     </message>
     <message>
         <source>New Profile</source>
@@ -1772,9 +1772,9 @@ Please make sure to enter the same password twice.</source>
         <translation type="unfinished">Vykdomasis failas</translation>
     </message>
     <message>
-        <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
+        <source>You have asked xTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translation type="unfinished">Nurodėte qTox atidaryti vykdomąjį failą (programą). Vykdomieji failai gali pakenkti Jūsų kompiuteriui. Ar norite tęsti?</translation>
+        <translation type="unfinished">Nurodėte xTox atidaryti vykdomąjį failą (programą). Vykdomieji failai gali pakenkti Jūsų kompiuteriui. Ar norite tęsti?</translation>
     </message>
 </context>
 <context>
@@ -1983,8 +1983,8 @@ Failo formatas dar gali pasikeisti, todėl galite prarasti sukauptus duomenis.</
         <translation>Nepavyko įgauti rakto iš slaptažodžio, profilis nenaudos naujojo slaptažodžio.</translation>
     </message>
     <message>
-        <source>Toxing on qTox</source>
-        <translation>Naudoju qTox</translation>
+        <source>Toxing on xTox</source>
+        <translation>Naudoju xTox</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2325,8 +2325,8 @@ Pasidalinkite ja su draugais, kad pradėtumėte kalbėtis.
         <translation>Klaida</translation>
     </message>
     <message>
-        <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translation>qTox nepavyko atidaryti pokalbių žurnalo, todėl jis buvo išjungtas.</translation>
+        <source>xTox couldn&apos;t open your chat logs, they will be disabled.</source>
+        <translation>xTox nepavyko atidaryti pokalbių žurnalo, todėl jis buvo išjungtas.</translation>
     </message>
     <message>
         <source>Dark</source>
@@ -2511,7 +2511,7 @@ Pasidalinkite ja su draugais, kad pradėtumėte kalbėtis.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
+        <source>Database version (%1) is newer than we currently support (%2). Please upgrade xTox.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2541,9 +2541,9 @@ Pasidalinkite ja su draugais, kad pradėtumėte kalbėtis.
 <context>
     <name>ScreenshotGrabber</name>
     <message>
-        <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
+        <source>Click and drag to select a region. Press %1 to hide/show xTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>Spustelėkite pelės klavišą ir vilkdami pelę pasirinkite norimą ekrano sritį. Paspauskite %1 klavišą, kad būtų paslėptas/parodytas qTox langas, arba paspauskite %2 klavišą, kad atsisakytumėte.</translation>
+        <translation>Spustelėkite pelės klavišą ir vilkdami pelę pasirinkite norimą ekrano sritį. Paspauskite %1 klavišą, kad būtų paslėptas/parodytas xTox langas, arba paspauskite %2 klavišą, kad atsisakytumėte.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2556,9 +2556,9 @@ Pasidalinkite ja su draugais, kad pradėtumėte kalbėtis.
         <translation>Escape (atšaukimo)</translation>
     </message>
     <message>
-        <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
+        <source>Press %1 to send a screenshot of the selection, %2 to hide/show xTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>Paspauskite %1 klavišą, kad nusiųstumėte pasirinktos ekrano srities kopiją, o %2, kad parodytumėte/paslėptumėte qTox langą. Veiksmo atsisakysite, paspaudę %3 klavišą.</translation>
+        <translation>Paspauskite %1 klavišą, kad nusiųstumėte pasirinktos ekrano srities kopiją, o %2, kad parodytumėte/paslėptumėte xTox langą. Veiksmo atsisakysite, paspaudę %3 klavišą.</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2682,7 +2682,7 @@ Pasidalinkite ja su draugais, kad pradėtumėte kalbėtis.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
+        <source>Unable to upgrade settings from version %1 to version %2. Cannot start xTox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2750,8 +2750,8 @@ Pasidalinkite ja su draugais, kad pradėtumėte kalbėtis.
         <translation>Dydis: </translation>
     </message>
     <message>
-        <source>New text styling preference may not load until qTox restarts.</source>
-        <translation>Naujoji teksto stiliaus nuostata negali būti įkelta tol, kol qTox nebus paleista iš naujo.</translation>
+        <source>New text styling preference may not load until xTox restarts.</source>
+        <translation>Naujoji teksto stiliaus nuostata negali būti įkelta tol, kol xTox nebus paleista iš naujo.</translation>
     </message>
     <message>
         <source>Text Style format:</source>
@@ -2778,9 +2778,9 @@ Pasidalinkite ja su draugais, kad pradėtumėte kalbėtis.
         <translation>Nauja žinutė</translation>
     </message>
     <message>
-        <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
+        <source>Open xTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translation>Gavus naują žinutę, atverti qTox langą, jeigu jis dar nėra atvertas.</translation>
+        <translation>Gavus naują žinutę, atverti xTox langą, jeigu jis dar nėra atvertas.</translation>
     </message>
     <message>
         <source>Open window</source>
@@ -2997,7 +2997,7 @@ Pasidalinkite ja su draugais, kad pradėtumėte kalbėtis.
     </message>
     <message>
         <source>Show</source>
-        <comment>Tray action menu to show qTox window</comment>
+        <comment>Tray action menu to show xTox window</comment>
         <translation>Fokusuoti langą</translation>
     </message>
     <message>
@@ -3030,9 +3030,9 @@ Pasidalinkite ja su draugais, kad pradėtumėte kalbėtis.
         <translation>Nepavyko paleisti „Toxcore“, programa bus nutraukta, kai uždarysite šį pranešimą.</translation>
     </message>
     <message>
-        <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
+        <source>Toxcore failed to start with your proxy settings. xTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
-        <translation>Nepavyko paleisti „Toxcore“ pagal jūsų įgaliotojo serverio nustatymus. „qTox“ negali veikti; pakeiskite nustatymus ir paleiskite iš naujo.</translation>
+        <translation>Nepavyko paleisti „Toxcore“ pagal jūsų įgaliotojo serverio nustatymus. „xTox“ negali veikti; pakeiskite nustatymus ir paleiskite iš naujo.</translation>
     </message>
     <message>
         <source>Couldn&apos;t send friend request</source>

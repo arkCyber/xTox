@@ -1,20 +1,20 @@
 /*
-    Copyright © 2017-2019 by The qTox Project Contributors
+    Copyright © 2017-2019 by The xTox Project Contributors
 
-    This file is part of qTox, a Qt-based graphical interface for Tox.
+    This file is part of xTox, a Qt-based graphical interface for Tox.
 
-    qTox is libre software: you can redistribute it and/or modify
+    xTox is libre software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    qTox is distributed in the hope that it will be useful,
+    xTox is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with qTox.  If not, see <http://www.gnu.org/licenses/>.
+    along with xTox.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "src/chatlog/textformatter.h"
@@ -172,8 +172,8 @@ const QVector<StringPair> MIXED_FORMATTING_SPECIAL_CASES {
 #define MAKE_WWW_LINK(url) "<a href=\"http://" url "\">" url "</a>"
 
 const QVector<QPair<QString, QString>> URL_CASES {
-    PAIR_FORMAT("https://github.com/qTox/qTox/issues/4233",
-                MAKE_LINK("https://github.com/qTox/qTox/issues/4233")),
+    PAIR_FORMAT("https://github.com/xTox/xTox/issues/4233",
+                MAKE_LINK("https://github.com/xTox/xTox/issues/4233")),
     PAIR_FORMAT("www.youtube.com", MAKE_WWW_LINK("www.youtube.com")),
     PAIR_FORMAT("https://url.com/some*url/some*more*url/",
                 MAKE_LINK("https://url.com/some*url/some*more*url/")),

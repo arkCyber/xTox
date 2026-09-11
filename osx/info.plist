@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>qTox</string>
+	<string>xTox</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -12,7 +12,7 @@
 				<string>tox</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>qtox_profile</string>
+			<string>xtox_profile</string>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
 				<string>application/x-tox.profile</string>
@@ -30,11 +30,11 @@
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
-	<string>qtox</string>
+	<string>xtox</string>
 	<key>CFBundleIconFile</key>
-	<string>qtox.icns</string>
+	<string>xtox.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>chat.tox.qtox</string>
+	<string>chat.tox.xtox</string>
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>en_US</string>
@@ -61,7 +61,7 @@
 		<string>zh_CH</string>
 	</array>
 	<key>CFBundleName</key>
-	<string>qTox</string>
+	<string>xTox</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -74,7 +74,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>CFBundleURLIconFile</key>
-			<string>qtox_profile</string>
+			<string>xtox_profile</string>
 			<key>CFBundleURLName</key>
 			<string>Tox URL</string>
 			<key>CFBundleURLSchemes</key>
@@ -88,9 +88,9 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>NSCameraUsageDescription</key>
-	<string>qTox needs access to the camera for video calls.</string>
+	<string>xTox needs access to the camera for video calls.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>qTox needs access to the microphone for audio calls.</string>
+	<string>xTox needs access to the microphone for audio calls.</string>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>

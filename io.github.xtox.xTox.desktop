@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=qTox
+Name=xTox
 GenericName=Tox client
 Comment=Qt 5 based Tox instant messenger for secure communication
 Comment[cs]=Tox instant messaging založený na Qt 5 pro zabezpečenou komunikaci 
@@ -23,9 +23,9 @@ Comment[sl]=Takojšnje sporočanje Tox, ki temelji na Qt 5 za varno komunikacijo
 Comment[sv]=Tox instant messaging baserad på Qt 5 för säker kommunikation
 Comment[tr]=Güvenli iletişim için Qt 5 tabanlı Tox anlık mesajlaşma
 Comment[zh]=基于Qt 5的Tox即时通讯，用于安全通信
-TryExec=qtox
-Exec=qtox %u
-Icon=qtox
+TryExec=xtox
+Exec=xtox %u
+Icon=xtox
 Categories=Network;InstantMessaging;Chat;Telephony;VideoConference;
 Terminal=false
 MimeType=x-scheme-handler/tox;application/x-tox;
