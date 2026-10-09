@@ -241,7 +241,7 @@ jobs:
       - name: Run build
         run: docker-compose run --rm ubuntu_lts ./appimage/build.sh --src-dir /xtox
       - name: Upload appimage
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v6
         with:
           name: xTox-${{ github.sha }}.x86_64.AppImage
           path: xTox-*.x86_64.AppImage
@@ -302,7 +302,7 @@ jobs:
       - name: Run build
         run: docker-compose run --rm flatpak ./flatpak/build.sh
       - name: Upload flatpak
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v6
         with:
           name: xTox-${{ github.sha }}.x86_64.flatpak
           path: xtox.flatpak
@@ -364,12 +364,12 @@ jobs:
         run: docker-compose run --rm windows_builder ./windows/cross-compile/build.sh --arch x86_64 --build-type ${{ matrix.build_type }} --run-tests --src-dir /xtox
       - name: Upload installer
         if: matrix.build_type == 'release'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v6
         with:
           name: setup-xtox-x86_64-${{ matrix.build_type }}.exe
           path: package-prefix/setup-xtox.exe
       - name: Upload zip
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v6
         with:
           name: xtox-x86_64-${{ matrix.build_type }}.zip
           path: install-prefix/xtox-x86_64-${{ matrix.build_type }}.zip
@@ -444,12 +444,12 @@ jobs:
         run: docker-compose run --rm windows_builder.i686 ./windows/cross-compile/build.sh --arch i686 --build-type ${{ matrix.build_type }} --run-tests --src-dir /xtox
       - name: Upload installer
         if: matrix.build_type == 'release'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v6
         with:
           name: setup-xtox-i686-${{ matrix.build_type }}.exe
           path: package-prefix/setup-xtox.exe
       - name: Upload zip
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v6
         with:
           name: xtox-i686-${{ matrix.build_type }}.zip
           path: install-prefix/xtox-i686-${{ matrix.build_type }}.zip
@@ -519,7 +519,7 @@ jobs:
       - name: Build xTox
         run: ./.ci-scripts/build-xtox-macos.sh dist
       - name: Upload dmg
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v6
         with:
           name: xTox-${{ github.sha }}.dmg
           path: xTox.dmg
